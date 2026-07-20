@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iftekhar Ahmed — Senior Content Marketing Executive & Strategist</title>
+<meta name="description" content="Portfolio of Iftekhar Ahmed, Senior Content Marketing Executive & Strategist specializing in SEO, GEO, and content-led growth for SaaS and WordPress products.">
+<meta property="og:title" content="Iftekhar Ahmed — Content Marketing Executive & Strategist">
+<meta property="og:description" content="SEO · GEO · Content Strategy for SaaS & WordPress products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F7F1;
+    --paper-alt:#FFFFFF;
+    --ink:#1B2430;
+    --ink-soft:#5B6472;
+    --highlighter:#DC9A3B;
+    --highlighter-soft:#F3E2C2;
+    --clipped:#3F6655;
+    --clipped-soft:#DEE8E3;
+    --rule:#DFDBCC;
+    --max-w:1040px;
+    --radius:3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    line-height:1.1;
+    margin:0;
+    color:var(--ink);
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--clipped);
+    font-weight:500;
+  }
+  section{scroll-margin-top:84px;}
+  :focus-visible{outline:2px solid var(--clipped); outline-offset:3px;}
+
+  /* ---- Nav ---- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(247,247,241,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
+  .monogram{
+    width:34px; height:34px; border-radius:50%;
+    background:var(--ink); color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;
+    flex-shrink:0;
+  }
+  .brand-name{font-family:'Fraunces',serif; font-weight:600; font-size:16px;}
+  .nav-links{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    text-decoration:none; font-size:14px; font-weight:500; color:var(--ink-soft);
+    transition:color .15s;
+  }
+  .nav-links a:hover{color:var(--ink);}
+  .nav-cta{
+    font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500;
+    background:var(--ink); color:var(--paper);
+    padding:9px 16px; border-radius:var(--radius); text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav-right{display:flex; align-items:center; gap:24px;}
+  .nav-toggle-input, .nav-toggle-label{display:none;}
+
+  @media (max-width:760px){
+    .nav-links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; background:var(--paper-alt);
+      border-bottom:1px solid var(--rule); padding:16px 24px; gap:16px;
+    }
+    .nav-toggle-input:checked ~ .nav-links{display:flex;}
+    .nav-toggle-label{
+      display:flex; flex-direction:column; gap:5px; cursor:pointer;
+      width:24px; padding:6px 0;
+    }
+    .nav-toggle-label span{width:100%; height:2px; background:var(--ink);}
+    .nav-cta{display:none;}
+  }
+
+  /* ---- Hero ---- */
+  .hero{
+    padding:64px 0 56px;
+    background-image:repeating-linear-gradient(to bottom, transparent, transparent 43px, var(--rule) 44px);
+  }
+  .brief-fields{
+    display:flex; flex-wrap:wrap; gap:8px 28px;
+    margin-bottom:34px;
+  }
+  .brief-fields div{font-size:12.5px;}
+  .brief-fields .k{color:var(--ink-soft);}
+  .brief-fields .v{color:var(--ink); font-weight:600;}
+  .hero h1{font-size:clamp(34px,5.4vw,58px); letter-spacing:-.01em;}
+  .hero .role{
+    font-family:'Fraunces',serif; font-weight:400; font-style:italic;
+    font-size:clamp(18px,2.4vw,24px); color:var(--ink-soft); margin-top:8px;
+  }
+  .meta-desc{
+    max-width:640px; margin-top:28px; padding:16px 18px;
+    background:var(--paper-alt); border:1px solid var(--rule); border-radius:var(--radius);
+  }
+  .meta-desc .label{
+    display:flex; align-items:center; gap:7px; margin-bottom:8px;
+  }
+  .dot{width:7px; height:7px; border-radius:50%; background:var(--clipped); flex-shrink:0;}
+  .meta-desc p{margin:0; font-size:16px; color:var(--ink);}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-top:30px;}
+  .btn{
+    font-family:'IBM Plex Mono',monospace; font-size:13.5px; font-weight:500;
+    padding:12px 22px; border-radius:var(--radius); text-decoration:none;
+    display:inline-block; transition:transform .15s, box-shadow .15s;
+  }
+  .btn-primary{background:var(--highlighter); color:var(--ink);}
+  .btn-secondary{background:transparent; color:var(--ink); border:1px solid var(--ink);}
+  .btn:hover{transform:translateY(-1px);}
+
+  /* ---- Section basics ---- */
+  .section{padding:64px 0;}
+  .section-head{margin-bottom:32px;}
+  .section-head h2{font-size:clamp(24px,3vw,32px); margin-top:8px;}
+  .section-alt{background:var(--paper-alt); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);}
+  .lede{max-width:640px; color:var(--ink-soft); font-size:15.5px; margin-top:10px;}
+
+  /* ---- reveal ---- */
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
+  .reveal.is-visible{opacity:1; transform:none;}
+
+  /* ---- About ---- */
+  .about-text{max-width:720px; font-size:17px; color:var(--ink-soft);}
+  .about-text p{margin:0 0 16px;}
+  .placeholder{color:var(--highlighter); background:var(--highlighter-soft); padding:1px 5px; border-radius:2px; font-style:normal;}
+
+  /* ---- Tags / Skills ---- */
+  .tag-groups{display:flex; flex-direction:column; gap:20px;}
+  .tag-group-label{font-size:13px; color:var(--ink-soft); margin-bottom:10px; font-weight:600;}
+  .tags{display:flex; flex-wrap:wrap; gap:9px;}
+  .tag{
+    font-family:'IBM Plex Mono',monospace; font-size:13px;
+    background:var(--clipped-soft); color:var(--clipped);
+    padding:7px 13px; border-radius:20px; font-weight:500;
+  }
+
+  /* ---- Tools ---- */
+  .tools-grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    gap:1px; background:var(--rule); border:1px solid var(--rule);
+  }
+  .tool-cell{background:var(--paper-alt); padding:16px; font-size:14px; font-weight:500;}
+  .tool-cell span{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); margin-top:3px; font-weight:400;}
+
+  /* ---- Brands strip ---- */
+  .brands-intro{max-width:560px; color:var(--ink-soft); font-size:15px; margin-top:10px; margin-bottom:32px;}
+  .brands-track-wrap{
+    overflow:hidden;
+    -webkit-mask:linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask:linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+    padding:20px 0;
+  }
+  .brands-track{
+    display:flex; align-items:center; gap:40px;
+    width:max-content;
+    animation: scroll-logos 30s linear infinite;
+  }
+  .brands-track:hover{animation-play-state:paused;}
+  @keyframes scroll-logos{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  .brand-logo{
+    height:52px; width:auto; max-width:160px;
+    object-fit:contain; flex-shrink:0;
+    filter:grayscale(100%) contrast(0.7);
+    opacity:0.6;
+    transition:filter .2s, opacity .2s;
+  }
+  .brand-logo:hover{filter:none; opacity:1;}
+  .brands-count{
+    text-align:center; margin-top:20px;
+    font-family:'IBM Plex Mono',monospace; font-size:12px;
+    color:var(--ink-soft); letter-spacing:.08em;
+  }
+
+  /* ---- Work cards ---- */
+  .work-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .work-card{
+    background:var(--paper-alt); border:1px solid var(--rule); border-radius:var(--radius);
+    padding:26px;
+  }
+  .work-card .eyebrow{margin-bottom:10px; display:block;}
+  .work-card h3{font-size:19px; margin-bottom:10px;}
+  .work-card p{color:var(--ink-soft); font-size:14.5px; margin:0;}
+  .work-card .metric{color:var(--clipped); font-weight:600;}
+  @media (max-width:700px){.work-grid{grid-template-columns:1fr;}}
+
+  /* ---- Experience timeline ---- */
+  .timeline{border-left:2px solid var(--rule); margin-left:6px;}
+  .tl-item{padding:0 0 30px 26px; position:relative;}
+  .tl-item::before{
+    content:''; position:absolute; left:-7px; top:4px;
+    width:12px; height:12px; border-radius:50%; background:var(--paper);
+    border:2px solid var(--clipped);
+  }
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-role{font-weight:600; font-size:16px;}
+  .tl-meta{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-soft); margin-top:3px;}
+  .tl-desc{font-size:14.5px; color:var(--ink-soft); margin-top:8px; max-width:560px;}
+
+  /* ---- Badges ---- */
+  .badge-row{display:flex; flex-wrap:wrap; gap:16px;}
+  .badge{
+    display:flex; align-items:flex-start; gap:12px;
+    background:var(--paper-alt); border:1px solid var(--rule); border-radius:var(--radius);
+    padding:14px 18px; min-width:230px; max-width:320px;
+  }
+  .badge-icon{
+    width:36px; height:36px; border-radius:50%; background:var(--highlighter-soft);
+    color:var(--highlighter); display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:13px; flex-shrink:0;
+  }
+  .badge-title{font-weight:600; font-size:14.5px;}
+  .badge-sub{font-size:12px; color:var(--ink-soft); margin-top:3px; line-height:1.5;}
+
+  /* ---- Education ---- */
+  .edu-item{margin-bottom:16px; font-size:15px;}
+  .edu-item strong{display:block;}
+  .edu-item span{font-size:13.5px; color:var(--ink-soft);}
+
+  /* ---- Languages / Interests ---- */
+  .li-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .li-block h3{font-size:14px; margin-bottom:16px; font-family:'IBM Plex Mono',monospace; letter-spacing:.06em; color:var(--ink-soft); font-weight:500;}
+  .lang-row{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; font-size:14.5px; max-width:280px;}
+  .lang-dots{display:flex; gap:4px;}
+  .lang-dots span{width:7px; height:7px; border-radius:50%; background:var(--rule); display:inline-block;}
+  .lang-dots span.filled{background:var(--clipped);}
+  .interest-list{list-style:none; padding:0; margin:0; font-size:14.5px; color:var(--ink-soft); max-width:320px;}
+  .interest-list li{padding:8px 0; border-bottom:1px solid var(--rule);}
+  .interest-list li:last-child{border-bottom:none;}
+  @media (max-width:700px){.li-grid{grid-template-columns:1fr; gap:28px;}}
+
+  /* ---- Contact / footer ---- */
+  .contact{
+    background:var(--ink); color:var(--paper); padding:70px 0 40px;
+  }
+  .contact h2{color:var(--paper); font-size:clamp(26px,3.6vw,38px);}
+  .contact .eyebrow{color:var(--highlighter);}
+  .contact-links{display:flex; flex-wrap:wrap; gap:16px; margin-top:28px;}
+  .contact-links a{
+    font-family:'IBM Plex Mono',monospace; font-size:14px;
+    border:1px solid rgba(247,247,241,0.3); padding:12px 20px; border-radius:var(--radius);
+    text-decoration:none; transition:border-color .15s, background .15s;
+  }
+  .contact-links a:hover{border-color:var(--highlighter); background:rgba(220,154,59,0.08);}
+  .footer-bottom{
+    max-width:var(--max-w); margin:56px auto 0; padding:20px 24px 0;
+    border-top:1px solid rgba(247,247,241,0.15);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:12.5px; color:rgba(247,247,241,0.55);
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <span class="monogram">IA</span>
+      <span class="brand-name">Iftekhar Ahmed</span>
+    </a>
+    <div class="nav-right">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="brief-fields mono">
+      <div><span class="k">ROLE_TYPE:</span> <span class="v">Content Marketing Executive & Strategist</span></div>
+      <div><span class="k">FOCUS:</span> <span class="v">SEO · GEO · Content Strategy</span></div>
+      <div><span class="k">BASE:</span> <span class="v">Dhaka, Bangladesh</span></div>
+      <div><span class="k">STATUS:</span> <span class="v placeholder">[open to opportunities — edit me]</span></div>
+    </div>
+
+    <h1>Iftekhar Ahmed</h1>
+    <p class="role">Senior Content Marketing Executive & Strategist</p>
+
+    <div class="meta-desc">
+      <div class="label mono eyebrow"><span class="dot"></span> META DESCRIPTION · 87/160 · GOOD LENGTH</div>
+      <p>Turning SEO, GEO, and WordPress/SaaS expertise into pipeline for 50+ brands worldwide.</p>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#work" class="btn btn-primary">View my work</a>
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / About</span>
+      <h2>A bit about my work</h2>
+    </div>
+    <div class="about-text">
+      <p>I'm a content marketing executive and strategist with 7+ years of experience across the SaaS and WordPress industries. I've worked cross-industry inside creative marketing agencies, serving 50+ brands across local and international markets — from WordPress plugin companies to a home construction agency in Scotland to Bangladesh Air Force Museum.</p>
+      <p>My work spans on-page and off-page SEO, keyword research and clustering, content strategy, and — more recently — generative engine optimization (GEO): making sure brands show up correctly when AI tools answer questions about their category. I hold a HubSpot Content Marketing Certification and have been recognized with a Sync Leader Award (2024) and a Team Leader Award (2022).</p>
+      <p class="placeholder">[Optional: add one line on what you're looking for next, or what makes your approach different.]</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="skills">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / Skills</span>
+      <h2>What I do</h2>
+    </div>
+    <div class="tag-groups">
+      <div>
+        <div class="tag-group-label">Strategy & Leadership</div>
+        <div class="tags">
+          <span class="tag">Content Strategy</span>
+          <span class="tag">Go-to-Market (GTM) Strategy</span>
+          <span class="tag">Campaign Strategy</span>
+          <span class="tag">Product Launch Strategy</span>
+          <span class="tag">Project Management</span>
+          <span class="tag">SCRUM</span>
+          <span class="tag">Product Management</span>
+          <span class="tag">Outreach Team Leadership</span>
+        </div>
+      </div>
+      <div>
+        <div class="tag-group-label">Search & SEO</div>
+        <div class="tags">
+          <span class="tag">SEO</span>
+          <span class="tag">On-Page SEO</span>
+          <span class="tag">Off-Page SEO</span>
+          <span class="tag">SEO Content Management</span>
+          <span class="tag">Keyword Research</span>
+          <span class="tag">Keyword Clustering</span>
+          <span class="tag">SEO Model Training</span>
+          <span class="tag">A/B Testing</span>
+          <span class="tag">Analytics</span>
+        </div>
+      </div>
+      <div>
+        <div class="tag-group-label">Content & Growth</div>
+        <div class="tags">
+          <span class="tag">Copywriting</span>
+          <span class="tag">Outbound Copywriting</span>
+          <span class="tag">Content Optimization</span>
+          <span class="tag">Email Marketing</span>
+          <span class="tag">AI-Content Generation</span>
+          <span class="tag">AI-Assisted Workflows</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / Tools & Platforms</span>
+      <h2>What I work in daily</h2>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-cell">Semrush<span>incl. AI Toolkit</span></div>
+      <div class="tool-cell">Ahrefs<span>incl. Brand Radar</span></div>
+      <div class="tool-cell">Otterly.ai<span>GEO tracking</span></div>
+      <div class="tool-cell">Peec AI<span>GEO tracking</span></div>
+      <div class="tool-cell">Search Console<span>GSC</span></div>
+      <div class="tool-cell">GA4<span>Analytics</span></div>
+      <div class="tool-cell">Tag Manager<span>GTM</span></div>
+      <div class="tool-cell">Screaming Frog<span>Site audits</span></div>
+      <div class="tool-cell">GTmetrix<span>Site speed</span></div>
+      <div class="tool-cell">WPMetrics<span>WordPress</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="brands">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / Brands I've Worked With</span>
+      <h2>50+ brands, across 7 countries</h2>
+      <p class="brands-intro">From defence organisations and global WordPress plugin companies to restaurants, agencies, and local startups — a selection of brands whose content I've owned, shaped, or launched.</p>
+    </div>
+  </div>
+  <div class="brands-track-wrap">
+    <div class="brands-track">
+      <!-- Set A — 21 brands -->
+      <img class="brand-logo" src="logos/arraytics.jpg"         alt="Arraytics" title="Arraytics">
+      <img class="brand-logo" src="logos/timetics.png"          alt="Timetics" title="Timetics">
+      <img class="brand-logo" src="logos/wpcafe.png"            alt="WPCafe" title="WPCafe">
+      <img class="brand-logo" src="logos/themewinter.png"       alt="ThemeWinter" title="ThemeWinter">
+      <img class="brand-logo" src="logos/techabyte.jpg"         alt="Techabyte Solutions" title="Techabyte Solutions">
+      <img class="brand-logo" src="logos/omnikick.jpg"          alt="OmniKick" title="OmniKick">
+      <img class="brand-logo" src="logos/markosis.jpg"          alt="Markosis Australia" title="Markosis Australia">
+      <img class="brand-logo" src="logos/classroom.jpg"         alt="ClassRoom" title="ClassRoom">
+      <img class="brand-logo" src="logos/baf_museum.jpg"        alt="Bangladesh Air Force Museum" title="Bangladesh Air Force Museum">
+      <img class="brand-logo" src="logos/somalicious.png"       alt="Somalicious" title="Somalicious">
+      <img class="brand-logo" src="logos/zaytun.jpg"            alt="Zaytun Restaurant & Convention Hall" title="Zaytun Restaurant & Convention Hall">
+      <img class="brand-logo" src="logos/giveforgood.png"       alt="Give For Good Global Foundation" title="Give For Good Global Foundation">
+      <img class="brand-logo" src="logos/dimensioniv.png"       alt="Dimension IV Wealth Management" title="Dimension IV Wealth Management">
+      <img class="brand-logo" src="logos/icchapoorn.jpg"        alt="Icchapoorn" title="Icchapoorn">
+      <img class="brand-logo" src="logos/egarage.png"           alt="eGarage" title="eGarage">
+      <img class="brand-logo" src="logos/houseofmarketing.jpg"  alt="House of Marketing" title="House of Marketing">
+      <img class="brand-logo" src="logos/houseofinnovation.jpg" alt="House of Innovation" title="House of Innovation">
+      <img class="brand-logo" src="logos/angies.jpg"            alt="Angie's Kebabs & Burgers" title="Angie's Kebabs & Burgers">
+      <img class="brand-logo" src="logos/mu.jpg"                alt="MU" title="MU">
+      <img class="brand-logo" src="logos/airforce.jpg"          alt="Bangladesh Air Force" title="Bangladesh Air Force">
+      <img class="brand-logo" src="logos/icchapoorn.jpg"        alt="Icchapoorn" title="Icchapoorn">
+      <!-- Set B — duplicate for seamless loop -->
+      <img class="brand-logo" src="logos/arraytics.jpg"         alt="Arraytics" title="Arraytics">
+      <img class="brand-logo" src="logos/timetics.png"          alt="Timetics" title="Timetics">
+      <img class="brand-logo" src="logos/wpcafe.png"            alt="WPCafe" title="WPCafe">
+      <img class="brand-logo" src="logos/themewinter.png"       alt="ThemeWinter" title="ThemeWinter">
+      <img class="brand-logo" src="logos/techabyte.jpg"         alt="Techabyte Solutions" title="Techabyte Solutions">
+      <img class="brand-logo" src="logos/omnikick.jpg"          alt="OmniKick" title="OmniKick">
+      <img class="brand-logo" src="logos/markosis.jpg"          alt="Markosis Australia" title="Markosis Australia">
+      <img class="brand-logo" src="logos/classroom.jpg"         alt="ClassRoom" title="ClassRoom">
+      <img class="brand-logo" src="logos/baf_museum.jpg"        alt="Bangladesh Air Force Museum" title="Bangladesh Air Force Museum">
+      <img class="brand-logo" src="logos/somalicious.png"       alt="Somalicious" title="Somalicious">
+      <img class="brand-logo" src="logos/zaytun.jpg"            alt="Zaytun Restaurant & Convention Hall" title="Zaytun Restaurant & Convention Hall">
+      <img class="brand-logo" src="logos/giveforgood.png"       alt="Give For Good Global Foundation" title="Give For Good Global Foundation">
+      <img class="brand-logo" src="logos/dimensioniv.png"       alt="Dimension IV Wealth Management" title="Dimension IV Wealth Management">
+      <img class="brand-logo" src="logos/icchapoorn.jpg"        alt="Icchapoorn" title="Icchapoorn">
+      <img class="brand-logo" src="logos/egarage.png"           alt="eGarage" title="eGarage">
+      <img class="brand-logo" src="logos/houseofmarketing.jpg"  alt="House of Marketing" title="House of Marketing">
+      <img class="brand-logo" src="logos/houseofinnovation.jpg" alt="House of Innovation" title="House of Innovation">
+      <img class="brand-logo" src="logos/angies.jpg"            alt="Angie's Kebabs & Burgers" title="Angie's Kebabs & Burgers">
+      <img class="brand-logo" src="logos/mu.jpg"                alt="MU" title="MU">
+      <img class="brand-logo" src="logos/airforce.jpg"          alt="Bangladesh Air Force" title="Bangladesh Air Force">
+      <img class="brand-logo" src="logos/icchapoorn.jpg"        alt="Icchapoorn" title="Icchapoorn">
+    </div>
+  </div>
+  <p class="brands-count wrap">Hover any logo to reveal its colours · 21 brands shown · 50+ served across 7 countries</p>
+</section>
+
+<section class="section section-alt" id="work">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / Featured Work</span>
+      <h2>Selected campaigns</h2>
+      <p class="lede">Real numbers pulled straight from your CV — add more wherever you have them.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card">
+        <span class="eyebrow">Techabyte Solutions · 2025–2026</span>
+        <h3>Agency accounts, GEO-first</h3>
+        <p>Owned content strategy and editorial calendars for agency accounts including <span class="metric">Bangladesh Air Force</span>, Somalicious, Zaytun and TopFace — pairing SEO with early GEO practices to grow organic reach.</p>
+      </div>
+      <div class="work-card">
+        <span class="eyebrow">Woooplugin · 2024</span>
+        <h3>Black Friday Roundup 2024</h3>
+        <p>Coordinated a roundup campaign across <span class="metric">39 WordPress brands</span> — including RankMath, Astra, and SureTriggers — via direct email outreach.</p>
+      </div>
+      <div class="work-card">
+        <span class="eyebrow">Arraytics · 2023–2024</span>
+        <h3>Timetics.ai launch</h3>
+        <p>Launched Timetics.ai on AppSumo and Product Hunt; wrote a landing page that hit a <span class="metric">91.80% traffic rate</span> and newsletters averaging a <span class="metric">14% CTR</span>.</p>
+      </div>
+      <div class="work-card">
+        <span class="eyebrow">Markosis Australia · 2020–2023</span>
+        <h3>Creative lead, 30 brands</h3>
+        <p>Led the Creative Department as Team Lead, running social strategy for <span class="metric">30 brands worldwide</span> and campaigns for 20 of them. Team Leader Award, 2022.</p>
+      </div>
+      <div class="work-card">
+        <span class="eyebrow">ClassRoom Ltd. · 2018–2020</span>
+        <h3>NCTB curriculum, animated</h3>
+        <p>Converted the <span class="metric">national SSC curriculum</span> into animated learning content within a year, and launched the "ClassRoom Activator" affiliate program with 200+ university students.</p>
+      </div>
+      <div class="work-card">
+        <span class="eyebrow">Connect2build Scotland · 2024–2025</span>
+        <h3>Full-funnel SEO, remote</h3>
+        <p>Ran keyword research, on/off-page SEO, competitor analysis, and content production for a Home Construction-industry agency, remote from Dhaka.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / Experience</span>
+      <h2>Where I've worked</h2>
+      <p class="lede placeholder">[Worth double-checking: OmniKick, ClassRoom and Prime Research show overlapping months in 2017–2018 — confirm these were concurrent/freelance before publishing.]</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-role">Content Strategist (Contract) · Techabyte Solutions</div>
+        <div class="tl-meta">Mirpur DOHS, Dhaka · Nov 2025 – Jun 2026</div>
+        <div class="tl-desc">Owned content strategy and editorial calendars for agency accounts; led GEO/SEO implementation and AI-assisted visual content direction.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Freelance SEO Strategist (Remote) · Connect2build Scotland</div>
+        <div class="tl-meta">Scotland · Dec 2024 – Oct 2025</div>
+        <div class="tl-desc">Ran keyword research, on/off-page SEO, and content production for a Home Construction-industry agency.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Content Marketing Associate (Contract) · Woooplugin</div>
+        <div class="tl-meta">Full-Remote · Sep 2024 – Nov 2024</div>
+        <div class="tl-desc">Led the Black Friday Roundup 2024, coordinating 39 WordPress brands via email outreach.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Senior Content Writer · Arraytics</div>
+        <div class="tl-meta">Dhaka, Bangladesh · May 2023 – Aug 2024</div>
+        <div class="tl-desc">Wrote product, landing, and email content for WordPress plugins; launched Timetics.ai on AppSumo and Product Hunt.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Senior Copywriter & Brand Planner · Markosis Australia</div>
+        <div class="tl-meta">Tasmania, Australia (Remote) · Dec 2020 – Feb 2023</div>
+        <div class="tl-desc">Led the Creative Department, managing social strategy and brand content for 30 brands worldwide.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Project Manager · ClassRoom Ltd.</div>
+        <div class="tl-meta">Mirpur DOHS, Dhaka · Dec 2018 – Feb 2020</div>
+        <div class="tl-desc">Built the business model and led hiring across 4 departments; converted the national SSC curriculum into animated content.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Junior Content Marketing Executive · OmniKick Corp.</div>
+        <div class="tl-meta">Dhaka, Bangladesh · Jul 2017 – Nov 2018</div>
+        <div class="tl-desc">Wrote lead-generation content and ran email automation and outbound campaigns across the UK, US, Australia, and Spain.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Researcher & Academic Writer · Prime Research And Consultancy Center</div>
+        <div class="tl-meta">Remote · Feb 2016 – Apr 2017</div>
+        <div class="tl-desc">Wrote 100+ long-form research documents (3,000–5,000 words) and ran editorial corrections for academic clients.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-role">Contract Employee · Durbin Labs Ltd.</div>
+        <div class="tl-meta">Mirpur DOHS, Dhaka · May 2015 – Jan 2016</div>
+        <div class="tl-desc">Wrote app content for the "Banbeis App" launch and led recruitment for the Durbin Academy talent team.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="credentials">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / Certifications & Awards</span>
+      <h2>Recognition</h2>
+    </div>
+    <div class="badge-row">
+      <div class="badge">
+        <div class="badge-icon">✓</div>
+        <div>
+          <div class="badge-title">HubSpot Content Marketing</div>
+          <div class="badge-sub">Certification</div>
+        </div>
+      </div>
+      <div class="badge">
+        <div class="badge-icon">★</div>
+        <div>
+          <div class="badge-title">Sync Leader Award</div>
+          <div class="badge-sub">2024 · Techabyte Solutions — for cross-team collaboration between product, support and marketing during a 6-month probation period.</div>
+        </div>
+      </div>
+      <div class="badge">
+        <div class="badge-icon">★</div>
+        <div>
+          <div class="badge-title">Team Leader Award</div>
+          <div class="badge-sub">2022 · Markosis Australia — for leading 20 brands as Creative Team Lead, producing 150+ pieces of content a month.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / Education</span>
+      <h2>Education</h2>
+    </div>
+    <div class="edu-item">
+      <strong>University of Dhaka</strong>
+      <span>BBA (Dropout), Marketing · Dhaka · 2014 – 2018</span>
+    </div>
+    <div class="edu-item">
+      <strong>Dhaka Commerce College</strong>
+      <span>Business Studies · Dhaka · 2011 – 2013</span>
+    </div>
+    <div class="edu-item">
+      <strong>Pallabi Mi Model High School</strong>
+      <span>Commerce · Dhaka · 2001 – 2011</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="personal">
+  <div class="wrap reveal">
+    <div class="li-grid">
+      <div class="li-block">
+        <h3>LANGUAGES</h3>
+        <div class="lang-row">
+          <span>English</span>
+          <span class="lang-dots"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span></span>
+        </div>
+        <div class="lang-row">
+          <span>Japanese</span>
+          <span class="lang-dots"><span class="filled"></span><span></span><span></span><span></span><span></span></span>
+        </div>
+      </div>
+      <div class="li-block">
+        <h3>INTERESTS</h3>
+        <ul class="interest-list">
+          <li>Reading — marketing books & novels</li>
+          <li>Movies, TV series & anime</li>
+          <li>Memes and sarcasm</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow mono">H2 / Get in touch</span>
+    <h2>Let's talk content.</h2>
+    <p style="color:rgba(247,247,241,0.75); max-width:520px; margin-top:14px;">Open to content marketing, SEO/GEO strategy, and content leadership roles — remote-friendly.</p>
+    <div class="contact-links">
+      <a href="mailto:samirinmarketing@gmail.com">✉ samirinmarketing@gmail.com</a>
+      <a href="https://www.linkedin.com/in/iftekhar-ahmed-in-marketing/" target="_blank" rel="noopener">in linkedin.com/in/iftekhar-ahmed-in-marketing</a>
+      <a href="tel:+8801772552344">📞 +880 1772-552344</a>
+      <a href="https://samirinmarketing.com" target="_blank" rel="noopener">samirinmarketing.com</a>
+      <a href="Iftekhar-Ahmed-Resume.pdf" target="_blank" rel="noopener">↓ Download CV</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Iftekhar Ahmed</span>
+      <span>Built by hand, hosted free on GitHub Pages</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.nav-links a').forEach(function(link){
+    link.addEventListener('click', function(){
+      document.getElementById('nav-toggle').checked = false;
+    });
+  });
+
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+</script>
+
+</body>
+</html>
