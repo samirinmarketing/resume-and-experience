@@ -77,6 +77,19 @@
   .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
     text-decoration:none;color:var(--ink-soft);}
   .cs-nav a:hover{color:var(--ink);}
+
+  /* gallery */
+  .cs-gallery{margin-bottom:52px;}
+  .cs-gallery h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);font-family:'Fraunces',Georgia,serif;}
+  .cs-gallery h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .post-grid img{width:100%;border-radius:4px;border:1px solid var(--rule);
+    display:block;transition:transform .2s,box-shadow .2s;}
+  .post-grid img:hover{transform:scale(1.02);box-shadow:0 6px 24px rgba(0,0,0,.1);}
+  @media(max-width:540px){.post-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
@@ -95,6 +108,16 @@
 </section>
 <div class="cs-body">
   <div class="wrap">
+
+    <div class="cs-gallery">
+      <h2>Work Samples <span>Content produced</span></h2>
+      <div class="post-grid">
+        <img src="posts/baf_cadet.jpg" alt="Bangladesh Air Force — Join as Officer Cadet recruitment campaign" loading="lazy">
+        <img src="posts/baf_independence.jpg" alt="Bangladesh Air Force — Independence Day civic celebration post" loading="lazy">
+        <img src="posts/bafm_fieldtrip.jpg" alt="Bangladesh Air Force Museum — Educational Field Trip promotion" loading="lazy">
+        <img src="posts/bafm_gallery.jpg" alt="Bangladesh Air Force Museum — Aircraft Gallery Bangla promotion" loading="lazy">
+      </div>
+    </div>
     <div class="cs-section">
       <h2>The Problem <span>01 / 04</span></h2>
       <p>Two distinct Bangladesh Air Force Facebook channels required very different content strategies:</p><p><strong>Join Bangladesh Air Force (Recruitment):</strong> The Directorate of Recruitment needed content that would attract eligible Bangladeshi youth to apply — civic pride content that was aspirational and clear without being tone-deaf or overly formal.</p><p><strong>Bangladesh Air Force Museum:</strong> The museum needed to convert passive social followers into ticket buyers and physical visitors, with content that made the museum feel accessible, educational, and worth the trip.</p><p>Both pages were part of Techabyte Solutions' managed agency accounts — and both demanded copy that reflected official institutional voice while still performing on a social algorithm built for entertainment.</p>

@@ -77,6 +77,19 @@
   .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
     text-decoration:none;color:var(--ink-soft);}
   .cs-nav a:hover{color:var(--ink);}
+
+  /* gallery */
+  .cs-gallery{margin-bottom:52px;}
+  .cs-gallery h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);font-family:'Fraunces',Georgia,serif;}
+  .cs-gallery h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .post-grid img{width:100%;border-radius:4px;border:1px solid var(--rule);
+    display:block;transition:transform .2s,box-shadow .2s;}
+  .post-grid img:hover{transform:scale(1.02);box-shadow:0 6px 24px rgba(0,0,0,.1);}
+  @media(max-width:540px){.post-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
@@ -95,6 +108,14 @@
 </section>
 <div class="cs-body">
   <div class="wrap">
+
+    <div class="cs-gallery">
+      <h2>Work Samples <span>Content produced</span></h2>
+      <div class="post-grid">
+        <img src="posts/art_house.jpg" alt="Artmap Argyll — Artist feature illustration (post #59)" loading="lazy">
+        <img src="posts/art_weekend.jpg" alt="Artmap Argyll — Weekend community engagement post" loading="lazy">
+      </div>
+    </div>
     <div class="cs-section">
       <h2>The Problem <span>01 / 04</span></h2>
       <p>Artmap Argyll is a network of artists living and working on the west coast of Scotland. Their primary annual event — Open Studios — invites the public into working artist spaces across Argyll, but awareness outside the immediate community was limited.</p><p>The challenge: arts organisations are notoriously hard to write for at scale. The copy needed to feel warm and community-rooted (for existing supporters) while being accessible enough to pull in new visitors who weren't already part of the arts scene. Generic "come to our event" copy wouldn't work for an audience that values authenticity.</p>

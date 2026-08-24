@@ -77,6 +77,19 @@
   .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
     text-decoration:none;color:var(--ink-soft);}
   .cs-nav a:hover{color:var(--ink);}
+
+  /* gallery */
+  .cs-gallery{margin-bottom:52px;}
+  .cs-gallery h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);font-family:'Fraunces',Georgia,serif;}
+  .cs-gallery h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .post-grid img{width:100%;border-radius:4px;border:1px solid var(--rule);
+    display:block;transition:transform .2s,box-shadow .2s;}
+  .post-grid img:hover{transform:scale(1.02);box-shadow:0 6px 24px rgba(0,0,0,.1);}
+  @media(max-width:540px){.post-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
@@ -95,6 +108,16 @@
 </section>
 <div class="cs-body">
   <div class="wrap">
+
+    <div class="cs-gallery">
+      <h2>Work Samples <span>Content produced</span></h2>
+      <div class="post-grid">
+        <img src="posts/zy_iftar30.jpg" alt="Zaytun — Ramadan Majlis-al-Iftar 30% off campaign" loading="lazy">
+        <img src="posts/zy_combined.jpg" alt="Zaytun — Combined Platter Ramadan promotion" loading="lazy">
+        <img src="posts/zy_mughal.jpg" alt="Zaytun — Mughal Platter Iftar deal" loading="lazy">
+        <img src="posts/zy_holud.jpg" alt="Zaytun — Host Your Perfect Holud Night event booking post" loading="lazy">
+      </div>
+    </div>
     <div class="cs-section">
       <h2>The Problem <span>01 / 04</span></h2>
       <p>Zaytun is a Garden & Rooftop Fine-Dining Restaurant in Agargaon, Dhaka, specialising in wedding, holud, and corporate event hosting. Despite a premium offering, their Facebook presence was inconsistent — posts went up sporadically, lacked a unified tone, and weren't converting social reach into event enquiries.</p><p>The challenge was dual-channel: Dhaka's food audience expects Bangla-first content with an emotional, occasion-led hook, while event planners (the highest-value buyers) respond to structured, benefit-led copy in English. Neither was being served well.</p>
