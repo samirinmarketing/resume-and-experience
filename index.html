@@ -213,6 +213,23 @@
     color:var(--ink-soft); letter-spacing:.08em;
   }
 
+  /* ---- Project cards ---- */
+  .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .project-card{
+    background:var(--paper-alt);border:1px solid var(--rule);border-radius:var(--radius);
+    padding:24px;text-decoration:none;color:var(--ink);display:block;
+    transition:border-color .15s,transform .15s;
+  }
+  .project-card:hover{border-color:var(--clipped);transform:translateY(-2px);}
+  .project-card .eyebrow{margin-bottom:10px;display:block;}
+  .project-card h3{font-size:17px;margin-bottom:8px;line-height:1.25;}
+  .project-card p{color:var(--ink-soft);font-size:14px;margin:0 0 14px;}
+  .project-card .cs-link{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;
+    color:var(--clipped);display:flex;align-items:center;gap:5px;
+  }
+  @media (max-width:700px){.project-grid{grid-template-columns:1fr;}}
+
   /* ---- Work cards ---- */
   .work-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
   .work-card{
@@ -305,6 +322,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -521,6 +539,89 @@
         <h3>Full-funnel SEO, remote</h3>
         <p>Ran keyword research, on/off-page SEO, competitor analysis, and content production for a Home Construction-industry agency, remote from Dhaka.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow">H2 / Projects</span>
+      <h2>Case studies</h2>
+      <p class="lede">10 projects across social media, local SEO, product launches, WordPress plugin marketing, SEO blog writing, and AI citation strategy. Each with full Problem → Strategy → Execution → Results breakdown.</p>
+    </div>
+    <div class="project-grid">
+
+      <a href="cs-zaytun.html" class="project-card">
+        <span class="eyebrow">Social Media Marketing</span>
+        <h3>Zaytun Restaurant & Convention Hall</h3>
+        <p>Bilingual Bengali–English Facebook content strategy driving event bookings for a Dhaka rooftop fine-dining brand.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-nonkabob.html" class="project-card">
+        <span class="eyebrow">Social Media Marketing</span>
+        <h3>Non-Kabob Dhaka</h3>
+        <p>Food storytelling and Facebook content for a Turkish–Bengali fusion kebab brand across two Dhaka locations.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-baf.html" class="project-card">
+        <span class="eyebrow">Social Media Marketing · Government</span>
+        <h3>Bangladesh Air Force</h3>
+        <p>Official content for two BAF Facebook channels — recruitment campaigns and Air Force Museum visit promotion.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-somalicious.html" class="project-card">
+        <span class="eyebrow">Brand · Social Media · Creative Production</span>
+        <h3>Somalicious</h3>
+        <p>End-to-end creative content for a Dhaka luxury fashion brand — brand copy, storyboards, scripts, and photography direction.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-artmap.html" class="project-card">
+        <span class="eyebrow">Social Media Marketing · Scotland</span>
+        <h3>Artmap Argyll</h3>
+        <p>Event promotion and community content for a Scottish artists' network — Open Studios 2025 campaign copy.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-local-seo.html" class="project-card">
+        <span class="eyebrow">Local SEO · Web Copy · Scotland</span>
+        <h3>A&C Building Contractors + Brickstone Heritage</h3>
+        <p>Local SEO and web copy for two Lochgilphead construction businesses — keyword mapping, GA4 setup, GMB optimisation.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-timetics.html" class="project-card">
+        <span class="eyebrow">Product Launch · GTM Copywriting</span>
+        <h3>Timetics.ai — Product Hunt & AppSumo</h3>
+        <p>Platform-specific GTM copy for the dual launch of an AI scheduling tool — maker-community copy for Product Hunt, deal copy for AppSumo.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-eventin.html" class="project-card">
+        <span class="eyebrow">Homepage Copy · WordPress Repository</span>
+        <h3>Eventin by ThemeWinter</h3>
+        <p>Homepage copy rewrite and WordPress.org plugin repository optimisation for one of WordPress's leading event management plugins.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-angan.html" class="project-card">
+        <span class="eyebrow">SEO · Blog Writing</span>
+        <h3>Angan Properties</h3>
+        <p>Data-rich real estate blog series targeting high-intent flat price queries for Dhanmondi, Gulshan, and Mirpur.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
+      <a href="cs-geo-seo.html" class="project-card">
+        <span class="eyebrow">GEO · AI Citation · International SEO</span>
+        <h3>Techabyte.xyz</h3>
+        <p>9-month blog programme combining traditional SEO with GEO — building content that ranks in search and gets cited by AI tools.</p>
+        <span class="cs-link">View case study →</span>
+      </a>
+
     </div>
   </div>
 </section>

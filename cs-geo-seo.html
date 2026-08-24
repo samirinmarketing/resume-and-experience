@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Techabyte — AI Citation & International SEO — Iftekhar Ahmed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F7F1; --paper-alt:#FFFFFF; --ink:#1B2430; --ink-soft:#5B6472;
+    --highlighter:#DC9A3B; --highlighter-soft:#F3E2C2;
+    --clipped:#3F6655; --clipped-soft:#DEE8E3;
+    --rule:#DFDBCC; --max-w:800px; --radius:3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.68;font-size:16px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--clipped);font-weight:500;}
+  /* back bar */
+  .back-bar{position:sticky;top:0;z-index:50;background:rgba(247,247,241,.92);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:12px 24px;
+    display:flex;align-items:center;justify-content:space-between;}
+  .back-link{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
+    text-decoration:none;color:var(--clipped);display:flex;align-items:center;gap:6px;}
+  .back-link:hover{color:var(--ink);}
+  .cs-category{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;padding:5px 10px;border-radius:20px;
+    background:var(--clipped-soft);color:var(--clipped);}
+  /* hero */
+  .cs-hero{padding:52px 0 44px;border-bottom:1px solid var(--rule);}
+  .cs-hero h1{font-size:clamp(28px,4vw,44px);margin-top:12px;letter-spacing:-.01em;}
+  .cs-hero .lede{font-size:17px;color:var(--ink-soft);max-width:600px;margin-top:16px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;}
+  .meta-cell{font-size:13.5px;}
+  .meta-cell strong{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
+  /* sections */
+  .cs-body{padding:52px 0 80px;}
+  .cs-section{margin-bottom:52px;}
+  .cs-section h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);}
+  .cs-section h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .cs-section p{color:var(--ink-soft);margin:0 0 14px;}
+  .cs-section ul{color:var(--ink-soft);margin:0 0 14px;padding-left:20px;}
+  .cs-section ul li{margin-bottom:8px;}
+  /* results grid */
+  .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:4px;}
+  .result-card{background:var(--paper-alt);border:1px solid var(--rule);
+    border-radius:var(--radius);padding:18px 16px;}
+  .result-card .num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;
+    color:var(--clipped);line-height:1;}
+  .result-card .label{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
+  /* cta */
+  .cs-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:500;
+    background:var(--ink);color:var(--paper);padding:12px 22px;
+    border-radius:var(--radius);text-decoration:none;}
+  .cs-cta:hover{background:var(--clipped);}
+  /* tag list */
+  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+  .skill-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;
+    background:var(--clipped-soft);color:var(--clipped);
+    padding:5px 11px;border-radius:20px;}
+  /* next/prev */
+  .cs-nav{border-top:1px solid var(--rule);padding:28px 0;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
+    text-decoration:none;color:var(--ink-soft);}
+  .cs-nav a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="back-bar">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+  <span class="cs-category">AI Citation · GEO · International SEO</span>
+</div>
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case Study</div>
+    <h1>Techabyte.xyz</h1>
+    <p class="lede">An ongoing blog programme combining traditional SEO with Generative Engine Optimisation (GEO) — building content that ranks in search and gets cited by AI tools.</p>
+    <div class="meta-row"><div class="meta-cell"><strong>Client</strong>Techabyte Solutions (in-house)</div><div class="meta-cell"><strong>Type</strong>GEO · AI Citation · International SEO</div><div class="meta-cell"><strong>Tools</strong>Semrush · Ahrefs · Otterly.ai · Peec AI</div><div class="meta-cell"><strong>Period</strong>Nov 2025 – Aug 2026</div></div>
+    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">GEO (Generative Engine Optimisation)</span><span class="skill-tag">AI Citation Tracking</span><span class="skill-tag">International SEO</span><span class="skill-tag">Content Strategy</span><span class="skill-tag">Semrush</span><span class="skill-tag">Ahrefs</span><span class="skill-tag">Otterly.ai</span><span class="skill-tag">Peec AI</span></div>
+  </div>
+</section>
+<div class="cs-body">
+  <div class="wrap">
+    <div class="cs-section">
+      <h2>The Problem <span>01 / 04</span></h2>
+      <p>By late 2025, search behaviour had fractured: a meaningful share of queries that used to end at a Google blue link were now being resolved by AI Overviews, ChatGPT, Perplexity, and similar tools. For Techabyte — a digital agency competing for visibility in the SaaS and digital marketing niche — ranking on page one of Google was no longer sufficient. The brand also needed to be cited when AI tools answered questions in their space.</p><p>Traditional SEO optimises for crawlers. GEO (Generative Engine Optimisation) optimises for the language models that synthesise web content into answers. The two require different — and sometimes conflicting — content decisions. Navigating that tension while keeping content human-readable was the core challenge.</p>
+    </div>
+    <div class="cs-section">
+      <h2>Strategy <span>02 / 04</span></h2>
+      <p>Built a dual-signal content framework where every article was written to satisfy both traditional ranking factors and the structural patterns that large language models favour for citation:</p><ul><li><strong>For search:</strong> Target keyword anchoring, semantic depth, internal linking architecture, and structured H2/H3 hierarchy.</li><li><strong>For AI citation:</strong> Clear entity definitions early in the article, explicit attribution statements ("According to [source]..."), FAQ sections with direct question-answer pairs, and authoritative sourcing that models can extract and reference.</li><li>Monitored AI citation rates using Otterly.ai and Peec AI — tracking whether Techabyte blog content was being surfaced by ChatGPT, Perplexity, and Google AI Overviews for target queries.</li><li>Maintained a GEO content audit log: which queries were yielding AI citations, which articles needed structural updates to increase citation probability.</li></ul>
+    </div>
+    <div class="cs-section">
+      <h2>Execution <span>03 / 04</span></h2>
+      <ul><li>Ongoing blog production at techabyte.xyz from November 2025 through August 2026 — articles covering digital marketing, SaaS, and agency services topics.</li><li>Each article written with GEO-first structure: entity introduction, definitive statement blocks, FAQ appendix, and structured data markup recommendations.</li><li>AI citation tracking set up across Otterly.ai and Peec AI, with monthly reporting on citation volume and query coverage.</li><li>Iterated article structure based on citation data — articles that weren't getting cited were restructured to front-load definitional content.</li></ul>
+    </div>
+    <div class="cs-section">
+      <h2>Results <span>04 / 04</span></h2>
+      <div class="results-grid"><div class="result-card"><div class="num">9+ months</div><div class="label">Ongoing content programme</div></div><div class="result-card"><div class="num">Dual-channel</div><div class="label">SEO + GEO targeting</div></div><div class="result-card"><div class="num">AI tools</div><div class="label">ChatGPT · Perplexity · AI Overviews</div></div><div class="result-card"><div class="num">Live tracking</div><div class="label">Otterly.ai · Peec AI</div></div></div><p style='margin-top:18px;color:var(--ink-soft);font-size:14px;'>Active engagement through August 2026. Citation and ranking data is Techabyte proprietary — available for discussion in interview context.</p>
+    </div>
+    <a href='https://www.techabyte.xyz/blog/' target='_blank' rel='noopener' class='cs-cta'>View live — Techabyte Blog ↗</a>
+    <div class="cs-nav">
+      <a href="cs-angan.html">← Angan Properties</a>
+      <a href="index.html">Back to portfolio →</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

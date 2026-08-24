@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eventin — WordPress Plugin Marketing — Iftekhar Ahmed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F7F1; --paper-alt:#FFFFFF; --ink:#1B2430; --ink-soft:#5B6472;
+    --highlighter:#DC9A3B; --highlighter-soft:#F3E2C2;
+    --clipped:#3F6655; --clipped-soft:#DEE8E3;
+    --rule:#DFDBCC; --max-w:800px; --radius:3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.68;font-size:16px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--clipped);font-weight:500;}
+  /* back bar */
+  .back-bar{position:sticky;top:0;z-index:50;background:rgba(247,247,241,.92);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:12px 24px;
+    display:flex;align-items:center;justify-content:space-between;}
+  .back-link{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
+    text-decoration:none;color:var(--clipped);display:flex;align-items:center;gap:6px;}
+  .back-link:hover{color:var(--ink);}
+  .cs-category{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;padding:5px 10px;border-radius:20px;
+    background:var(--clipped-soft);color:var(--clipped);}
+  /* hero */
+  .cs-hero{padding:52px 0 44px;border-bottom:1px solid var(--rule);}
+  .cs-hero h1{font-size:clamp(28px,4vw,44px);margin-top:12px;letter-spacing:-.01em;}
+  .cs-hero .lede{font-size:17px;color:var(--ink-soft);max-width:600px;margin-top:16px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;}
+  .meta-cell{font-size:13.5px;}
+  .meta-cell strong{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
+  /* sections */
+  .cs-body{padding:52px 0 80px;}
+  .cs-section{margin-bottom:52px;}
+  .cs-section h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);}
+  .cs-section h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .cs-section p{color:var(--ink-soft);margin:0 0 14px;}
+  .cs-section ul{color:var(--ink-soft);margin:0 0 14px;padding-left:20px;}
+  .cs-section ul li{margin-bottom:8px;}
+  /* results grid */
+  .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:4px;}
+  .result-card{background:var(--paper-alt);border:1px solid var(--rule);
+    border-radius:var(--radius);padding:18px 16px;}
+  .result-card .num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;
+    color:var(--clipped);line-height:1;}
+  .result-card .label{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
+  /* cta */
+  .cs-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:500;
+    background:var(--ink);color:var(--paper);padding:12px 22px;
+    border-radius:var(--radius);text-decoration:none;}
+  .cs-cta:hover{background:var(--clipped);}
+  /* tag list */
+  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+  .skill-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;
+    background:var(--clipped-soft);color:var(--clipped);
+    padding:5px 11px;border-radius:20px;}
+  /* next/prev */
+  .cs-nav{border-top:1px solid var(--rule);padding:28px 0;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
+    text-decoration:none;color:var(--ink-soft);}
+  .cs-nav a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="back-bar">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+  <span class="cs-category">Homepage Copy · WordPress Repository</span>
+</div>
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case Study</div>
+    <h1>Eventin by ThemeWinter</h1>
+    <p class="lede">Homepage copy and WordPress.org plugin repository optimisation for one of the leading WordPress event management plugins.</p>
+    <div class="meta-row"><div class="meta-cell"><strong>Client</strong>Arraytics / ThemeWinter (Eventin)</div><div class="meta-cell"><strong>Scope</strong>Homepage Copy + WordPress.org Repository</div><div class="meta-cell"><strong>Type</strong>Conversion Copy · App Store SEO</div><div class="meta-cell"><strong>Role</strong>Senior Content Writer</div></div>
+    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">Conversion Copywriting</span><span class="skill-tag">WordPress.org Optimisation</span><span class="skill-tag">Plugin Repository SEO</span><span class="skill-tag">Homepage Copy</span><span class="skill-tag">Content Strategy</span></div>
+  </div>
+</section>
+<div class="cs-body">
+  <div class="wrap">
+    <div class="cs-section">
+      <h2>The Problem <span>01 / 04</span></h2>
+      <p>Eventin is a feature-rich WordPress event calendar and ticketing plugin — WooCommerce integration, RSVP management, attendee tracking, AI event creation. But its homepage copy was leading with features ("manage calendars, sell tickets, handle RSVPs") instead of the user's problem ("I need to run events on WordPress without cobbling together five plugins").</p><p>Simultaneously, the WordPress.org plugin repository listing — where thousands of potential installs are either won or lost — wasn't structured to capture the plugin's range of capabilities in the keyword-rich, benefit-first format that drives both rankings and install clicks.</p><p>A plugin that doesn't rank in the WordPress.org search doesn't get installed — no matter how good it is.</p>
+    </div>
+    <div class="cs-section">
+      <h2>Strategy <span>02 / 04</span></h2>
+      <p>Two parallel workstreams with different success metrics:</p><p><strong>Homepage copy:</strong> Restructured the messaging hierarchy around the primary buyer — an event organiser who wants an all-in-one solution. Led with the outcome ("run better events, from calendar to checkout") rather than the feature set. Introduced capability clusters (create events → sell tickets → manage attendees) as a logical flow matching the user's actual job-to-be-done.</p><p><strong>WordPress.org repository:</strong> Audited the readme.txt against the WordPress plugin search algorithm's key ranking factors — short description keyword density, long description structure, FAQ section completeness, and screenshot descriptions. Mapped Eventin's core capabilities to high-volume plugin search queries.</p>
+    </div>
+    <div class="cs-section">
+      <h2>Execution <span>03 / 04</span></h2>
+      <ul><li>Homepage copy rewrite: hero section, feature highlights, use case sections, and CTA copy for themewinter.com/eventin.</li><li>WordPress.org readme.txt rewrite for Eventin, WP Timetics, and WP Café — each optimised for their primary plugin category search queries.</li><li>Structured the Eventin readme with keyword-anchored short description (150 chars), benefit-led feature list, expanded long description with H2 sections, and an FAQ block targeting common pre-install questions.</li><li>Screenshot alt text and changelog copy to maintain fresh signals in the repository listing.</li></ul>
+    </div>
+    <div class="cs-section">
+      <h2>Results <span>04 / 04</span></h2>
+      <div class="results-grid"><div class="result-card"><div class="num">3</div><div class="label">Plugin repos optimised</div></div><div class="result-card"><div class="num">91.80%</div><div class="label">Landing page traffic increase</div></div><div class="result-card"><div class="num">Homepage</div><div class="label">Copy rewritten</div></div><div class="result-card"><div class="num">WordPress.org</div><div class="label">Structured for search</div></div></div><p style='margin-top:18px;color:var(--ink-soft);font-size:14px;'>The 91.80% traffic increase figure is from a landing page written during the same role at Arraytics. Plugin ranking data is Arraytics' proprietary data.</p>
+    </div>
+    <a href='https://themewinter.com/eventin/' target='_blank' rel='noopener' class='cs-cta'>View live — Eventin Homepage ↗</a>
+    <div class="cs-nav">
+      <a href="cs-timetics.html">← Timetics.ai Launch</a>
+      <a href="cs-angan.html">Angan Properties Blogs →</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
