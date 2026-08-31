@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iftekhar Ahmed — Senior Content Marketing Executive & Strategist</title>
+<title>Iftekhar Ahmed, Senior Content Marketing Executive & Strategist</title>
 <meta name="description" content="Portfolio of Iftekhar Ahmed, Senior Content Marketing Executive & Strategist specializing in SEO, GEO, and content-led growth for SaaS and WordPress products.">
-<meta property="og:title" content="Iftekhar Ahmed — Content Marketing Executive & Strategist">
+<meta property="og:title" content="Iftekhar Ahmed, Content Marketing Executive & Strategist">
 <meta property="og:description" content="SEO · GEO · Content Strategy for SaaS & WordPress products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,39 +112,103 @@
 
   /* ---- Hero ---- */
   .hero{
-    padding:64px 0 56px;
-    background-image:repeating-linear-gradient(to bottom, transparent, transparent 43px, var(--rule) 44px);
+    background:#0F1117;
+    padding:0;
+    min-height:92vh;
+    display:flex; align-items:center;
   }
-  .brief-fields{
-    display:flex; flex-wrap:wrap; gap:8px 28px;
-    margin-bottom:34px;
+  .hero-inner{
+    display:grid; grid-template-columns:1fr 420px;
+    align-items:center; gap:48px;
+    padding:72px 24px;
+    max-width:var(--max-w); margin:0 auto; width:100%;
   }
-  .brief-fields div{font-size:12.5px;}
-  .brief-fields .k{color:var(--ink-soft);}
-  .brief-fields .v{color:var(--ink); font-weight:600;}
-  .hero h1{font-size:clamp(34px,5.4vw,58px); letter-spacing:-.01em;}
+  .hero-greeting{
+    font-family:'IBM Plex Mono',monospace; font-size:14px;
+    color:#A0A8B8; letter-spacing:.12em; text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:clamp(36px,5.4vw,60px); letter-spacing:-.02em;
+    line-height:1.05; color:#FFFFFF; margin-bottom:4px;
+  }
+  .hero h1 .accent{color:#F5C842;}
   .hero .role{
     font-family:'Fraunces',serif; font-weight:400; font-style:italic;
-    font-size:clamp(18px,2.4vw,24px); color:var(--ink-soft); margin-top:8px;
+    font-size:clamp(16px,2vw,20px); color:#A0A8B8; margin-top:10px;
   }
-  .meta-desc{
-    max-width:640px; margin-top:28px; padding:16px 18px;
-    background:var(--paper-alt); border:1px solid var(--rule); border-radius:var(--radius);
+  .hero-desc{
+    max-width:480px; margin-top:24px; font-size:16px;
+    color:#C8CDD8; line-height:1.7;
   }
-  .meta-desc .label{
-    display:flex; align-items:center; gap:7px; margin-bottom:8px;
-  }
-  .dot{width:7px; height:7px; border-radius:50%; background:var(--clipped); flex-shrink:0;}
-  .meta-desc p{margin:0; font-size:16px; color:var(--ink);}
-  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-top:30px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-top:32px;}
   .btn{
     font-family:'IBM Plex Mono',monospace; font-size:13.5px; font-weight:500;
-    padding:12px 22px; border-radius:var(--radius); text-decoration:none;
-    display:inline-block; transition:transform .15s, box-shadow .15s;
+    padding:13px 24px; border-radius:var(--radius); text-decoration:none;
+    display:inline-flex; align-items:center; gap:7px;
+    transition:transform .15s, box-shadow .15s;
   }
-  .btn-primary{background:var(--highlighter); color:var(--ink);}
-  .btn-secondary{background:transparent; color:var(--ink); border:1px solid var(--ink);}
-  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:#F5C842; color:#0F1117;}
+  .btn-secondary{background:transparent; color:#FFFFFF; border:1px solid rgba(255,255,255,0.3);}
+  .btn-secondary:hover{border-color:#F5C842; color:#F5C842;}
+  .btn:hover{transform:translateY(-2px);}
+  /* photo */
+  .hero-photo-wrap{
+    position:relative; display:flex; justify-content:center;
+  }
+  .hero-photo-wrap::before{
+    content:''; position:absolute; inset:-12px; border-radius:12px;
+    background:linear-gradient(135deg,#F5C842 0%,transparent 60%);
+    opacity:.25; z-index:0;
+  }
+  .hero-photo{
+    width:100%; max-width:380px; border-radius:10px;
+    object-fit:cover; aspect-ratio:3/4;
+    position:relative; z-index:1;
+    border:2px solid rgba(245,200,66,0.2);
+    background:#1A1D26;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .hero-photo-placeholder{
+    width:100%; max-width:380px; border-radius:10px;
+    aspect-ratio:3/4; background:#1A1D26;
+    border:2px dashed rgba(245,200,66,0.3);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:12px; color:#A0A8B8; position:relative; z-index:1;
+  }
+  .hero-photo-placeholder .ph-icon{font-size:48px; opacity:.5;}
+  .hero-photo-placeholder p{font-family:'IBM Plex Mono',monospace; font-size:11px;
+    letter-spacing:.1em; text-align:center; margin:0; opacity:.6;}
+  /* stat bar */
+  .hero-stats{
+    display:flex; gap:32px; margin-top:36px; flex-wrap:wrap;
+  }
+  .hero-stat .num{
+    font-family:'Fraunces',serif; font-size:28px; font-weight:700;
+    color:#F5C842; line-height:1;
+  }
+  .hero-stat .lbl{
+    font-size:12px; color:#A0A8B8; margin-top:4px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  @media(max-width:780px){
+    .hero-inner{grid-template-columns:1fr; padding:56px 24px 40px;}
+    .hero-photo-wrap{order:-1; max-width:220px; margin:0 auto;}
+    .hero-photo-placeholder{max-width:220px; aspect-ratio:1;}
+  }
+  /* nav overrides for dark hero */
+  .nav-cta-book{
+    font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500;
+    background:#F5C842; color:#0F1117;
+    padding:9px 16px; border-radius:var(--radius); text-decoration:none;
+    white-space:nowrap;
+  }
+  /* ---- Calendly section ---- */
+  .calendly-section{background:#0F1117; padding:72px 0;}
+  .calendly-section h2{color:#FFFFFF; font-size:clamp(24px,3vw,34px); margin-top:8px;}
+  .calendly-section .eyebrow{color:#F5C842;}
+  .calendly-section .lede{color:#A0A8B8; max-width:520px; margin-top:10px;}
+  .calendly-widget-wrap{margin-top:40px; border-radius:8px; overflow:hidden;}
 
   /* ---- Section basics ---- */
   .section{padding:64px 0;}
@@ -321,12 +385,12 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#work">Work</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#book">Book a call</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="nav-cta">Get in touch</a>
+      <a href="#book" class="nav-cta-book">Book a call</a>
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </label>
@@ -334,26 +398,31 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="brief-fields mono">
-      <div><span class="k">ROLE_TYPE:</span> <span class="v">Content Marketing Executive & Strategist</span></div>
-      <div><span class="k">FOCUS:</span> <span class="v">SEO · GEO · Content Strategy</span></div>
-      <div><span class="k">BASE:</span> <span class="v">Dhaka, Bangladesh</span></div>
-      <div><span class="k">STATUS:</span> <span class="v placeholder">[open to opportunities]</span></div>
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-greeting">Senior Content Marketing Executive & Strategist</p>
+      <h1>Hello, I am<br><span class="accent">Iftekhar A. Samir</span></h1>
+      <p class="role">SEO · GEO · WordPress & SaaS Content</p>
+      <p class="hero-desc">7+ years turning search and content strategy into pipeline for 50+ brands, from WordPress plugin launches to AI citation strategies that get noticed by ChatGPT and Perplexity.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">7+</div><div class="lbl">Years experience</div></div>
+        <div class="hero-stat"><div class="num">50+</div><div class="lbl">Brands served</div></div>
+        <div class="hero-stat"><div class="num">10</div><div class="lbl">Case studies</div></div>
+      </div>
+      <div class="hero-ctas">
+        <a href="Iftekhar-Ahmed-Resume.pdf" target="_blank" class="btn btn-primary">↓ Download CV</a>
+        <a href="#book" class="btn btn-secondary">Book a free call</a>
+      </div>
     </div>
-
-    <h1>Iftekhar Ahmed</h1>
-    <p class="role">Senior Content Marketing Executive & Strategist</p>
-
-    <div class="meta-desc">
-      <div class="label mono eyebrow"><span class="dot"></span> META DESCRIPTION · 87/160 · GOOD LENGTH</div>
-      <p>Turning SEO, GEO, and WordPress/SaaS expertise into pipeline for 50+ brands worldwide.</p>
-    </div>
-
-    <div class="hero-ctas">
-      <a href="#work" class="btn btn-primary">View my work</a>
-      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    <div class="hero-photo-wrap">
+      <img src="profile.jpg" alt="Iftekhar Ahmed, Senior Content Marketing Executive"
+           class="hero-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="hero-photo-placeholder" style="display:none;">
+        <span class="ph-icon">👤</span>
+        <p>Upload profile.jpg<br>to repo root</p>
+      </div>
     </div>
   </div>
 </section>
@@ -361,13 +430,13 @@
 <section class="section" id="about">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / About</span>
+      <span class="eyebrow">About</span>
       <h2>A bit about my work</h2>
     </div>
     <div class="about-text">
-      <p>I'm a content marketing executive and strategist with 7+ years of experience across the SaaS and WordPress industries. I've worked cross-industry inside creative marketing agencies, serving 50+ brands across local and international markets — from WordPress plugin companies to a home construction agency in Scotland to Bangladesh Air Force Museum.</p>
-      <p>My work spans on-page and off-page SEO, keyword research and clustering, content strategy, and — more recently — generative engine optimization (GEO): making sure brands show up correctly when AI tools answer questions about their category. I hold a HubSpot Content Marketing Certification and have been recognized with a Sync Leader Award (2024) and a Team Leader Award (2022).</p>
-      <p>Right now I'm looking for a senior content role where I can own both the strategy and the execution — somewhere that's serious about search, not just publishing volume.</p>
+      <p>I'm a content marketing executive and strategist with 7+ years of experience across the SaaS and WordPress industries. I've worked cross-industry inside creative marketing agencies, serving 50+ brands across local and international markets, from WordPress plugin companies to a home construction agency in Scotland to Bangladesh Air Force Museum.</p>
+      <p>My work spans on-page and off-page SEO, keyword research and clustering, content strategy, and, more recently, generative engine optimization (GEO): making sure brands show up correctly when AI tools answer questions about their category. I hold a HubSpot Content Marketing Certification and have been recognized with a Sync Leader Award (2024) and a Team Leader Award (2022).</p>
+      <p>Right now I'm looking for a senior content role where I can own both the strategy and the execution, somewhere that's serious about search, not just publishing volume.</p>
     </div>
   </div>
 </section>
@@ -375,7 +444,7 @@
 <section class="section section-alt" id="skills">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / Skills</span>
+      <span class="eyebrow">Skills</span>
       <h2>What I do</h2>
     </div>
     <div class="tag-groups">
@@ -424,7 +493,7 @@
 <section class="section" id="tools">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / Tools & Platforms</span>
+      <span class="eyebrow">Tools & Platforms</span>
       <h2>What I work in daily</h2>
     </div>
     <div class="tools-grid">
@@ -445,14 +514,14 @@
 <section class="section" id="brands">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / Brands I've Worked With</span>
+      <span class="eyebrow">Brands I've Worked With</span>
       <h2>50+ brands, across 7 countries</h2>
-      <p class="brands-intro">From defence organisations and global WordPress plugin companies to restaurants, agencies, and local startups — a selection of brands whose content I've owned, shaped, or launched.</p>
+      <p class="brands-intro">From defence organisations and global WordPress plugin companies to restaurants, agencies, and local startups, a selection of brands whose content I've owned, shaped, or launched.</p>
     </div>
   </div>
   <div class="brands-track-wrap">
     <div class="brands-track">
-      <!-- Set A — 21 brands -->
+      <!-- Set A, 21 brands -->
       <img class="brand-logo" src="arraytics.jpg"         alt="Arraytics" title="Arraytics">
       <img class="brand-logo" src="timetics.png"          alt="Timetics" title="Timetics">
       <img class="brand-logo" src="wpcafe.png"            alt="WPCafe" title="WPCafe">
@@ -474,7 +543,7 @@
       <img class="brand-logo" src="mu.jpg"                alt="MU" title="MU">
       <img class="brand-logo" src="airforce.jpg"          alt="Bangladesh Air Force" title="Bangladesh Air Force">
       <img class="brand-logo" src="icchapoorn.jpg"        alt="Icchapoorn" title="Icchapoorn">
-      <!-- Set B — duplicate for seamless loop -->
+      <!-- Set B, duplicate for seamless loop -->
       <img class="brand-logo" src="arraytics.jpg"         alt="Arraytics" title="Arraytics">
       <img class="brand-logo" src="timetics.png"          alt="Timetics" title="Timetics">
       <img class="brand-logo" src="wpcafe.png"            alt="WPCafe" title="WPCafe">
@@ -504,38 +573,38 @@
 <section class="section section-alt" id="work">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / Featured Work</span>
+      <span class="eyebrow">Featured Work</span>
       <h2>Selected campaigns</h2>
-      <p class="lede">Real numbers pulled straight from your CV — add more wherever you have them.</p>
+      <p class="lede">Real numbers pulled straight from your CV, add more wherever you have them.</p>
     </div>
     <div class="work-grid">
       <div class="work-card">
-        <span class="eyebrow">Techabyte Solutions · 2025–2026</span>
+        <span class="eyebrow">Techabyte Solutions · 2025, 2026</span>
         <h3>Agency accounts, GEO-first</h3>
-        <p>Owned content strategy and editorial calendars for agency accounts including <span class="metric">Bangladesh Air Force</span>, Somalicious, Zaytun and TopFace — pairing SEO with early GEO practices to grow organic reach.</p>
+        <p>Owned content strategy and editorial calendars for agency accounts including <span class="metric">Bangladesh Air Force</span>, Somalicious, Zaytun and TopFace, pairing SEO with early GEO practices to grow organic reach.</p>
       </div>
       <div class="work-card">
         <span class="eyebrow">Woooplugin · 2024</span>
         <h3>Black Friday Roundup 2024</h3>
-        <p>Coordinated a roundup campaign across <span class="metric">39 WordPress brands</span> — including RankMath, Astra, and SureTriggers — via direct email outreach.</p>
+        <p>Coordinated a roundup campaign across <span class="metric">39 WordPress brands</span>, including RankMath, Astra, and SureTriggers, via direct email outreach.</p>
       </div>
       <div class="work-card">
-        <span class="eyebrow">Arraytics · 2023–2024</span>
+        <span class="eyebrow">Arraytics · 2023, 2024</span>
         <h3>Timetics.ai launch</h3>
         <p>Launched Timetics.ai on AppSumo and Product Hunt; wrote a landing page that hit a <span class="metric">91.80% traffic rate</span> and newsletters averaging a <span class="metric">14% CTR</span>.</p>
       </div>
       <div class="work-card">
-        <span class="eyebrow">Markosis Australia · 2020–2023</span>
+        <span class="eyebrow">Markosis Australia · 2020, 2023</span>
         <h3>Creative lead, 30 brands</h3>
         <p>Led the Creative Department as Team Lead, running social strategy for <span class="metric">30 brands worldwide</span> and campaigns for 20 of them. Team Leader Award, 2022.</p>
       </div>
       <div class="work-card">
-        <span class="eyebrow">ClassRoom Ltd. · 2018–2020</span>
+        <span class="eyebrow">ClassRoom Ltd. · 2018, 2020</span>
         <h3>NCTB curriculum, animated</h3>
         <p>Converted the <span class="metric">national SSC curriculum</span> into animated learning content within a year, and launched the "ClassRoom Activator" affiliate program with 200+ university students.</p>
       </div>
       <div class="work-card">
-        <span class="eyebrow">Connect2build Scotland · 2024–2025</span>
+        <span class="eyebrow">Connect2build Scotland · 2024, 2025</span>
         <h3>Full-funnel SEO, remote</h3>
         <p>Ran keyword research, on/off-page SEO, competitor analysis, and content production for a Home Construction-industry agency, remote from Dhaka.</p>
       </div>
@@ -546,7 +615,7 @@
 <section class="section" id="projects">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / Projects</span>
+      <span class="eyebrow">Projects</span>
       <h2>Case studies</h2>
       <p class="lede">10 projects across social media, local SEO, product launches, WordPress plugin marketing, SEO blog writing, and AI citation strategy. Each with full Problem → Strategy → Execution → Results breakdown.</p>
     </div>
@@ -555,49 +624,49 @@
       <a href="cs-zaytun.html" class="project-card">
         <span class="eyebrow">Social Media Marketing</span>
         <h3>Zaytun Restaurant & Convention Hall</h3>
-        <p>Bilingual Bengali–English Facebook content strategy driving event bookings for a Dhaka rooftop fine-dining brand.</p>
+        <p>Bilingual Bengali, English Facebook content strategy driving event bookings for a Dhaka rooftop fine-dining brand.</p>
         <span class="cs-link">View case study →</span>
       </a>
 
       <a href="cs-nonkabob.html" class="project-card">
         <span class="eyebrow">Social Media Marketing</span>
         <h3>Non-Kabob Dhaka</h3>
-        <p>Food storytelling and Facebook content for a Turkish–Bengali fusion kebab brand across two Dhaka locations.</p>
+        <p>Food storytelling and Facebook content for a Turkish, Bengali fusion kebab brand across two Dhaka locations.</p>
         <span class="cs-link">View case study →</span>
       </a>
 
       <a href="cs-baf.html" class="project-card">
         <span class="eyebrow">Social Media Marketing · Government</span>
         <h3>Bangladesh Air Force</h3>
-        <p>Official content for two BAF Facebook channels — recruitment campaigns and Air Force Museum visit promotion.</p>
+        <p>Official content for two BAF Facebook channels, recruitment campaigns and Air Force Museum visit promotion.</p>
         <span class="cs-link">View case study →</span>
       </a>
 
       <a href="cs-somalicious.html" class="project-card">
         <span class="eyebrow">Brand · Social Media · Creative Production</span>
         <h3>Somalicious</h3>
-        <p>End-to-end creative content for a Dhaka luxury fashion brand — brand copy, storyboards, scripts, and photography direction.</p>
+        <p>End-to-end creative content for a Dhaka luxury fashion brand, brand copy, storyboards, scripts, and photography direction.</p>
         <span class="cs-link">View case study →</span>
       </a>
 
       <a href="cs-artmap.html" class="project-card">
         <span class="eyebrow">Social Media Marketing · Scotland</span>
         <h3>Artmap Argyll</h3>
-        <p>Event promotion and community content for a Scottish artists' network — Open Studios 2025 campaign copy.</p>
+        <p>Event promotion and community content for a Scottish artists' network, Open Studios 2025 campaign copy.</p>
         <span class="cs-link">View case study →</span>
       </a>
 
       <a href="cs-local-seo.html" class="project-card">
         <span class="eyebrow">Local SEO · Web Copy · Scotland</span>
         <h3>A&C Building Contractors + Brickstone Heritage</h3>
-        <p>Local SEO and web copy for two Lochgilphead construction businesses — keyword mapping, GA4 setup, GMB optimisation.</p>
+        <p>Local SEO and web copy for two Lochgilphead construction businesses, keyword mapping, GA4 setup, GMB optimisation.</p>
         <span class="cs-link">View case study →</span>
       </a>
 
       <a href="cs-timetics.html" class="project-card">
         <span class="eyebrow">Product Launch · GTM Copywriting</span>
-        <h3>Timetics.ai — Product Hunt & AppSumo</h3>
-        <p>Platform-specific GTM copy for the dual launch of an AI scheduling tool — maker-community copy for Product Hunt, deal copy for AppSumo.</p>
+        <h3>Timetics.ai, Product Hunt & AppSumo</h3>
+        <p>Platform-specific GTM copy for the dual launch of an AI scheduling tool, maker-community copy for Product Hunt, deal copy for AppSumo.</p>
         <span class="cs-link">View case study →</span>
       </a>
 
@@ -618,7 +687,7 @@
       <a href="cs-geo-seo.html" class="project-card">
         <span class="eyebrow">GEO · AI Citation · International SEO</span>
         <h3>Techabyte.xyz</h3>
-        <p>9-month blog programme combining traditional SEO with GEO — building content that ranks in search and gets cited by AI tools.</p>
+        <p>9-month blog programme combining traditional SEO with GEO, building content that ranks in search and gets cited by AI tools.</p>
         <span class="cs-link">View case study →</span>
       </a>
 
@@ -629,54 +698,54 @@
 <section class="section" id="experience">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / Experience</span>
+      <span class="eyebrow">Experience</span>
       <h2>Where I've worked</h2>
-      <p class="lede">9 roles across 10+ years — from academic writing to leading creative departments for 30 brands simultaneously.</p>
+      <p class="lede">9 roles across 10+ years, from academic writing to leading creative departments for 30 brands simultaneously.</p>
     </div>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-role">Content Strategist (Contract) · Techabyte Solutions</div>
-        <div class="tl-meta">Mirpur DOHS, Dhaka · Nov 2025 – Jun 2026</div>
+        <div class="tl-meta">Mirpur DOHS, Dhaka · Nov 2025, Jun 2026</div>
         <div class="tl-desc">Owned content strategy and editorial calendars for agency accounts; led GEO/SEO implementation and AI-assisted visual content direction.</div>
       </div>
       <div class="tl-item">
         <div class="tl-role">Freelance SEO Strategist (Remote) · Connect2build Scotland</div>
-        <div class="tl-meta">Scotland · Dec 2024 – Oct 2025</div>
+        <div class="tl-meta">Scotland · Dec 2024, Oct 2025</div>
         <div class="tl-desc">Ran keyword research, on/off-page SEO, and content production for a Home Construction-industry agency.</div>
       </div>
       <div class="tl-item">
         <div class="tl-role">Content Marketing Associate (Contract) · Woooplugin</div>
-        <div class="tl-meta">Full-Remote · Sep 2024 – Nov 2024</div>
+        <div class="tl-meta">Full-Remote · Sep 2024, Nov 2024</div>
         <div class="tl-desc">Led the Black Friday Roundup 2024, coordinating 39 WordPress brands via email outreach.</div>
       </div>
       <div class="tl-item">
         <div class="tl-role">Senior Content Writer · Arraytics</div>
-        <div class="tl-meta">Dhaka, Bangladesh · Mar 2023 – Aug 2024</div>
+        <div class="tl-meta">Dhaka, Bangladesh · Mar 2023, Aug 2024</div>
         <div class="tl-desc">Wrote product, landing, and email content for WordPress plugins; launched Timetics.ai on AppSumo and Product Hunt.</div>
       </div>
       <div class="tl-item">
         <div class="tl-role">Senior Copywriter & Brand Planner · Markosis Australia</div>
-        <div class="tl-meta">Tasmania, Australia (Remote) · Dec 2020 – Feb 2023</div>
+        <div class="tl-meta">Tasmania, Australia (Remote) · Dec 2020, Feb 2023</div>
         <div class="tl-desc">Led the Creative Department, managing social strategy and brand content for 30 brands worldwide.</div>
       </div>
       <div class="tl-item">
         <div class="tl-role">Project Manager · ClassRoom Ltd.</div>
-        <div class="tl-meta">Dhaka, Bangladesh · Apr 2018 – Feb 2020</div>
+        <div class="tl-meta">Dhaka, Bangladesh · Apr 2018, Feb 2020</div>
         <div class="tl-desc">Built the business model and led hiring across 4 departments; converted the national SSC curriculum into animated content.</div>
       </div>
       <div class="tl-item">
         <div class="tl-role">Junior Content Marketing Executive · OmniKick Corp.</div>
-        <div class="tl-meta">Dhaka, Bangladesh · Jul 2017 – Apr 2018</div>
+        <div class="tl-meta">Dhaka, Bangladesh · Jul 2017, Apr 2018</div>
         <div class="tl-desc">Wrote lead-generation content and ran email automation and outbound campaigns across the UK, US, Australia, and Spain.</div>
       </div>
       <div class="tl-item">
         <div class="tl-role">Researcher & Academic Writer · Prime Research And Consultancy Center</div>
-        <div class="tl-meta">Remote · Feb 2016 – Apr 2017</div>
-        <div class="tl-desc">Wrote 100+ long-form research documents (3,000–5,000 words) and ran editorial corrections for academic clients.</div>
+        <div class="tl-meta">Remote · Feb 2016, Apr 2017</div>
+        <div class="tl-desc">Wrote 100+ long-form research documents (3,000, 5,000 words) and ran editorial corrections for academic clients.</div>
       </div>
       <div class="tl-item">
         <div class="tl-role">Contract Employee · Durbin Labs Ltd.</div>
-        <div class="tl-meta">Mirpur DOHS, Dhaka · May 2015 – Jan 2016</div>
+        <div class="tl-meta">Mirpur DOHS, Dhaka · May 2015, Jan 2016</div>
         <div class="tl-desc">Wrote app content for the "Banbeis App" launch and led recruitment for the Durbin Academy talent team.</div>
       </div>
     </div>
@@ -686,7 +755,7 @@
 <section class="section section-alt" id="credentials">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / Certifications & Awards</span>
+      <span class="eyebrow">Certifications & Awards</span>
       <h2>Recognition</h2>
     </div>
     <div class="badge-row">
@@ -701,21 +770,21 @@
         <div class="badge-icon">★</div>
         <div>
           <div class="badge-title">Sync Leader Award</div>
-          <div class="badge-sub">2024 · Arraytics — for cross-team collaboration between product, support and marketing during a 6-month probation period.</div>
+          <div class="badge-sub">2024 · Arraytics, for cross-team collaboration between product, support and marketing during a 6-month probation period.</div>
         </div>
       </div>
       <div class="badge">
         <div class="badge-icon">★</div>
         <div>
           <div class="badge-title">Team Leader Award</div>
-          <div class="badge-sub">2022 · Markosis Australia — for leading 20 brands as Creative Team Lead, producing 150+ pieces of content a month.</div>
+          <div class="badge-sub">2022 · Markosis Australia, for leading 20 brands as Creative Team Lead, producing 150+ pieces of content a month.</div>
         </div>
       </div>
       <div class="badge">
         <div class="badge-icon">✓</div>
         <div>
           <div class="badge-title">Semrush Academy</div>
-          <div class="badge-sub">GA4 for SEO — How data helps businesses grow · Course by Jeff Sauer · Jun 2025</div>
+          <div class="badge-sub">GA4 for SEO, How data helps businesses grow · Course by Jeff Sauer · Jun 2025</div>
         </div>
       </div>
     </div>
@@ -725,20 +794,20 @@
 <section class="section" id="education">
   <div class="wrap reveal">
     <div class="section-head">
-      <span class="eyebrow">H2 / Education</span>
+      <span class="eyebrow">Education</span>
       <h2>Education</h2>
     </div>
     <div class="edu-item">
       <strong>University of Dhaka</strong>
-      <span>BBA (Dropout), Marketing · Dhaka · 2014 – 2018</span>
+      <span>BBA (Dropout), Marketing · Dhaka · 2014, 2018</span>
     </div>
     <div class="edu-item">
       <strong>Dhaka Commerce College</strong>
-      <span>Business Studies · Dhaka · 2011 – 2013</span>
+      <span>Business Studies · Dhaka · 2011, 2013</span>
     </div>
     <div class="edu-item">
       <strong>Pallabi Mi Model High School</strong>
-      <span>Commerce · Dhaka · 2001 – 2011</span>
+      <span>Commerce · Dhaka · 2001, 2011</span>
     </div>
   </div>
 </section>
@@ -760,7 +829,7 @@
       <div class="li-block">
         <h3>INTERESTS</h3>
         <ul class="interest-list">
-          <li>Reading — marketing books & novels</li>
+          <li>Reading, marketing books & novels</li>
           <li>Movies, TV series & anime</li>
           <li>Memes and sarcasm</li>
         </ul>
@@ -769,11 +838,25 @@
   </div>
 </section>
 
+<section class="calendly-section" id="book">
+  <div class="wrap">
+    <span class="eyebrow mono">Schedule · Let's Talk</span>
+    <h2>Book a free 30-min call</h2>
+    <p class="lede">Want to talk content strategy, SEO/GEO, or just explore if we're a good fit? Pick a slot that works for you.</p>
+    <div class="calendly-widget-wrap">
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/samirinmarketing/30min"
+           style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="wrap">
     <span class="eyebrow mono">H2 / Get in touch</span>
     <h2>Let's talk content.</h2>
-    <p style="color:rgba(247,247,241,0.75); max-width:520px; margin-top:14px;">Open to content marketing, SEO/GEO strategy, and content leadership roles — remote-friendly.</p>
+    <p style="color:rgba(247,247,241,0.75); max-width:520px; margin-top:14px;">Open to content marketing, SEO/GEO strategy, and content leadership roles, remote-friendly.</p>
     <div class="contact-links">
       <a href="mailto:samirinmarketing@gmail.com">✉ samirinmarketing@gmail.com</a>
       <a href="https://www.linkedin.com/in/iftekhar-ahmed-in-marketing/" target="_blank" rel="noopener">in linkedin.com/in/iftekhar-ahmed-in-marketing</a>
