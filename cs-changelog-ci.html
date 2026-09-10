@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Competitive Intelligence by Changelog, Iftekhar Ahmed</title>
+<meta name="description" content="How I built a repeatable competitive-intelligence framework for a WordPress plugin company by systematically tracking competitors' changelogs, feature releases, and social announcements.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F7F1; --paper-alt:#FFFFFF; --ink:#1B2430; --ink-soft:#5B6472;
+    --highlighter:#DC9A3B; --highlighter-soft:#F3E2C2;
+    --clipped:#3F6655; --clipped-soft:#DEE8E3;
+    --rule:#DFDBCC; --max-w:800px; --radius:3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.68;font-size:16px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--clipped);font-weight:500;}
+  /* back bar */
+  .back-bar{position:sticky;top:0;z-index:50;background:rgba(247,247,241,.92);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:12px 24px;
+    display:flex;align-items:center;justify-content:space-between;}
+  .back-link{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
+    text-decoration:none;color:var(--clipped);display:flex;align-items:center;gap:6px;}
+  .back-link:hover{color:var(--ink);}
+  .cs-category{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;padding:5px 10px;border-radius:20px;
+    background:var(--clipped-soft);color:var(--clipped);}
+  /* hero */
+  .cs-hero{padding:52px 0 44px;border-bottom:1px solid var(--rule);}
+  .cs-hero h1{font-size:clamp(28px,4vw,44px);margin-top:12px;letter-spacing:-.01em;}
+  .cs-hero .lede{font-size:17px;color:var(--ink-soft);max-width:600px;margin-top:16px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;}
+  .meta-cell{font-size:13.5px;}
+  .meta-cell strong{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
+  /* sections */
+  .cs-body{padding:52px 0 80px;}
+  .cs-section{margin-bottom:52px;}
+  .cs-section h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);}
+  .cs-section h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .cs-section p{color:var(--ink-soft);margin:0 0 14px;}
+  .cs-section ul{color:var(--ink-soft);margin:0 0 14px;padding-left:20px;}
+  .cs-section ul li{margin-bottom:8px;}
+  /* results grid */
+  .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:4px;}
+  .result-card{background:var(--paper-alt);border:1px solid var(--rule);
+    border-radius:var(--radius);padding:18px 16px;}
+  .result-card .num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;
+    color:var(--clipped);line-height:1;}
+  .result-card .label{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
+  /* cta */
+  .cs-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:500;
+    background:var(--ink);color:var(--paper);padding:12px 22px;
+    border-radius:var(--radius);text-decoration:none;}
+  .cs-cta:hover{background:var(--clipped);}
+  /* tag list */
+  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+  .skill-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;
+    background:var(--clipped-soft);color:var(--clipped);
+    padding:5px 11px;border-radius:20px;}
+  /* next/prev */
+  .cs-nav{border-top:1px solid var(--rule);padding:28px 0;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
+    text-decoration:none;color:var(--ink-soft);}
+  .cs-nav a:hover{color:var(--ink);}
+
+  /* gallery */
+  .cs-gallery{margin-bottom:52px;}
+  .cs-gallery h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);font-family:'Fraunces',Georgia,serif;}
+  .cs-gallery h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .post-grid img{width:100%;border-radius:4px;border:1px solid var(--rule);
+    display:block;transition:transform .2s,box-shadow .2s;}
+  .post-grid img:hover{transform:scale(1.02);box-shadow:0 6px 24px rgba(0,0,0,.1);}
+  @media(max-width:540px){.post-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="back-bar">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+  <span class="cs-category">Competitive Intelligence</span>
+</div>
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case Study</div>
+    <h1>Competitive Intelligence by Changelog</h1>
+    <p class="lede">A repeatable framework for tracking what competitors are actually shipping, built from WordPress changelogs, CodeCanyon pages, and correlated social announcements.</p>
+    <div class="meta-row"><div class="meta-cell"><strong>Company</strong>Arraytics / ThemeWinter</div><div class="meta-cell"><strong>Product</strong>Timetics (scheduling plugin)</div><div class="meta-cell"><strong>Type</strong>Competitive Intelligence Framework</div><div class="meta-cell"><strong>Period</strong>Aug 2023</div></div>
+    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">Competitive Intelligence</span><span class="skill-tag">Changelog Analysis</span><span class="skill-tag">Market Research</span><span class="skill-tag">Feature Gap Analysis</span><span class="skill-tag">WordPress Plugin Ecosystem</span><span class="skill-tag">Content Strategy</span></div>
+  </div>
+</section>
+<div class="cs-body">
+  <div class="wrap">
+    <div class="cs-section">
+      <h2>The Problem <span>01 / 04</span></h2>
+      <p>Timetics was competing against established plugins with dramatically larger footprints. The Events Calendar had 800,000+ active installs and 2,099 reviews. Events Manager by Pixelite held 90,000+ installs. Timely sat at 70,000+ installs with 1,653 reviews. WP Amelia had 50,000+ installs and 443 reviews. On the scheduling side, Calendly, Trafft, and Appointlet each held significant share at premium price points: Calendly at $10-$20/seat/month, Trafft at $29-$250/month, even YouCanBook.me at $14.95/user/month.</p><p>The team had strong product opinions but no structured way to track what competitors were actually building, how fast they were shipping, or which features were gaining user traction. Without this, positioning decisions were made on instinct rather than evidence.</p><p style="font-size:13px;color:var(--ink-soft);"><em>Competitor figures from <code>Eventin WordPress Competitor Tag Research.xlsx</code> and <code>Features on Comparison [Pricing].xlsx</code>.</em></p>
+    </div>
+    <div class="cs-section">
+      <h2>Strategy <span>02 / 04</span></h2>
+      <p>Built a documented, repeatable competitive intelligence process with five steps:</p><ul><li>List the competitors across both verticals: event management (The Events Calendar, Events Manager, WP Event Manager, Event Tickets) and scheduling (Calendly, Trafft, Appointlet).</li><li>Pull their WordPress.org and CodeCanyon product pages. Capture review counts and active install figures as a baseline.</li><li>Read their changelogs in the Development section. Log every entry by date, categorising each as [New], [Tweak], or [Fix].</li><li>Check their social pages for any posts tied to feature announcements. Correlate announcement timing with the changelog dates to identify which features they chose to promote (and which they shipped quietly).</li><li>Synthesise into a feature-velocity comparison: who is shipping what, how often, and what does the gap analysis say about Timetics' roadmap priorities.</li></ul>
+      <p>The framework extended beyond changelogs into two additional intelligence channels:</p>
+      <ul><li><strong>Paid-funnel teardown:</strong> Audited The Events Calendar's Facebook advertising, classifying every ad by funnel stage (Conversion Topic, Trial Tryout, Cart Retargeting) with reaction counts and creative copy captured per ad. This showed where the category leader was spending and which stage of the funnel they were optimising for.</li>
+      <li><strong>Social-content audit:</strong> Tracked Bookly's social output from Dec 2022 to Mar 2023 across content type, format, likes, and shares. More valuably, mined their comment sections for customer complaints (authorisation page returning blank screens after update, unanswered support emails). Competitor complaints are positioning opportunities.</li></ul>
+      <p style="font-size:13px;color:var(--ink-soft);"><em>Paid-funnel data from <code>Eventin Competitor's Paid Advertisement Analysis (FB).xlsx</code>. Social audit from <code>Competitor Research for TimeTics (1).xlsx</code>.</em></p>
+    </div>
+    <div class="cs-section">
+      <h2>Execution <span>03 / 04</span></h2>
+      <ul><li>Documented the full process in a single reference file, making it repeatable by anyone on the team without the original analyst.</li><li>Benchmarked five event-management competitors with review counts and install figures recorded at the time of analysis.</li><li>Tracked scheduling competitors (Calendly, Trafft, Appointlet) separately, since the buyer profile and competitive dynamics differ from the WordPress plugin space.</li><li>Output fed directly into the comparison-page programme that followed in September and October 2023: the Timetics vs. Calendly, Timetics vs. Trafft, and Appointlet vs. Calendly vs. Timetics pages were all built on this competitive data.</li></ul>
+    </div>
+    <div class="cs-section">
+      <h2>Results <span>04 / 04</span></h2>
+      <div class="results-grid"><div class="result-card"><div class="num">5+</div><div class="label">Event competitors benchmarked</div></div><div class="result-card"><div class="num">3</div><div class="label">Scheduling competitors tracked</div></div><div class="result-card"><div class="num">Repeatable</div><div class="label">Documented framework</div></div><div class="result-card"><div class="num">Pipeline</div><div class="label">Fed comparison-page programme</div></div></div><p style="margin-top:18px;color:var(--ink-soft);font-size:14px;">Methodology is the author's own. Underlying data and artefacts are Arraytics/ThemeWinter property, available on request with permission.</p>
+    </div>
+    
+    <div class="cs-nav">
+      <a href="cs-geo-seo.html">← Techabyte AI Citation</a>
+      <a href="cs-calendly-positioning.html">Calendly Positioning →</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

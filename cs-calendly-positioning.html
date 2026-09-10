@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repositioning a WordPress Plugin Against Calendly, Iftekhar Ahmed</title>
+<meta name="description" content="How I positioned Timetics against Calendly, Trafft, and Appointlet through keyword research, comparison pages, and deliberate segment disqualification.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F7F1; --paper-alt:#FFFFFF; --ink:#1B2430; --ink-soft:#5B6472;
+    --highlighter:#DC9A3B; --highlighter-soft:#F3E2C2;
+    --clipped:#3F6655; --clipped-soft:#DEE8E3;
+    --rule:#DFDBCC; --max-w:800px; --radius:3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.68;font-size:16px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--clipped);font-weight:500;}
+  /* back bar */
+  .back-bar{position:sticky;top:0;z-index:50;background:rgba(247,247,241,.92);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:12px 24px;
+    display:flex;align-items:center;justify-content:space-between;}
+  .back-link{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
+    text-decoration:none;color:var(--clipped);display:flex;align-items:center;gap:6px;}
+  .back-link:hover{color:var(--ink);}
+  .cs-category{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;padding:5px 10px;border-radius:20px;
+    background:var(--clipped-soft);color:var(--clipped);}
+  /* hero */
+  .cs-hero{padding:52px 0 44px;border-bottom:1px solid var(--rule);}
+  .cs-hero h1{font-size:clamp(28px,4vw,44px);margin-top:12px;letter-spacing:-.01em;}
+  .cs-hero .lede{font-size:17px;color:var(--ink-soft);max-width:600px;margin-top:16px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;}
+  .meta-cell{font-size:13.5px;}
+  .meta-cell strong{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
+  /* sections */
+  .cs-body{padding:52px 0 80px;}
+  .cs-section{margin-bottom:52px;}
+  .cs-section h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);}
+  .cs-section h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .cs-section p{color:var(--ink-soft);margin:0 0 14px;}
+  .cs-section ul{color:var(--ink-soft);margin:0 0 14px;padding-left:20px;}
+  .cs-section ul li{margin-bottom:8px;}
+  /* results grid */
+  .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:4px;}
+  .result-card{background:var(--paper-alt);border:1px solid var(--rule);
+    border-radius:var(--radius);padding:18px 16px;}
+  .result-card .num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;
+    color:var(--clipped);line-height:1;}
+  .result-card .label{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
+  /* cta */
+  .cs-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:500;
+    background:var(--ink);color:var(--paper);padding:12px 22px;
+    border-radius:var(--radius);text-decoration:none;}
+  .cs-cta:hover{background:var(--clipped);}
+  /* tag list */
+  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+  .skill-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;
+    background:var(--clipped-soft);color:var(--clipped);
+    padding:5px 11px;border-radius:20px;}
+  /* next/prev */
+  .cs-nav{border-top:1px solid var(--rule);padding:28px 0;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
+    text-decoration:none;color:var(--ink-soft);}
+  .cs-nav a:hover{color:var(--ink);}
+
+  /* gallery */
+  .cs-gallery{margin-bottom:52px;}
+  .cs-gallery h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);font-family:'Fraunces',Georgia,serif;}
+  .cs-gallery h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .post-grid img{width:100%;border-radius:4px;border:1px solid var(--rule);
+    display:block;transition:transform .2s,box-shadow .2s;}
+  .post-grid img:hover{transform:scale(1.02);box-shadow:0 6px 24px rgba(0,0,0,.1);}
+  @media(max-width:540px){.post-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="back-bar">
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+  <span class="cs-category">SEO · Positioning · Comparison Pages</span>
+</div>
+<section class="cs-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case Study</div>
+    <h1>Positioning Against the Category Leader</h1>
+    <p class="lede">Keyword research through comparison-page copywriting for Timetics vs. Calendly, Timetics vs. Trafft, and a three-way Appointlet vs. Calendly vs. Timetics piece.</p>
+    <div class="meta-row"><div class="meta-cell"><strong>Company</strong>Arraytics / ThemeWinter</div><div class="meta-cell"><strong>Product</strong>Timetics</div><div class="meta-cell"><strong>Type</strong>SEO Comparison Pages + Positioning</div><div class="meta-cell"><strong>Period</strong>Sep, Oct 2023</div></div>
+    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">Keyword Research</span><span class="skill-tag">Content Strategy</span><span class="skill-tag">Comparison Page Copywriting</span><span class="skill-tag">Competitive Positioning</span><span class="skill-tag">SEO</span><span class="skill-tag">Segment Disqualification</span></div>
+  </div>
+</section>
+<div class="cs-body">
+  <div class="wrap">
+    <div class="cs-section">
+      <h2>The Problem <span>01 / 04</span></h2>
+      <p>Calendly owns the scheduling category. When WordPress site owners search for booking solutions, "Calendly" is the reference point; everything else is measured against it. Timetics needed to appear in those comparison searches without pretending to be a Calendly replacement for everyone.</p><p>The harder problem: Timetics genuinely isn't for enterprise teams running complex, multi-org scheduling. Positioning that tries to compete head-on with Calendly at scale would lose credibility. The copy needed to concede Calendly's strengths, then carve out a specific segment where Timetics wins.</p>
+      <p>The keyword landscape reinforced this: "appointment booking" pulled 5,000 monthly searches at competition index 100, "scheduling app" had 5,000 at index 52, and "booking system for small business" had 500 searches but top-of-page bids of $10.48-$45.36, signalling serious commercial intent. The database also captured the misspelling "scheudling" at 5,000 monthly searches with low competition, a genuine long-tail opportunity.</p>
+      <p style="font-size:13px;color:var(--ink-soft);"><em>Keyword data from <code>Timetics AI Keyword Research Database.xlsx</code> (Google Keyword Planner, Jan-Dec 2023, US market).</em></p>
+    </div>
+    <div class="cs-section">
+      <h2>Strategy <span>02 / 04</span></h2>
+      <p>Ran a full keyword research to content pipeline for three comparison angles:</p><ul><li><strong>Timetics vs. Calendly:</strong> Led with deliberate segment disqualification. The published copy opens by acknowledging Calendly as the pioneer, then explicitly states: "If you're looking to scale your business with a GIANT solution, then Timetics is not for you." This concedes the enterprise segment to earn trust with the WordPress/SMB segment where Timetics genuinely fits.</li><li><strong>Timetics vs. Trafft:</strong> A feature-level comparison targeting users evaluating mid-tier alternatives. Trafft's pricing ($29-$250/month) versus Calendly's per-seat model ($10-$20/seat/month) created a natural three-way positioning map where Timetics could claim the WordPress-native, cost-effective position.</li><li><strong>Appointlet vs. Calendly vs. Timetics:</strong> Full three-way comparison built from a separate keyword research and content outline, targeting comparison-shopping queries.</li></ul>
+    </div>
+    <div class="cs-section">
+      <h2>Execution <span>03 / 04</span></h2>
+      <ul><li>Keyword research document mapping search volume, intent, and difficulty for scheduling-comparison queries.</li><li>Content outline for the three-way comparison piece, structured around buyer decision factors rather than feature lists.</li><li>Full blog draft for the Appointlet vs. Calendly vs. Timetics comparison.</li><li>Webpage copy for both Timetics vs. Calendly and Timetics vs. Trafft, each as standalone landing pages.</li><li>A separate feature comparison list document supporting the Trafft piece with granular capability matching.</li></ul>
+    </div>
+    <div class="cs-section">
+      <h2>Results <span>04 / 04</span></h2>
+      <div class="results-grid"><div class="result-card"><div class="num">3</div><div class="label">Comparison pages produced</div></div><div class="result-card"><div class="num">Full pipeline</div><div class="label">Research to published page</div></div><div class="result-card"><div class="num">Segment</div><div class="label">Deliberate disqualification strategy</div></div><div class="result-card"><div class="num">WordPress/SMB</div><div class="label">Target segment carved out</div></div></div><p style="margin-top:18px;color:var(--ink-soft);font-size:14px;">Methodology is the author's own. Underlying data and artefacts are Arraytics/ThemeWinter property, available on request with permission.</p>
+    </div>
+    
+    <div class="cs-nav">
+      <a href="cs-changelog-ci.html">← Changelog Intelligence</a>
+      <a href="cs-eventin-4.html">Eventin 4.0 Launch →</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
