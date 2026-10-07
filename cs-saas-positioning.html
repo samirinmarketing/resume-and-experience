@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Techabyte, AI Citation & International SEO, Iftekhar Ahmed</title>
+<title>Moving a WordPress Plugin into SaaS, Iftekhar Ahmed</title>
+<meta name="description" content="How I handled the positioning split when Timetics launched as both a WordPress plugin and a standalone SaaS product, with two buyer mindsets and one brand.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -77,44 +78,57 @@
   .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
     text-decoration:none;color:var(--ink-soft);}
   .cs-nav a:hover{color:var(--ink);}
+
+  /* gallery */
+  .cs-gallery{margin-bottom:52px;}
+  .cs-gallery h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
+    border-bottom:2px solid var(--rule);font-family:'Fraunces',Georgia,serif;}
+  .cs-gallery h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
+    margin-left:10px;font-weight:500;vertical-align:middle;}
+  .post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .post-grid img{width:100%;border-radius:4px;border:1px solid var(--rule);
+    display:block;transition:transform .2s,box-shadow .2s;}
+  .post-grid img:hover{transform:scale(1.02);box-shadow:0 6px 24px rgba(0,0,0,.1);}
+  @media(max-width:540px){.post-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
 <div class="back-bar">
   <a href="index.html" class="back-link">← Back to portfolio</a>
-  <span class="cs-category">AI Citation · GEO · International SEO</span>
+  <span class="cs-category">SaaS Positioning · Landing Page</span>
 </div>
 <section class="cs-hero">
   <div class="wrap">
     <div class="eyebrow">Case Study</div>
-    <h1>Techabyte.xyz</h1>
-    <p class="lede">An ongoing blog programme combining traditional SEO with Generative Engine Optimisation (GEO), building content that ranks in search and gets cited by AI tools.</p>
-    <div class="meta-row"><div class="meta-cell"><strong>Client</strong>Techabyte Solutions (in-house)</div><div class="meta-cell"><strong>Type</strong>GEO · AI Citation · International SEO</div><div class="meta-cell"><strong>Tools</strong>Semrush · Ahrefs · Otterly.ai · Peec AI</div><div class="meta-cell"><strong>Period</strong>Nov 2025, Aug 2026</div></div>
-    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">GEO (Generative Engine Optimisation)</span><span class="skill-tag">AI Citation Tracking</span><span class="skill-tag">International SEO</span><span class="skill-tag">Content Strategy</span><span class="skill-tag">Semrush</span><span class="skill-tag">Ahrefs</span><span class="skill-tag">Otterly.ai</span><span class="skill-tag">Peec AI</span></div>
+    <h1>WordPress Plugin to SaaS</h1>
+    <p class="lede">Timetics existed as a WordPress plugin. Timetics.ai launched as a standalone SaaS. One product, two delivery models, two buyer mindsets, one brand that needed to hold both without confusing either.</p>
+    <div class="meta-row"><div class="meta-cell"><strong>Company</strong>Arraytics / ThemeWinter</div><div class="meta-cell"><strong>Product</strong>Timetics + Timetics.ai</div><div class="meta-cell"><strong>Type</strong>SaaS Positioning + Landing Page</div><div class="meta-cell"><strong>Period</strong>Aug 2023, Jan 2024</div></div>
+    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">SaaS Positioning</span><span class="skill-tag">Landing Page Copywriting</span><span class="skill-tag">Product Comparison</span><span class="skill-tag">Feature Matrix</span><span class="skill-tag">Content Strategy</span><span class="skill-tag">WordPress to SaaS Transition</span></div>
   </div>
 </section>
 <div class="cs-body">
   <div class="wrap">
     <div class="cs-section">
       <h2>The Problem <span>01 / 04</span></h2>
-      <p>By late 2025, search behaviour had fractured: a meaningful share of queries that used to end at a Google blue link were now being resolved by AI Overviews, ChatGPT, Perplexity, and similar tools. For Techabyte, a digital agency competing for visibility in the SaaS and digital marketing niche, ranking on page one of Google was no longer sufficient. The brand also needed to be cited when AI tools answered questions in their space.</p><p>Traditional SEO optimises for crawlers. GEO (Generative Engine Optimisation) optimises for the language models that synthesise web content into answers. The two require different, and sometimes conflicting, content decisions. Navigating that tension while keeping content human-readable was the core challenge.</p>
+      <p>Timetics started as a WordPress plugin. When the SaaS version (Timetics.ai) launched, the positioning problem multiplied: the WordPress buyer wants self-hosted control, plugin ecosystem compatibility, and a one-time purchase. The SaaS buyer wants zero maintenance, hosted infrastructure, and predictable monthly pricing.</p><p>Both products share core scheduling functionality but differ in deployment, support model, and technical requirements. The landing page, the feature descriptions, and every comparison needed to speak to the right buyer without undermining the other product's value proposition.</p>
     </div>
     <div class="cs-section">
       <h2>Strategy <span>02 / 04</span></h2>
-      <p>Built a dual-signal content framework where every article was written to satisfy both traditional ranking factors and the structural patterns that large language models favour for citation:</p><ul><li><strong>For search:</strong> Target keyword anchoring, semantic depth, internal linking architecture, and structured H2/H3 hierarchy.</li><li><strong>For AI citation:</strong> Clear entity definitions early in the article, explicit attribution statements ("According to [source]..."), FAQ sections with direct question-answer pairs, and authoritative sourcing that models can extract and reference.</li><li>Monitored AI citation rates using Otterly.ai and Peec AI, tracking whether Techabyte blog content was being surfaced by ChatGPT, Perplexity, and Google AI Overviews for target queries.</li><li>Maintained a GEO content audit log: which queries were yielding AI citations, which articles needed structural updates to increase citation probability.</li></ul>
+      <p>Built a structured framework to separate the two audiences cleanly:</p><ul><li>Created a 20-row feature/deployment/support/technicality comparison matrix (SaaS vs. WP) to establish where the products genuinely diverge, not just where the pricing differs.</li><li>Developed a narrative structure for the SaaS landing page using story blocks rather than feature lists. The headline framework: "Timetics Lets You Create More Than Just a Booking Form," followed by four benefit-led blocks (Meaningful Meetings, Visual Seat Plan, Automation, Scale Without Limits).</li><li>Wrote a full SaaS landing page copy document with a connected Figma prototype for the design team.</li><li>Addressed SaaS-specific questions ("what happens to my data?", "can I use my own domain?") in a separate FAQ document rather than burying them in the landing page.</li></ul>
     </div>
     <div class="cs-section">
       <h2>Execution <span>03 / 04</span></h2>
-      <ul><li>Ongoing blog production at techabyte.xyz from November 2025 through August 2026, articles covering digital marketing, SaaS, and agency services topics.</li><li>Each article written with GEO-first structure: entity introduction, definitive statement blocks, FAQ appendix, and structured data markup recommendations.</li><li>AI citation tracking set up across Otterly.ai and Peec AI, with monthly reporting on citation volume and query coverage.</li><li>Iterated article structure based on citation data, articles that weren't getting cited were restructured to front-load definitional content.</li></ul>
+      <ul><li>SaaS vs. WordPress comparison matrix covering features, deployment, support, and technical requirements.</li><li>SaaS landing page story blocks defining the narrative arc and benefit hierarchy.</li><li>Full SaaS landing page copy with Figma prototype link for design handoff.</li><li>SaaS roadmap content document covering planned features (Agency Accounts, AI Chatbot, Custom Domain, Email Notification).</li><li>SaaS questions-and-answers document for internal alignment and external FAQ.</li><li>Introductory blog post for the SaaS launch.</li><li>Updated privacy policy for the SaaS product.</li></ul>
     </div>
     <div class="cs-section">
       <h2>Results <span>04 / 04</span></h2>
-      <div class="results-grid"><div class="result-card"><div class="num">9+ months</div><div class="label">Ongoing content programme</div></div><div class="result-card"><div class="num">Dual-channel</div><div class="label">SEO + GEO targeting</div></div><div class="result-card"><div class="num">AI tools</div><div class="label">ChatGPT · Perplexity · AI Overviews</div></div><div class="result-card"><div class="num">Live tracking</div><div class="label">Otterly.ai · Peec AI</div></div></div><p style='margin-top:18px;color:var(--ink-soft);font-size:14px;'>Active engagement through August 2026. Citation and ranking data is Techabyte proprietary, available for discussion in interview context.</p>
+      <div class="results-grid"><div class="result-card"><div class="num">2</div><div class="label">Product variants positioned</div></div><div class="result-card"><div class="num">20-row</div><div class="label">Feature comparison matrix</div></div><div class="result-card"><div class="num">Story blocks</div><div class="label">Narrative landing page structure</div></div><div class="result-card"><div class="num">Figma</div><div class="label">Design handoff connected</div></div></div><p style="margin-top:18px;color:var(--ink-soft);font-size:14px;">Methodology is the author's own. Underlying data and artefacts are Arraytics/ThemeWinter property, available on request with permission.</p>
     </div>
-    <a href='https://www.techabyte.xyz/blog/' target='_blank' rel='noopener' class='cs-cta'>View live, Techabyte Blog ↗</a>
+    
     <div class="cs-nav">
-      <a href="cs-angan.html">← Angan Properties</a>
-      <a href="cs-changelog-ci.html">Changelog Intelligence →</a>
+      <a href="cs-eventin-4.html">← Eventin 4.0 Launch</a>
+      <a href="cs-seasonal-deals.html">Seasonal Deal System →</a>
     </div>
   </div>
 </div>
