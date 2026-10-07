@@ -50,6 +50,8 @@
   }
 
   /* ---------- reveal once ---------- */
+  // A page that loads in a background tab or a prerender has nothing to animate for: show it all.
+  if (document.hidden) $$('.rv').forEach(n => n.classList.add('in'));
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -199,6 +201,37 @@
           g.addEventListener('click', () => opts.onPick(label));
           g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); opts.onPick(label); } });
         }
+      });
+    };
+    draw();
+    if ('ResizeObserver' in window) new ResizeObserver(draw).observe(host);
+  };
+
+  // Ranges: rows [label, low, high] drawn as a low-to-high bar on one axis
+  Charts.ranges = (host, rows, opts = {}) => {
+    let lastW = 0;
+    const fmt = opts.fmt || (v => String(v));
+    const full = v => v.toLocaleString('en-US');
+    const draw = () => {
+      const W = Math.round(host.clientWidth); if (!W || W === lastW) return; lastW = W; host.replaceChildren();
+      const narrow = W < 420, rowH = narrow ? 52 : 40, l = narrow ? 0 : 96, r = 16, H = rows.length * rowH + 24, max = opts.max;
+      const x = v => l + v / max * (W - l - r);
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'group', 'aria-label': opts.unit || '' }, host);
+      (opts.ticks || []).forEach(v => {
+        svgEl('line', { x1: x(v), x2: x(v), y1: 0, y2: H - 20, stroke: cssVar('--hairline'), 'stroke-width': 1 }, svg);
+        svgText(svg, x(v), H - 4, fmt(v), { 'text-anchor': 'middle' });
+      });
+      rows.forEach(([label, lo, hi], i) => {
+        const y = i * rowH + (narrow ? 26 : 12);
+        if (narrow) svgText(svg, 0, y - 8, label, { class: 't-sans' });
+        else svgText(svg, l - 12, y + 11, label, { 'text-anchor': 'end', class: 't-sans' });
+        const g = svgEl('g', {}, svg);
+        svgEl('rect', { x: x(lo) - 8, y: y - 8, width: x(hi) - x(lo) + 16, height: 32, fill: 'transparent' }, g);
+        svgEl('rect', { x: x(lo), y, width: Math.max(x(hi) - x(lo), 6), height: 14, rx: 7, fill: cssVar('--d1'), class: 'mk grow', style: `transition-delay:${i * 90}ms` }, g);
+        const end = x(hi) + 8, txt = `${fmt(lo)}–${fmt(hi)}`;
+        if (end + 60 < W) svgText(svg, end, y + 11, txt, { class: 't-strong' });
+        else svgText(svg, x(lo) - 8, y + 11, txt, { class: 't-strong', 'text-anchor': 'end' });
+        bindTip(g, `${full(lo)} – ${full(hi)}`, `${label}, ${opts.unit || ''}`);
       });
     };
     draw();
