@@ -141,28 +141,48 @@ em.em{font-style:italic;font-weight:500;padding-right:.04em}
 .label{font:700 var(--t-xs)/1.2 var(--font-data);color:var(--teal);letter-spacing:.04em}
 
 /* ---------- 6. Hero ---------- */
-.hero{padding:clamp(2.75rem, 1.5rem + 5vw, 6rem) 0 var(--section)}
-.hero__grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,1rem + 4vw,5rem);align-items:center}
-.hero h1{font-size:var(--t-display);line-height:1.03;letter-spacing:-.035em;padding-bottom:.06em;margin-top:var(--s4)}
-.hero__sub{font-size:1.1875rem;color:var(--ink-soft);max-width:42ch;margin-top:var(--s5)}
+/* Full-width headline on top (2 lines), then the long sub-headline + CTAs beside a square portrait. */
+.hero{padding:clamp(2.5rem, 1.5rem + 4vw, 5rem) 0 var(--section)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,320px);grid-template-areas:"title title" "copy photo";
+  column-gap:clamp(2rem,1rem + 5vw,6rem);row-gap:clamp(1.5rem,1rem + 1.6vw,2.25rem);align-items:start}
+.hero__title{grid-area:title}
+.hero__copy{grid-area:copy;max-width:54ch;padding-top:var(--s2)}
+.hero .portrait{grid-area:photo}
+.hero h1{font-size:clamp(2.4rem, 1.25rem + 4.1vw, 4.1rem);line-height:1.04;letter-spacing:-.035em;padding-bottom:.06em;margin-top:var(--s4);max-width:24ch}
+.hero__sub{font-size:clamp(1.0625rem, 1rem + .35vw, 1.25rem);line-height:1.6;color:var(--ink-soft)}
 .hero__ctas{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s6)}
-.portrait{position:relative;isolation:isolate;max-width:440px;justify-self:end;width:100%}
-.portrait img{width:100%;aspect-ratio:760/931;object-fit:cover;border-radius:var(--r-card);box-shadow:var(--e3)}
-.portrait::before{content:"";position:absolute;inset:16px -16px -16px 16px;border-radius:var(--r-card);background:var(--wash-lavender);z-index:-1}
+.portrait{position:relative;isolation:isolate;max-width:320px;justify-self:end;width:100%}
+.portrait img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 18%;border-radius:var(--r-card);box-shadow:var(--e3)}
+.portrait::before{content:"";position:absolute;inset:14px -14px -14px 14px;border-radius:var(--r-card);background:var(--wash-lavender);z-index:-1}
 @media (max-width:860px){
-  .hero__grid{grid-template-columns:1fr}
-  .portrait{justify-self:start;max-width:300px;order:2}
-  .hero__sub{font-size:1.0625rem}
+  .hero__grid{grid-template-columns:1fr;grid-template-areas:"title" "copy" "photo"}
+  .portrait{justify-self:start;max-width:280px}
 }
 
 /* ---------- 7. About ---------- */
 .about{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(2rem,1rem + 4vw,5rem);align-items:start}
 .about__text{display:grid;gap:var(--s4);font-size:1.0625rem;color:var(--ink-soft);max-width:62ch}
 .about__text strong{color:var(--ink);font-weight:600}
+.about__side{display:grid;gap:var(--s4)}
 .avatar{border-radius:var(--r-card);background:var(--wash-sand);padding:var(--s3)}
 .avatar img{border-radius:10px;aspect-ratio:1;object-fit:cover}
-.avatar figcaption{font-size:var(--t-xs);color:var(--ink-muted);padding:var(--s3) var(--s2) var(--s1)}
-@media (max-width:860px){ .about{grid-template-columns:1fr} .avatar{max-width:240px} }
+.learning{border:1px solid var(--hairline);border-radius:var(--r-card);padding:var(--s4) var(--s5);display:grid;gap:var(--s3)}
+.learning__head{display:flex;align-items:center;gap:.5rem;color:var(--teal)}
+.learning__head i{width:8px;height:8px;border-radius:50%;background:var(--d2);box-shadow:0 0 0 3px var(--wash-lavender)}
+.learning ul{list-style:none;padding:0;display:grid;gap:var(--s3)}
+.learning li{display:grid;gap:0}
+.learning b{font-weight:600}
+.learning span{font-size:var(--t-xs);color:var(--ink-soft)}
+@media (max-width:860px){ .about{grid-template-columns:1fr} .about__side{grid-template-columns:200px minmax(0,1fr);align-items:start;max-width:520px} }
+@media (max-width:480px){ .about__side{grid-template-columns:1fr;max-width:260px} }
+
+/* places: "my favourite places to hang out" */
+.places{list-style:none;padding:0;border-top:1px solid var(--hairline);margin-bottom:var(--s8)}
+.places li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s5);align-items:baseline;padding:var(--s5) 0;border-bottom:1px solid var(--hairline)}
+.places__name{font:600 clamp(1.5rem,1.1rem + 1.6vw,2.4rem)/1.1 var(--font-sans);letter-spacing:-.025em;font-variation-settings:"wdth" 110}
+.places__note{color:var(--ink-soft);max-width:56ch}
+@media (max-width:700px){ .places li{grid-template-columns:1fr;gap:var(--s2)} }
+.skillset__title{font-size:var(--t-h3);margin-bottom:var(--s5)}
 
 /* ---------- 8. Skills / tools / brands ---------- */
 .skillset{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6)}
