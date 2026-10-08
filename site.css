@@ -201,16 +201,13 @@ em.em{font-style:italic;font-weight:500;padding-right:.04em}
 @media (hover:hover){ .tools li:hover{background:var(--teal-wash);border-color:var(--teal);transform:translateY(-2px)} .tools li:hover b{color:var(--teal)} }
 @media (max-width:860px){ .tools{grid-template-columns:repeat(2,minmax(0,1fr))} }
 
-.logos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--hairline);border:1px solid var(--hairline);
+.logos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--hairline);border:1px solid var(--hairline);
   border-radius:var(--r-card);overflow:hidden;list-style:none;padding:0}
 .logos li{background:#fff;display:grid;place-items:center;padding:var(--s5) var(--s4);min-height:104px}
-.logos img{max-height:52px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1);opacity:.72;
+.logos img{max-height:64px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1);opacity:.72;
   transition:filter var(--d-base) var(--ease),opacity var(--d-base) var(--ease)}
-/* square marks carry their own whitespace: give them more height so they read at the same size */
-.logos img[width="240"]{max-height:84px}
-.logos img[width="346"],.logos img[width="360"]{max-height:72px}
 @media (hover:hover){ .logos li:hover img{filter:none;opacity:1} }
-@media (max-width:1040px){ .logos{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:1040px){ .logos{grid-template-columns:repeat(4,minmax(0,1fr))} }
 @media (max-width:620px){ .logos{grid-template-columns:repeat(2,minmax(0,1fr))} .logos li{min-height:88px} }
 .logos__note{margin-top:var(--s4);font-size:var(--t-xs);color:var(--ink-muted)}
 
