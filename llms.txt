@@ -11,7 +11,7 @@ Key facts:
 ## Main pages
 
 - [Home](https://samirinmarketing.github.io/resume-and-experience/): profile, skills, featured work, experience, awards, education and contact.
-- [Home in Bangla](https://samirinmarketing.github.io/resume-and-experience/bn/): the same profile in Bangla (বাংলা). The projects page and seven case studies also have Bangla versions under https://samirinmarketing.github.io/resume-and-experience/bn/.
+- [Home in Bangla](https://samirinmarketing.github.io/resume-and-experience/bn/): the same profile in Bangla (বাংলা). The projects page and all 17 case studies also have Bangla versions under https://samirinmarketing.github.io/resume-and-experience/bn/.
 - [All projects](https://samirinmarketing.github.io/resume-and-experience/projects.html): the 17 case studies, filterable by focus.
 - [CV (PDF)](https://samirinmarketing.github.io/resume-and-experience/Iftekhar-Ahmed-Resume.pdf): October 2026 CV.
 

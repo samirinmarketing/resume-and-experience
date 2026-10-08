@@ -32,7 +32,7 @@
   /* ---------- words the script writes itself, per page language ---------- */
   const BN = document.documentElement.lang === 'bn';
   const T = BN
-    ? { menu: 'মেনু', close: 'বন্ধ', all: 'সব', fewer: 'কম দেখুন', showAll: n => `সব ${n}টি দেখুন`, mo: 'মাস', before: 'আগে', after: 'পরে', timeline: 'টাইমলাইন' }
+    ? { menu: 'Menu', close: 'বন্ধ', all: 'সব', fewer: 'কম দেখুন', showAll: n => `সব ${n}টি দেখুন`, mo: 'মাস', before: 'আগে', after: 'পরে', timeline: 'টাইমলাইন' }
     : { menu: 'Menu', close: 'Close', all: 'All', fewer: 'Show fewer', showAll: n => `Show all ${n}`, mo: 'mo', before: 'Before', after: 'After', timeline: 'Timeline' };
 
   /* ---------- language switch keeps your place on the page ---------- */
