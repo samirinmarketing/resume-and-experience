@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://samirinmarketing.github.io/resume-and-experience/</loc><lastmod>2026-10-08</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://samirinmarketing.github.io/resume-and-experience/</loc><lastmod>2026-10-08</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://samirinmarketing.github.io/resume-and-experience/"/><xhtml:link rel="alternate" hreflang="bn" href="https://samirinmarketing.github.io/resume-and-experience/bn.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://samirinmarketing.github.io/resume-and-experience/"/></url>
+  <url><loc>https://samirinmarketing.github.io/resume-and-experience/bn.html</loc><lastmod>2026-10-08</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://samirinmarketing.github.io/resume-and-experience/"/><xhtml:link rel="alternate" hreflang="bn" href="https://samirinmarketing.github.io/resume-and-experience/bn.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://samirinmarketing.github.io/resume-and-experience/"/></url>
   <url><loc>https://samirinmarketing.github.io/resume-and-experience/projects.html</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://samirinmarketing.github.io/resume-and-experience/cs-timetics.html</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html</loc><lastmod>2026-10-08</lastmod></url>

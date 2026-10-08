@@ -29,10 +29,21 @@
     return t;
   }
 
+  /* ---------- words the script writes itself, per page language ---------- */
+  const BN = document.documentElement.lang === 'bn';
+  const T = BN
+    ? { menu: 'মেনু', close: 'বন্ধ', all: 'সব', fewer: 'কম দেখুন', showAll: n => `সব ${n}টি দেখুন`, mo: 'মাস', before: 'আগে', after: 'পরে', timeline: 'টাইমলাইন' }
+    : { menu: 'Menu', close: 'Close', all: 'All', fewer: 'Show fewer', showAll: n => `Show all ${n}`, mo: 'mo', before: 'Before', after: 'After', timeline: 'Timeline' };
+
+  /* ---------- language switch keeps your place on the page ---------- */
+  $$('.lang a:not([aria-current])').forEach(a => a.addEventListener('click', () => {
+    if (location.hash) a.href = a.href.split('#')[0] + location.hash;
+  }));
+
   /* ---------- mobile menu ---------- */
   const menuBtn = $('.menu-btn'), nav = $('#site-nav');
   if (menuBtn && nav) {
-    const set = open => { nav.dataset.open = String(open); menuBtn.setAttribute('aria-expanded', String(open)); menuBtn.textContent = open ? 'Close' : 'Menu'; };
+    const set = open => { nav.dataset.open = String(open); menuBtn.setAttribute('aria-expanded', String(open)); menuBtn.textContent = open ? T.close : T.menu; };
     menuBtn.addEventListener('click', () => set(nav.dataset.open !== 'true'));
     $$('a', nav).forEach(a => a.addEventListener('click', () => set(false)));
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.dataset.open === 'true') { set(false); menuBtn.focus(); } });
@@ -110,7 +121,7 @@
       const W = Math.round(host.clientWidth); if (!W || W === lastW) return; lastW = W; host.replaceChildren();
       const narrow = W < 620, rowH = narrow ? 44 : 32, top = 6, left = narrow ? 0 : 172, right = 8, H = top + roles.length * rowH + 28;
       const x = d => left + (d - t0) / (t1 - t0) * (W - left - right);
-      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'group', 'aria-label': opts.label || 'Timeline' }, host);
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'group', 'aria-label': opts.label || T.timeline }, host);
       for (let y = from; y <= to; y++) {
         const gx = x(Date.UTC(y, 0, 1));
         svgEl('line', { x1: gx, x2: gx, y1: top, y2: H - 22, stroke: cssVar('--hairline'), 'stroke-width': 1 }, svg);
@@ -124,7 +135,7 @@
         svgEl('rect', { x: x0, y: y - 7, width: Math.max(x1 - x0, 8), height: 28, fill: 'transparent' }, g);
         svgEl('rect', { x: x0, y, width: Math.max(x1 - x0, 6), height: 14, rx: 4, fill: cssVar(cats[cat][1]), class: 'mk grow', style: `transition-delay:${i * 70}ms` }, g);
         const months = Math.round((toT(e) - toT(s)) / 2.63e9) + 1;
-        bindTip(g, `${s.replace('-', '.')} – ${e.replace('-', '.')} · ${months} mo`, `${role}, ${co} (${cats[cat][0]})`);
+        bindTip(g, `${s.replace('-', '.')} – ${e.replace('-', '.')} · ${months} ${T.mo}`, `${role}, ${co} (${cats[cat][0]})`);
       });
     };
     draw();
@@ -142,9 +153,9 @@
     });
     svgEl('line', { x1: x(before), x2: x(after), y1: 25, y2: 25, stroke: cssVar('--d1'), 'stroke-width': 2, class: 'grow' }, svg);
     const a = svgEl('g', {}, svg); svgEl('circle', { cx: x(before), cy: 25, r: 7, fill: cssVar('--d-muted'), stroke: '#fff', 'stroke-width': 2, class: 'mk' }, a);
-    bindTip(a, String(before), opts.beforeLabel || 'Before');
+    bindTip(a, String(before), opts.beforeLabel || T.before);
     const b = svgEl('g', {}, svg); svgEl('circle', { cx: x(after), cy: 25, r: 7, fill: cssVar('--d1'), stroke: '#fff', 'stroke-width': 2, class: 'mk pop', style: 'transition-delay:700ms' }, b);
-    bindTip(b, String(after), opts.afterLabel || 'After');
+    bindTip(b, String(after), opts.afterLabel || T.after);
   };
 
   // 10 x 10 waffle: share of 100
@@ -259,22 +270,22 @@
     if (!cards.length || !chipsHost) return null;
     const cats = [...new Set(cards.map(c => c.dataset.cat))];
     const limit = Number(root.dataset.limit || 6);
-    let current = 'All', expanded = false;
-    const chips = ['All', ...cats].map(c => {
+    const ALL = '*all*'; let current = ALL, expanded = false;
+    const chips = [ALL, ...cats].map(c => {
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'chip'; b.dataset.cat = c;
-      const n = c === 'All' ? cards.length : cards.filter(k => k.dataset.cat === c).length;
+      const n = c === ALL ? cards.length : cards.filter(k => k.dataset.cat === c).length;
       const s = document.createElement('span'); s.className = 'n'; s.textContent = n;
-      b.append(document.createTextNode(c), s);
+      b.append(document.createTextNode(c === ALL ? T.all : c), s);
       b.addEventListener('click', () => pick(c));
       chipsHost.appendChild(b);
       return b;
     });
     const render = () => {
-      const match = cards.filter(c => current === 'All' || c.dataset.cat === current);
+      const match = cards.filter(c => current === ALL || c.dataset.cat === current);
       cards.forEach(c => { c.hidden = true; });
       match.forEach((c, i) => { c.hidden = !(expanded || i < limit); });
-      if (more) { more.hidden = match.length <= limit; more.textContent = expanded ? 'Show fewer' : `Show all ${match.length}`; more.setAttribute('aria-expanded', String(expanded)); }
+      if (more) { more.hidden = match.length <= limit; more.textContent = expanded ? T.fewer : T.showAll(match.length); more.setAttribute('aria-expanded', String(expanded)); }
       chips.forEach(ch => ch.setAttribute('aria-pressed', String(ch.dataset.cat === current)));
     };
     const pick = c => { current = c; expanded = false; render(); };
