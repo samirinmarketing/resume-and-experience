@@ -1,122 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Techabyte, AI Citation & International SEO, Iftekhar Ahmed</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generative Engine Optimization (GEO) Case Study · Iftekhar A. Samir</title>
+<meta name="description" content="A GEO and SEO blog programme for Techabyte: posts built to rank on Google and get cited by ChatGPT, Perplexity and AI Overviews, tracked in Otterly.ai and Peec AI.">
+<meta name="author" content="Iftekhar A. Samir">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Samir in Marketing">
+<meta property="og:title" content="Generative Engine Optimization (GEO) Case Study">
+<meta property="og:description" content="A GEO and SEO blog programme for Techabyte: posts built to rank on Google and get cited by ChatGPT, Perplexity and AI Overviews, tracked in Otterly.ai and Peec AI.">
+<meta property="og:url" content="https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html">
+<meta property="og:image" content="https://samirinmarketing.github.io/resume-and-experience/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#F7F7F1; --paper-alt:#FFFFFF; --ink:#1B2430; --ink-soft:#5B6472;
-    --highlighter:#DC9A3B; --highlighter-soft:#F3E2C2;
-    --clipped:#3F6655; --clipped-soft:#DEE8E3;
-    --rule:#DFDBCC; --max-w:800px; --radius:3px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--paper);color:var(--ink);
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    line-height:1.68;font-size:16px;-webkit-font-smoothing:antialiased;}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0;}
-  a{color:inherit;}
-  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
-  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--clipped);font-weight:500;}
-  /* back bar */
-  .back-bar{position:sticky;top:0;z-index:50;background:rgba(247,247,241,.92);
-    backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:12px 24px;
-    display:flex;align-items:center;justify-content:space-between;}
-  .back-link{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
-    text-decoration:none;color:var(--clipped);display:flex;align-items:center;gap:6px;}
-  .back-link:hover{color:var(--ink);}
-  .cs-category{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
-    text-transform:uppercase;padding:5px 10px;border-radius:20px;
-    background:var(--clipped-soft);color:var(--clipped);}
-  /* hero */
-  .cs-hero{padding:52px 0 44px;border-bottom:1px solid var(--rule);}
-  .cs-hero h1{font-size:clamp(28px,4vw,44px);margin-top:12px;letter-spacing:-.01em;}
-  .cs-hero .lede{font-size:17px;color:var(--ink-soft);max-width:600px;margin-top:16px;}
-  .meta-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;}
-  .meta-cell{font-size:13.5px;}
-  .meta-cell strong{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
-  /* sections */
-  .cs-body{padding:52px 0 80px;}
-  .cs-section{margin-bottom:52px;}
-  .cs-section h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
-    border-bottom:2px solid var(--rule);}
-  .cs-section h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
-    margin-left:10px;font-weight:500;vertical-align:middle;}
-  .cs-section p{color:var(--ink-soft);margin:0 0 14px;}
-  .cs-section ul{color:var(--ink-soft);margin:0 0 14px;padding-left:20px;}
-  .cs-section ul li{margin-bottom:8px;}
-  /* results grid */
-  .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:4px;}
-  .result-card{background:var(--paper-alt);border:1px solid var(--rule);
-    border-radius:var(--radius);padding:18px 16px;}
-  .result-card .num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;
-    color:var(--clipped);line-height:1;}
-  .result-card .label{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
-  /* cta */
-  .cs-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;
-    font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:500;
-    background:var(--ink);color:var(--paper);padding:12px 22px;
-    border-radius:var(--radius);text-decoration:none;}
-  .cs-cta:hover{background:var(--clipped);}
-  /* tag list */
-  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
-  .skill-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;
-    background:var(--clipped-soft);color:var(--clipped);
-    padding:5px 11px;border-radius:20px;}
-  /* next/prev */
-  .cs-nav{border-top:1px solid var(--rule);padding:28px 0;
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-  .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
-    text-decoration:none;color:var(--ink-soft);}
-  .cs-nav a:hover{color:var(--ink);}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,100..125,400..700;1,100..125,400..700&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html#article",
+      "headline": "Getting quoted by AI, not just ranked by Google",
+      "name": "Generative Engine Optimization (GEO) Case Study",
+      "description": "A GEO and SEO blog programme for Techabyte: posts built to rank on Google and get cited by ChatGPT, Perplexity and AI Overviews, tracked in Otterly.ai and Peec AI.",
+      "url": "https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html",
+      "mainEntityOfPage": "https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html",
+      "image": "https://samirinmarketing.github.io/resume-and-experience/assets/og-image.jpg",
+      "inLanguage": "en",
+      "dateModified": "2026-10-08",
+      "keywords": "generative engine optimization, GEO case study, AI citation tracking, AI Overviews SEO, Otterly.ai, Peec AI",
+      "articleSection": "Case studies",
+      "genre": "GEO · AI citation",
+      "author": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#person"
+      },
+      "publisher": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#person"
+      },
+      "isPartOf": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Techabyte AI citation",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
-<div class="back-bar">
-  <a href="index.html" class="back-link">← Back to portfolio</a>
-  <span class="cs-category">AI Citation · GEO · International SEO</span>
-</div>
-<section class="cs-hero">
-  <div class="wrap">
-    <div class="eyebrow">Case Study</div>
-    <h1>Techabyte.xyz</h1>
-    <p class="lede">An ongoing blog programme combining traditional SEO with Generative Engine Optimisation (GEO), building content that ranks in search and gets cited by AI tools.</p>
-    <div class="meta-row"><div class="meta-cell"><strong>Client</strong>Techabyte Solutions (in-house)</div><div class="meta-cell"><strong>Type</strong>GEO · AI Citation · International SEO</div><div class="meta-cell"><strong>Tools</strong>Semrush · Ahrefs · Otterly.ai · Peec AI</div><div class="meta-cell"><strong>Period</strong>Nov 2025, Aug 2026</div></div>
-    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">GEO (Generative Engine Optimisation)</span><span class="skill-tag">AI Citation Tracking</span><span class="skill-tag">International SEO</span><span class="skill-tag">Content Strategy</span><span class="skill-tag">Semrush</span><span class="skill-tag">Ahrefs</span><span class="skill-tag">Otterly.ai</span><span class="skill-tag">Peec AI</span></div>
-  </div>
-</section>
-<div class="cs-body">
-  <div class="wrap">
-    <div class="cs-section">
-      <h2>The Problem <span>01 / 04</span></h2>
-      <p>By late 2025, search behaviour had fractured: a meaningful share of queries that used to end at a Google blue link were now being resolved by AI Overviews, ChatGPT, Perplexity, and similar tools. For Techabyte, a digital agency competing for visibility in the SaaS and digital marketing niche, ranking on page one of Google was no longer sufficient. The brand also needed to be cited when AI tools answered questions in their space.</p><p>Traditional SEO optimises for crawlers. GEO (Generative Engine Optimisation) optimises for the language models that synthesise web content into answers. The two require different, and sometimes conflicting, content decisions. Navigating that tension while keeping content human-readable was the core challenge.</p>
-    </div>
-    <div class="cs-section">
-      <h2>Strategy <span>02 / 04</span></h2>
-      <p>Built a dual-signal content framework where every article was written to satisfy both traditional ranking factors and the structural patterns that large language models favour for citation:</p><ul><li><strong>For search:</strong> Target keyword anchoring, semantic depth, internal linking architecture, and structured H2/H3 hierarchy.</li><li><strong>For AI citation:</strong> Clear entity definitions early in the article, explicit attribution statements ("According to [source]..."), FAQ sections with direct question-answer pairs, and authoritative sourcing that models can extract and reference.</li><li>Monitored AI citation rates using Otterly.ai and Peec AI, tracking whether Techabyte blog content was being surfaced by ChatGPT, Perplexity, and Google AI Overviews for target queries.</li><li>Maintained a GEO content audit log: which queries were yielding AI citations, which articles needed structural updates to increase citation probability.</li></ul>
-    </div>
-    <div class="cs-section">
-      <h2>Execution <span>03 / 04</span></h2>
-      <ul><li>Ongoing blog production at techabyte.xyz from November 2025 through August 2026, articles covering digital marketing, SaaS, and agency services topics.</li><li>Each article written with GEO-first structure: entity introduction, definitive statement blocks, FAQ appendix, and structured data markup recommendations.</li><li>AI citation tracking set up across Otterly.ai and Peec AI, with monthly reporting on citation volume and query coverage.</li><li>Iterated article structure based on citation data, articles that weren't getting cited were restructured to front-load definitional content.</li></ul>
-    </div>
-    <div class="cs-section">
-      <h2>Results <span>04 / 04</span></h2>
-      <div class="results-grid"><div class="result-card"><div class="num">9+ months</div><div class="label">Ongoing content programme</div></div><div class="result-card"><div class="num">Dual-channel</div><div class="label">SEO + GEO targeting</div></div><div class="result-card"><div class="num">AI tools</div><div class="label">ChatGPT · Perplexity · AI Overviews</div></div><div class="result-card"><div class="num">Live tracking</div><div class="label">Otterly.ai · Peec AI</div></div></div><p style='margin-top:18px;color:var(--ink-soft);font-size:14px;'>Active engagement through August 2026. The citation and ranking data belongs to Techabyte, so it stays private.</p>
-    </div>
-    <a href='https://www.techabyte.xyz/blog/' target='_blank' rel='noopener' class='cs-cta'>View live, Techabyte Blog ↗</a>
-    <div class="cs-nav">
-      <a href="cs-angan.html">← Angan Properties</a>
-      <a href="cs-changelog-ci.html">Changelog Intelligence →</a>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="mark" href="index.html" aria-label="Iftekhar A. Samir, home"><span class="mark__glyph" aria-hidden="true">IA</span>Iftekhar A. Samir</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="projects.html" aria-current="true">Case studies</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="bar__end">
+      <a class="btn btn--primary" href="index.html#book">Book a call</a>
+      <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
     </div>
   </div>
-</div>
+</header>
+
+<main id="main">
+  <article>
+  <section class="cs-hero">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li aria-current="page">Techabyte AI citation</li></ol></nav>
+      <p class="label">Techabyte Solutions · GEO · AI citation</p>
+      <h1>Getting quoted by AI, not just ranked by Google</h1>
+      <p class="cs-lede">A blog where every post is written for two readers: Google, and the AI tools people now ask instead. Eight months of writing, tracking and reworking at Techabyte.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--flush">
+    <div class="wrap">
+      <div class="cs-intro rv">
+        <div class="tldr">
+          <h2>At a glance</h2>
+          <ul><li>GEO (generative engine optimization) means writing so AI tools can find, trust and quote you.</li><li>Each post pairs SEO basics with quotable definitions, FAQ answers and named sources.</li><li>Citations tracked in Otterly.ai and Peec AI. Posts that weren't quoted got reworked.</li></ul>
+        </div>
+        <div>
+          <dl class="cs-facts"><div><dt>Client</dt><dd>Techabyte Solutions, in-house</dd></div><div><dt>Period</dt><dd>Nov 2025 – Jun 2026</dd></div><div><dt>Tools</dt><dd>Semrush · Ahrefs · Otterly.ai · Peec AI</dd></div><div><dt>Work</dt><dd>GEO, SEO, content strategy</dd></div></dl>
+          <ul class="cs-tags" aria-label="Skills used"><li class="tag">GEO (Generative Engine Optimization)</li><li class="tag">AI Citation Tracking</li><li class="tag">International SEO</li><li class="tag">Content Strategy</li><li class="tag">Semrush</li><li class="tag">Ahrefs</li><li class="tag">Otterly.ai</li><li class="tag">Peec AI</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">01 / 04</span><h2>The problem</h2></div>
+        <div class="cs-sec__body rv">
+          <p>By late 2025, lots of questions that used to end on a Google link were being answered by AI Overviews, ChatGPT and Perplexity instead. Page one wasn't enough anymore. Techabyte also needed to be the source those tools quoted.</p>
+          <p>SEO writes for crawlers. GEO writes for the language models that summarise the web. Sometimes they want different things, and the posts still had to read well for humans.</p>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">02 / 04</span><h2>The plan</h2></div>
+        <div class="cs-sec__body rv">
+          <p>Write every post for both readers at once.</p>
+          <ul class="bullets"><li><strong>For Google:</strong> a clear target keyword, real topic depth, tidy H2 and H3 headings, smart internal links.</li><li><strong>For AI:</strong> define the topic early, write lines worth quoting, add FAQ answers and name sources.</li><li><strong>Measure it:</strong> track whether ChatGPT, Perplexity and AI Overviews cite the posts, in Otterly.ai and Peec AI.</li><li><strong>Keep a log:</strong> which queries earn citations, and which posts need work.</li></ul>
+        <div class="panel rv">
+          <header><h3>How each post works</h3><p>Two readers, one post, and a loop to check it worked.</p></header>
+          <ol class="signal" aria-label="How it works">
+            <li class="signal__row"><i class="signal__dot" style="background:var(--d1)" aria-hidden="true"></i><div><b>For Google</b><span>Clear keywords, deep topics, tidy headings, smart internal links.</span></div></li>
+            <li class="signal__row"><i class="signal__dot" style="background:var(--d2)" aria-hidden="true"></i><div><b>For AI</b><span>Early definitions, quotable lines, FAQ answers, real sources.</span></div></li>
+            <li class="signal__row"><i class="signal__dot" style="background:var(--ink)" aria-hidden="true"></i><div><b>Measured</b><span>Citations tracked in Otterly.ai and Peec AI. Posts that weren't quoted got reworked.</span></div></li>
+          </ol>
+        </div>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">03 / 04</span><h2>What I did</h2></div>
+        <div class="cs-sec__body rv">
+          <ul class="bullets"><li>Ongoing posts on techabyte.xyz from November 2025 to June 2026, on digital marketing, SaaS and agency topics.</li><li>A GEO-first structure for each: entity intro, definition blocks, FAQ and schema suggestions.</li><li>Monthly reports on citation volume and query coverage.</li><li>Posts that weren't getting cited were restructured to put definitions up front.</li></ul>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">04 / 04</span><h2>How it went</h2></div>
+        <div class="cs-sec__body cs-sec__body--wide rv">
+          <div class="tiles" style="--n:4"><div class="tile"><b>8 months</b><span>ongoing programme</span></div><div class="tile"><b>2</b><span>readers: Google and AI</span></div><div class="tile"><b>3</b><span>AI answer engines tracked</span></div><div class="tile"><b>2</b><span>citation trackers</span></div></div>
+          <p class="note">The citation and ranking data belongs to Techabyte, so it stays private.</p>
+          <div class="cs-live"><a class="btn btn--ghost" href="https://www.techabyte.xyz/blog/" target="_blank" rel="noopener">See the Techabyte blog <span class="arrow" aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </article>
+
+  <section class="sec sec--flush">
+    <div class="wrap">
+      <nav class="pager" aria-label="More case studies"><a href="cs-angan.html" rel="prev"><span>← Previous</span><b>Angan Properties</b></a><a href="cs-onpage-seo.html" rel="next"><span>Next →</span><b>On-page SEO programme</b></a></nav>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="book">
+        <div>
+          <p class="label">Book a call</p>
+          <h2 style="margin-top:.75rem">Got a project like this?</h2>
+          <p>Tell me about it. Quick advice is on me, and you'll only get an invoice if it turns into paid work.</p>
+        </div>
+        <div class="book__actions">
+          <a class="btn btn--light" href="index.html#book">Book a call <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="mailto:samirinmarketing@gmail.com">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Iftekhar A. Samir · Samir in Marketing</span>
+    <span>Built by hand, hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
 </body>
 </html>

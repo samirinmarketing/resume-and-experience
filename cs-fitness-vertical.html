@@ -1,136 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Vertical Content Targeting: Booking for Fitness, Iftekhar Ahmed</title>
-<meta name="description" content="How I narrowed WP Timetics content from generic scheduling to fitness businesses specifically, with a four-document sequence going from guide to conversion page.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vertical Content Strategy: A Booking Plugin for Fitness · Iftekhar A. Samir</title>
+<meta name="description" content="How I pointed WP Timetics at gyms, studios and personal trainers with a four-piece content sequence, from a 101 guide to a conversion-stage blog post.">
+<meta name="author" content="Iftekhar A. Samir">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://samirinmarketing.github.io/resume-and-experience/cs-fitness-vertical.html">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Samir in Marketing">
+<meta property="og:title" content="Vertical Content Strategy: A Booking Plugin for Fitness">
+<meta property="og:description" content="How I pointed WP Timetics at gyms, studios and personal trainers with a four-piece content sequence, from a 101 guide to a conversion-stage blog post.">
+<meta property="og:url" content="https://samirinmarketing.github.io/resume-and-experience/cs-fitness-vertical.html">
+<meta property="og:image" content="https://samirinmarketing.github.io/resume-and-experience/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#F7F7F1; --paper-alt:#FFFFFF; --ink:#1B2430; --ink-soft:#5B6472;
-    --highlighter:#DC9A3B; --highlighter-soft:#F3E2C2;
-    --clipped:#3F6655; --clipped-soft:#DEE8E3;
-    --rule:#DFDBCC; --max-w:800px; --radius:3px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--paper);color:var(--ink);
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    line-height:1.68;font-size:16px;-webkit-font-smoothing:antialiased;}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0;}
-  a{color:inherit;}
-  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
-  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--clipped);font-weight:500;}
-  /* back bar */
-  .back-bar{position:sticky;top:0;z-index:50;background:rgba(247,247,241,.92);
-    backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:12px 24px;
-    display:flex;align-items:center;justify-content:space-between;}
-  .back-link{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
-    text-decoration:none;color:var(--clipped);display:flex;align-items:center;gap:6px;}
-  .back-link:hover{color:var(--ink);}
-  .cs-category{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
-    text-transform:uppercase;padding:5px 10px;border-radius:20px;
-    background:var(--clipped-soft);color:var(--clipped);}
-  /* hero */
-  .cs-hero{padding:52px 0 44px;border-bottom:1px solid var(--rule);}
-  .cs-hero h1{font-size:clamp(28px,4vw,44px);margin-top:12px;letter-spacing:-.01em;}
-  .cs-hero .lede{font-size:17px;color:var(--ink-soft);max-width:600px;margin-top:16px;}
-  .meta-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;}
-  .meta-cell{font-size:13.5px;}
-  .meta-cell strong{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
-  /* sections */
-  .cs-body{padding:52px 0 80px;}
-  .cs-section{margin-bottom:52px;}
-  .cs-section h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
-    border-bottom:2px solid var(--rule);}
-  .cs-section h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
-    margin-left:10px;font-weight:500;vertical-align:middle;}
-  .cs-section p{color:var(--ink-soft);margin:0 0 14px;}
-  .cs-section ul{color:var(--ink-soft);margin:0 0 14px;padding-left:20px;}
-  .cs-section ul li{margin-bottom:8px;}
-  /* results grid */
-  .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:4px;}
-  .result-card{background:var(--paper-alt);border:1px solid var(--rule);
-    border-radius:var(--radius);padding:18px 16px;}
-  .result-card .num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;
-    color:var(--clipped);line-height:1;}
-  .result-card .label{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
-  /* cta */
-  .cs-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;
-    font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:500;
-    background:var(--ink);color:var(--paper);padding:12px 22px;
-    border-radius:var(--radius);text-decoration:none;}
-  .cs-cta:hover{background:var(--clipped);}
-  /* tag list */
-  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
-  .skill-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;
-    background:var(--clipped-soft);color:var(--clipped);
-    padding:5px 11px;border-radius:20px;}
-  /* next/prev */
-  .cs-nav{border-top:1px solid var(--rule);padding:28px 0;
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-  .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
-    text-decoration:none;color:var(--ink-soft);}
-  .cs-nav a:hover{color:var(--ink);}
-
-  /* gallery */
-  .cs-gallery{margin-bottom:52px;}
-  .cs-gallery h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
-    border-bottom:2px solid var(--rule);font-family:'Fraunces',Georgia,serif;}
-  .cs-gallery h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
-    margin-left:10px;font-weight:500;vertical-align:middle;}
-  .post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-  .post-grid img{width:100%;border-radius:4px;border:1px solid var(--rule);
-    display:block;transition:transform .2s,box-shadow .2s;}
-  .post-grid img:hover{transform:scale(1.02);box-shadow:0 6px 24px rgba(0,0,0,.1);}
-  @media(max-width:540px){.post-grid{grid-template-columns:1fr 1fr;}}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,100..125,400..700;1,100..125,400..700&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://samirinmarketing.github.io/resume-and-experience/cs-fitness-vertical.html#article",
+      "headline": "Pointing a booking plugin at gyms and trainers",
+      "name": "Vertical Content Strategy: A Booking Plugin for Fitness",
+      "description": "How I pointed WP Timetics at gyms, studios and personal trainers with a four-piece content sequence, from a 101 guide to a conversion-stage blog post.",
+      "url": "https://samirinmarketing.github.io/resume-and-experience/cs-fitness-vertical.html",
+      "mainEntityOfPage": "https://samirinmarketing.github.io/resume-and-experience/cs-fitness-vertical.html",
+      "image": "https://samirinmarketing.github.io/resume-and-experience/assets/og-image.jpg",
+      "inLanguage": "en",
+      "dateModified": "2026-10-08",
+      "keywords": "vertical content strategy, niche SEO, fitness class booking WordPress, gym scheduling plugin, full-funnel content",
+      "articleSection": "Case studies",
+      "genre": "Vertical content · Niche SEO",
+      "author": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#person"
+      },
+      "publisher": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#person"
+      },
+      "isPartOf": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fitness vertical",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/cs-fitness-vertical.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
-<div class="back-bar">
-  <a href="index.html" class="back-link">← Back to portfolio</a>
-  <span class="cs-category">Vertical Content · Niche Targeting</span>
-</div>
-<section class="cs-hero">
-  <div class="wrap">
-    <div class="eyebrow">Case Study</div>
-    <h1>Vertical Targeting: Fitness Businesses</h1>
-    <p class="lede">Four sequential documents narrowing WP Timetics from "scheduling plugin for everyone" to "the booking tool for fitness and gym businesses." Going deep instead of staying horizontal.</p>
-    <div class="meta-row"><div class="meta-cell"><strong>Company</strong>Arraytics / ThemeWinter</div><div class="meta-cell"><strong>Product</strong>WP Timetics</div><div class="meta-cell"><strong>Type</strong>Vertical Content Strategy</div><div class="meta-cell"><strong>Period</strong>Mar, Apr 2024</div></div>
-    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">Vertical Content Strategy</span><span class="skill-tag">Niche SEO</span><span class="skill-tag">WordPress Plugin Marketing</span><span class="skill-tag">Content Sequencing</span><span class="skill-tag">Full-funnel Content</span><span class="skill-tag">Fitness Industry</span></div>
-  </div>
-</section>
-<div class="cs-body">
-  <div class="wrap">
-    <div class="cs-section">
-      <h2>The Problem <span>01 / 04</span></h2>
-      <p>WP Timetics was positioned as a general-purpose scheduling and booking plugin. That's accurate but unhelpful for search: "scheduling plugin" competes against hundreds of products. Fitness studios, gyms, and personal trainers searching for class booking solutions were using vertical-specific queries ("gym scheduling plugin", "fitness class booking WordPress") that WP Timetics had no content for.</p><p>The opportunity: fitness businesses have specific booking needs (class schedules, recurring sessions, trainer assignment, capacity limits) that generic scheduling content doesn't address. Writing specifically to this vertical could capture traffic that broad-positioning competitors weren't targeting.</p>
-    </div>
-    <div class="cs-section">
-      <h2>Strategy <span>02 / 04</span></h2>
-      <p>Built a four-piece content sequence that moved from educational breadth to product-specific conversion:</p><ul><li><strong>101 Guide:</strong> A comprehensive guide to scheduling and managing fitness classes using WP Timetics. Top-of-funnel, keyword-led, establishing the product as a credible option in the fitness space.</li><li><strong>Benefits piece:</strong> A focused document on the specific benefits of WP Timetics for fitness businesses, moving from feature descriptions to outcome language ("manage 50 concurrent class bookings" rather than "supports multiple events").</li><li><strong>Quick outline:</strong> A structural outline for "Why WP Timetics is the Best Choice for Your WordPress Fitness Website," mapping the conversion-stage argument.</li><li><strong>Full blog draft:</strong> The complete post, built from the outline, targeting bottom-of-funnel comparison queries.</li></ul>
-    </div>
-    <div class="cs-section">
-      <h2>Execution <span>03 / 04</span></h2>
-      <ul><li>"WP Timetics 101: A Comprehensive Guide to Scheduling and Managing Fitness Classes" (full blog).</li><li>"Experience the Power of WP Timetics for Your Fitness Business" (benefits-led content).</li><li>Content outline for the conversion-stage piece, mapping argument flow before drafting.</li><li>"Why WP Timetics is the Best Choice for Your WordPress Fitness Website" (full blog draft).</li><li>Supporting benefits document providing the feature-to-outcome translations used across all four pieces.</li></ul>
-    </div>
-    <div class="cs-section">
-      <h2>Results <span>04 / 04</span></h2>
-      <div class="results-grid"><div class="result-card"><div class="num">4</div><div class="label">Sequential content pieces</div></div><div class="result-card"><div class="num">Fitness</div><div class="label">Vertical captured</div></div><div class="result-card"><div class="num">Top → Bottom</div><div class="label">Full-funnel coverage</div></div><div class="result-card"><div class="num">Outline → Draft</div><div class="label">Process documented</div></div></div><p style="margin-top:18px;color:var(--ink-soft);font-size:14px;">The method is mine. The data behind it belongs to Arraytics and ThemeWinter, so it stays private.</p>
-    </div>
-    
-    <div class="cs-nav">
-      <a href="cs-onpage-seo.html">← On-Page SEO Programme</a>
-      <a href="index.html">Back to portfolio →</a>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="mark" href="index.html" aria-label="Iftekhar A. Samir, home"><span class="mark__glyph" aria-hidden="true">IA</span>Iftekhar A. Samir</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="projects.html" aria-current="true">Case studies</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="bar__end">
+      <a class="btn btn--primary" href="index.html#book">Book a call</a>
+      <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
     </div>
   </div>
-</div>
+</header>
+
+<main id="main">
+  <article>
+  <section class="cs-hero">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li aria-current="page">Fitness vertical</li></ol></nav>
+      <p class="label">Arraytics / ThemeWinter · Vertical content</p>
+      <h1>Pointing a booking plugin at gyms and trainers</h1>
+      <p class="cs-lede">WP Timetics was a scheduling plugin for everyone, which made it hard to find for anyone. So we picked one crowd, fitness businesses, and went deep.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--flush">
+    <div class="wrap">
+      <div class="cs-intro rv">
+        <div class="tldr">
+          <h2>At a glance</h2>
+          <ul><li>Narrowed from &quot;scheduling plugin&quot; to searches like &quot;gym scheduling plugin&quot;.</li><li>Four pieces that walk a reader from learning to buying.</li><li>Features translated into outcomes a gym owner cares about.</li></ul>
+        </div>
+        <div>
+          <dl class="cs-facts"><div><dt>Company</dt><dd>Arraytics / ThemeWinter</dd></div><div><dt>Product</dt><dd>WP Timetics</dd></div><div><dt>Period</dt><dd>Mar – Apr 2024</dd></div><div><dt>Work</dt><dd>Vertical content, niche SEO</dd></div></dl>
+          <ul class="cs-tags" aria-label="Skills used"><li class="tag">Vertical Content Strategy</li><li class="tag">Niche SEO</li><li class="tag">WordPress Plugin Marketing</li><li class="tag">Content Sequencing</li><li class="tag">Full-funnel Content</li><li class="tag">Fitness Industry</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">01 / 04</span><h2>The problem</h2></div>
+        <div class="cs-sec__body rv">
+          <p>&quot;Scheduling plugin&quot; is a crowded search with hundreds of products. Gyms, studios and trainers search differently, with terms like &quot;fitness class booking WordPress&quot;, and WP Timetics had nothing for them.</p>
+          <p>They have their own needs too: class schedules, recurring sessions, trainer assignment and capacity limits. Generic scheduling content skips all of that.</p>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">02 / 04</span><h2>The plan</h2></div>
+        <div class="cs-sec__body rv">
+          <p>Four pieces, from wide to narrow.</p>
+          <ol class="signal steps"><li class="signal__row"><i class="signal__dot" aria-hidden="true">01</i><div><b>101 guide</b><span>How to schedule and run fitness classes with WP Timetics. Top of the funnel.</span></div></li><li class="signal__row"><i class="signal__dot" aria-hidden="true">02</i><div><b>Benefits piece</b><span>Features turned into outcomes, like &quot;manage 50 concurrent class bookings&quot;.</span></div></li><li class="signal__row"><i class="signal__dot" aria-hidden="true">03</i><div><b>Outline</b><span>The argument for the final piece, mapped before drafting.</span></div></li><li class="signal__row"><i class="signal__dot" aria-hidden="true">04</i><div><b>Full blog</b><span>The conversion-stage post, written from the outline.</span></div></li></ol>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">03 / 04</span><h2>What I did</h2></div>
+        <div class="cs-sec__body rv">
+          <ul class="bullets"><li>&quot;WP Timetics 101: A Comprehensive Guide to Scheduling and Managing Fitness Classes&quot;</li><li>&quot;Experience the Power of WP Timetics for Your Fitness Business&quot;</li><li>An outline for the conversion-stage post</li><li>&quot;Why WP Timetics is the Best Choice for Your WordPress Fitness Website&quot;</li><li>A benefits sheet with the feature-to-outcome lines used across all four</li></ul>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">04 / 04</span><h2>How it went</h2></div>
+        <div class="cs-sec__body cs-sec__body--wide rv">
+          <div class="tiles" style="--n:3"><div class="tile"><b>4</b><span>pieces in sequence</span></div><div class="tile"><b>1</b><span>vertical: fitness</span></div><div class="tile"><b>Top → bottom</b><span>full funnel covered</span></div></div>
+          <p class="note">The method is mine. The data behind it belongs to Arraytics and ThemeWinter, so it stays private.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </article>
+
+  <section class="sec sec--flush">
+    <div class="wrap">
+      <nav class="pager" aria-label="More case studies"><a href="cs-onpage-seo.html" rel="prev"><span>← Previous</span><b>On-page SEO programme</b></a><a href="cs-timetics.html" rel="next"><span>Next →</span><b>Timetics.ai launch</b></a></nav>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="book">
+        <div>
+          <p class="label">Book a call</p>
+          <h2 style="margin-top:.75rem">Got a project like this?</h2>
+          <p>Tell me about it. Quick advice is on me, and you'll only get an invoice if it turns into paid work.</p>
+        </div>
+        <div class="book__actions">
+          <a class="btn btn--light" href="index.html#book">Book a call <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="mailto:samirinmarketing@gmail.com">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Iftekhar A. Samir · Samir in Marketing</span>
+    <span>Built by hand, hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
 </body>
 </html>

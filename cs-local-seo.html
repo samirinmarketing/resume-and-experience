@@ -1,122 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A&C Building Contractors + Brickstone Heritage, Local SEO, Iftekhar Ahmed</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local SEO for Builders in Lochgilphead, Scotland · Iftekhar A. Samir</title>
+<meta name="description" content="Local SEO case study: keyword research, service pages, GA4, Search Console and Google Business Profile setup for two construction firms in Argyll, Scotland.">
+<meta name="author" content="Iftekhar A. Samir">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://samirinmarketing.github.io/resume-and-experience/cs-local-seo.html">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Samir in Marketing">
+<meta property="og:title" content="Local SEO for Builders in Lochgilphead, Scotland">
+<meta property="og:description" content="Local SEO case study: keyword research, service pages, GA4, Search Console and Google Business Profile setup for two construction firms in Argyll, Scotland.">
+<meta property="og:url" content="https://samirinmarketing.github.io/resume-and-experience/cs-local-seo.html">
+<meta property="og:image" content="https://samirinmarketing.github.io/resume-and-experience/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#F7F7F1; --paper-alt:#FFFFFF; --ink:#1B2430; --ink-soft:#5B6472;
-    --highlighter:#DC9A3B; --highlighter-soft:#F3E2C2;
-    --clipped:#3F6655; --clipped-soft:#DEE8E3;
-    --rule:#DFDBCC; --max-w:800px; --radius:3px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--paper);color:var(--ink);
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    line-height:1.68;font-size:16px;-webkit-font-smoothing:antialiased;}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0;}
-  a{color:inherit;}
-  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
-  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--clipped);font-weight:500;}
-  /* back bar */
-  .back-bar{position:sticky;top:0;z-index:50;background:rgba(247,247,241,.92);
-    backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:12px 24px;
-    display:flex;align-items:center;justify-content:space-between;}
-  .back-link{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
-    text-decoration:none;color:var(--clipped);display:flex;align-items:center;gap:6px;}
-  .back-link:hover{color:var(--ink);}
-  .cs-category{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
-    text-transform:uppercase;padding:5px 10px;border-radius:20px;
-    background:var(--clipped-soft);color:var(--clipped);}
-  /* hero */
-  .cs-hero{padding:52px 0 44px;border-bottom:1px solid var(--rule);}
-  .cs-hero h1{font-size:clamp(28px,4vw,44px);margin-top:12px;letter-spacing:-.01em;}
-  .cs-hero .lede{font-size:17px;color:var(--ink-soft);max-width:600px;margin-top:16px;}
-  .meta-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;}
-  .meta-cell{font-size:13.5px;}
-  .meta-cell strong{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
-  /* sections */
-  .cs-body{padding:52px 0 80px;}
-  .cs-section{margin-bottom:52px;}
-  .cs-section h2{font-size:22px;margin-bottom:16px;padding-bottom:10px;
-    border-bottom:2px solid var(--rule);}
-  .cs-section h2 span{font-size:12px;font-family:'IBM Plex Mono',monospace;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--clipped);
-    margin-left:10px;font-weight:500;vertical-align:middle;}
-  .cs-section p{color:var(--ink-soft);margin:0 0 14px;}
-  .cs-section ul{color:var(--ink-soft);margin:0 0 14px;padding-left:20px;}
-  .cs-section ul li{margin-bottom:8px;}
-  /* results grid */
-  .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:4px;}
-  .result-card{background:var(--paper-alt);border:1px solid var(--rule);
-    border-radius:var(--radius);padding:18px 16px;}
-  .result-card .num{font-family:'Fraunces',serif;font-size:28px;font-weight:700;
-    color:var(--clipped);line-height:1;}
-  .result-card .label{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
-  /* cta */
-  .cs-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;
-    font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:500;
-    background:var(--ink);color:var(--paper);padding:12px 22px;
-    border-radius:var(--radius);text-decoration:none;}
-  .cs-cta:hover{background:var(--clipped);}
-  /* tag list */
-  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
-  .skill-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;
-    background:var(--clipped-soft);color:var(--clipped);
-    padding:5px 11px;border-radius:20px;}
-  /* next/prev */
-  .cs-nav{border-top:1px solid var(--rule);padding:28px 0;
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-  .cs-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;
-    text-decoration:none;color:var(--ink-soft);}
-  .cs-nav a:hover{color:var(--ink);}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,100..125,400..700;1,100..125,400..700&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://samirinmarketing.github.io/resume-and-experience/cs-local-seo.html#article",
+      "headline": "Local SEO for two builders in a small Scottish town",
+      "name": "Local SEO for Builders in Lochgilphead, Scotland",
+      "description": "Local SEO case study: keyword research, service pages, GA4, Search Console and Google Business Profile setup for two construction firms in Argyll, Scotland.",
+      "url": "https://samirinmarketing.github.io/resume-and-experience/cs-local-seo.html",
+      "mainEntityOfPage": "https://samirinmarketing.github.io/resume-and-experience/cs-local-seo.html",
+      "image": "https://samirinmarketing.github.io/resume-and-experience/assets/og-image.jpg",
+      "inLanguage": "en",
+      "dateModified": "2026-10-08",
+      "keywords": "local SEO for builders, construction company SEO Scotland, Google Business Profile optimization, service page copywriting",
+      "articleSection": "Case studies",
+      "genre": "Local SEO · Web copy",
+      "author": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#person"
+      },
+      "publisher": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#person"
+      },
+      "isPartOf": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Local SEO in Scotland",
+          "item": "https://samirinmarketing.github.io/resume-and-experience/cs-local-seo.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
-<div class="back-bar">
-  <a href="index.html" class="back-link">← Back to portfolio</a>
-  <span class="cs-category">Local SEO · Web Copy</span>
-</div>
-<section class="cs-hero">
-  <div class="wrap">
-    <div class="eyebrow">Case Study</div>
-    <h1>A&C Building Contractors & Brickstone Heritage</h1>
-    <p class="lede">Full-funnel local SEO and web copy for two Lochgilphead construction businesses, improving search visibility and converting site visitors into enquiries.</p>
-    <div class="meta-row"><div class="meta-cell"><strong>Clients</strong>A&C Building Contractors · Brickstone Heritage</div><div class="meta-cell"><strong>Type</strong>Local SEO + Web Copywriting</div><div class="meta-cell"><strong>Location</strong>Lochgilphead, Argyll, Scotland</div><div class="meta-cell"><strong>Channel</strong>Connect2build Scotland (Remote)</div></div>
-    <div class="skill-tags" style="margin-top:20px;"><span class="skill-tag">Local SEO</span><span class="skill-tag">Keyword Research</span><span class="skill-tag">On-Page SEO</span><span class="skill-tag">Web Copywriting</span><span class="skill-tag">GA4 Setup</span><span class="skill-tag">Google Search Console</span><span class="skill-tag">GMB Optimisation</span></div>
-  </div>
-</section>
-<div class="cs-body">
-  <div class="wrap">
-    <div class="cs-section">
-      <h2>The Problem <span>01 / 04</span></h2>
-      <p>Two established building companies in Lochgilphead, Argyll were near-invisible in local search results despite years of trading and a strong local reputation:</p><p><strong>A&C Building Contractors</strong> offered a comprehensive range of services (plumbing, heating, joinery, roofing, roughcasting, full renovations) but their website copy buried the offer in generic contractor language, no location signals, no service-specific pages, no reason for Google to surface them for "builders Lochgilphead" queries.</p><p><strong>Brickstone Heritage</strong> (formerly RJD Brickwork) had recently rebranded and needed web copy that reflected their 20+ year heritage in stonework and masonry while establishing the new brand name in local search.</p>
-    </div>
-    <div class="cs-section">
-      <h2>Strategy <span>02 / 04</span></h2>
-      <p>Ran keyword research targeting homeowner-intent search queries in the Lochgilphead and Argyll area, prioritising transactional terms ("building contractors Lochgilphead", "stonework Argyll", "roughcasting Scotland") over informational content at this stage.</p><ul><li>Audited both sites for on-page SEO signals: title tags, meta descriptions, header structure, internal linking, and keyword density.</li><li>Mapped services to search intent, each core service needed its own copy block with a specific keyword anchor, not one merged "what we do" page.</li><li>Set up Google Analytics 4 and Google Search Console for both clients and established baseline tracking before any copy changes went live.</li><li>Optimised Google My Business profiles for both companies to strengthen local pack rankings.</li></ul>
-    </div>
-    <div class="cs-section">
-      <h2>Execution <span>03 / 04</span></h2>
-      <ul><li>Rewrote website copy for both clients with location signals embedded naturally, Lochgilphead, Argyll, and surrounding areas named throughout service descriptions.</li><li>Created service-specific copy blocks for A&C (plumbing, heating, joinery, roofing, roughcasting, renovation), each with distinct keyword anchoring.</li><li>Wrote Brickstone Heritage's new brand about copy, leading with the 20-year heritage story and translating "RJD Brickwork" equity into the new name.</li><li>Added social proof language and local trust signals (years in business, area coverage, customer satisfaction emphasis) to support conversion.</li><li>Set up GA4 + Search Console tracking and configured key event tracking for contact form submissions.</li></ul>
-    </div>
-    <div class="cs-section">
-      <h2>Results <span>04 / 04</span></h2>
-      <div class="results-grid"><div class="result-card"><div class="num">2</div><div class="label">Clients optimised</div></div><div class="result-card"><div class="num">GA4 + GSC</div><div class="label">Tracking established</div></div><div class="result-card"><div class="num">GMB</div><div class="label">Profiles optimised</div></div><div class="result-card"><div class="num">Service pages</div><div class="label">Keyword-mapped copy</div></div></div><p style='margin-top:18px;color:var(--ink-soft);font-size:14px;'>Ongoing engagement at time of contract end, final ranking data not shared. Work done remotely from Dhaka via Connect2build Scotland.</p>
-    </div>
-    <a href='https://acbuilders.co.uk/' target='_blank' rel='noopener' class='cs-cta'>View live, A&C Building Contractors ↗</a>
-    <div class="cs-nav">
-      <a href="cs-artmap.html">← Artmap Argyll</a>
-      <a href="cs-timetics.html">Timetics.ai Launch →</a>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="mark" href="index.html" aria-label="Iftekhar A. Samir, home"><span class="mark__glyph" aria-hidden="true">IA</span>Iftekhar A. Samir</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="projects.html" aria-current="true">Case studies</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="bar__end">
+      <a class="btn btn--primary" href="index.html#book">Book a call</a>
+      <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
     </div>
   </div>
-</div>
+</header>
+
+<main id="main">
+  <article>
+  <section class="cs-hero">
+    <div class="wrap">
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li aria-current="page">Local SEO in Scotland</li></ol></nav>
+      <p class="label">A&amp;C Building Contractors + Brickstone Heritage · Local SEO</p>
+      <h1>Local SEO for two builders in a small Scottish town</h1>
+      <p class="cs-lede">Two trusted building firms in Lochgilphead, Argyll. Years of happy customers, almost no presence on Google. I fixed the copy and the tracking, remotely from Dhaka.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--flush">
+    <div class="wrap">
+      <div class="cs-intro rv">
+        <div class="tldr">
+          <h2>At a glance</h2>
+          <ul><li>Keyword research on ready-to-hire searches like &quot;building contractors Lochgilphead&quot;.</li><li>One copy block per service, each with its own keyword, and place names throughout.</li><li>GA4, Search Console and Google Business Profiles set up before any copy went live.</li></ul>
+        </div>
+        <div>
+          <dl class="cs-facts"><div><dt>Clients</dt><dd>A&amp;C Building Contractors · Brickstone Heritage</dd></div><div><dt>Where</dt><dd>Lochgilphead, Argyll, Scotland</dd></div><div><dt>Via</dt><dd>Connect2build Scotland, remote</dd></div><div><dt>Work</dt><dd>Keyword research, web copy, GA4, Search Console</dd></div></dl>
+          <ul class="cs-tags" aria-label="Skills used"><li class="tag">Local SEO</li><li class="tag">Keyword Research</li><li class="tag">On-Page SEO</li><li class="tag">Web Copywriting</li><li class="tag">GA4 Setup</li><li class="tag">Google Search Console</li><li class="tag">GMB Optimization</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">01 / 04</span><h2>The problem</h2></div>
+        <div class="cs-sec__body rv">
+          <p><strong>A&amp;C Building Contractors</strong> do plumbing, heating, joinery, roofing, roughcasting and full renovations. Their site said all of that in generic builder-speak, with no place names and no service pages. Google had no reason to show them for &quot;builders Lochgilphead&quot;.</p>
+          <p><strong>Brickstone Heritage</strong>, formerly RJD Brickwork, had just rebranded. They needed copy that carried 20+ years of stonework into a brand new name.</p>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">02 / 04</span><h2>The plan</h2></div>
+        <div class="cs-sec__body rv">
+          <ul class="bullets"><li>Research what homeowners search when they're ready to hire: &quot;building contractors Lochgilphead&quot;, &quot;stonework Argyll&quot;, &quot;roughcasting Scotland&quot;.</li><li>Audit both sites: titles, meta descriptions, headings and internal links.</li><li>Give each service its own copy block and keyword, instead of one big &quot;what we do&quot; page.</li><li>Set up GA4 and Search Console first, for a clean baseline.</li><li>Tidy both Google Business Profiles for the local map pack.</li></ul>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">03 / 04</span><h2>What I did</h2></div>
+        <div class="cs-sec__body rv">
+          <ul class="bullets"><li>Rewrote both sites with Lochgilphead, Argyll and nearby areas woven into the service copy.</li><li>Six service blocks for A&amp;C: plumbing, heating, joinery, roofing, roughcasting and renovation.</li><li>New about copy for Brickstone Heritage that leads with the 20-year story and carries the RJD name across.</li><li>Local trust signals: years in business, areas covered, happy customers.</li><li>GA4 and Search Console, with contact form submissions tracked as key events.</li></ul>
+        </div>
+      </div>
+      <div class="cs-sec">
+        <div class="cs-sec__head rv"><span class="data">04 / 04</span><h2>How it went</h2></div>
+        <div class="cs-sec__body cs-sec__body--wide rv">
+          <div class="tiles" style="--n:4"><div class="tile"><b>2</b><span>local businesses</span></div><div class="tile"><b>6</b><span>service blocks for A&amp;C</span></div><div class="tile"><b>GA4 + GSC</b><span>tracking set up</span></div><div class="tile"><b>2</b><span>Business Profiles tidied</span></div></div>
+          <p class="note">The contract ended before final ranking data was shared.</p>
+          <div class="cs-live"><a class="btn btn--ghost" href="https://acbuilders.co.uk/" target="_blank" rel="noopener">See A&amp;C Building Contractors <span class="arrow" aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </article>
+
+  <section class="sec sec--flush">
+    <div class="wrap">
+      <nav class="pager" aria-label="More case studies"><a href="cs-artmap.html" rel="prev"><span>← Previous</span><b>Artmap Argyll</b></a><a href="cs-angan.html" rel="next"><span>Next →</span><b>Angan Properties</b></a></nav>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="book">
+        <div>
+          <p class="label">Book a call</p>
+          <h2 style="margin-top:.75rem">Got a project like this?</h2>
+          <p>Tell me about it. Quick advice is on me, and you'll only get an invoice if it turns into paid work.</p>
+        </div>
+        <div class="book__actions">
+          <a class="btn btn--light" href="index.html#book">Book a call <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="mailto:samirinmarketing@gmail.com">Email me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Iftekhar A. Samir · Samir in Marketing</span>
+    <span>Built by hand, hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
 </body>
 </html>
