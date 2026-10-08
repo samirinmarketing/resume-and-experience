@@ -601,3 +601,5 @@ html[lang="bn"] .label,html[lang="bn"] .data{letter-spacing:0}
   .menu-btn{padding:0 .7rem}
 }
 @media (max-width:370px){ .mark{font-size:0;gap:0} .mark__glyph{font-size:.78rem} }
+.nf-bn{margin-top:var(--s7);padding-top:var(--s6);border-top:1px solid var(--hairline);display:grid;gap:var(--s3)}
+@media (max-width:480px){ html[lang="bn"] .mark{font-size:0;gap:0} }
