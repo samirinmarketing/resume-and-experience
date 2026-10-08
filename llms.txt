@@ -1,0 +1,50 @@
+# Iftekhar A. Samir (Samir in Marketing)
+
+> Iftekhar Ahmed, also known as Iftekhar A. Samir and "Samir in Marketing", is a content marketing strategist based in Dhaka, Bangladesh, with 7 years of experience. He ranks content, creates designs and builds websites, with a focus on SEO, generative engine optimization (GEO), brand style, content strategy and go-to-market (GTM) work for SaaS and WordPress brands.
+
+Key facts:
+- Worked with 50+ brands in Bangladesh, Scotland and Tasmania (Australia), in agencies and product teams.
+- Roles include Content Strategist at Techabyte Solutions (Nov 2025 – Jun 2026), Freelance SEO Strategist at Connect2build Scotland (Dec 2024 – Oct 2025), Senior Content Writer at Arraytics (Mar 2023 – Aug 2024) and Senior Copywriter & Brand Planner at Markosis Australia (Dec 2020 – Feb 2023).
+- Awards: Sync Leader Award (Arraytics, 2024), Team Leader Award (Markosis Australia, 2022). Certified in HubSpot Content Marketing.
+- Results stated on the site come from his CV or the cited source. Client analytics that are not public are marked as private rather than estimated.
+
+## Main pages
+
+- [Home](https://samirinmarketing.github.io/resume-and-experience/): profile, skills, featured work, experience, awards, education and contact.
+- [All projects](https://samirinmarketing.github.io/resume-and-experience/projects.html): the 17 case studies, filterable by focus.
+- [CV (PDF)](https://samirinmarketing.github.io/resume-and-experience/Iftekhar-Ahmed-Resume.pdf): October 2026 CV.
+
+## Case studies: Social media
+
+- [Zaytun: Bilingual Restaurant Social Media in Dhaka](https://samirinmarketing.github.io/resume-and-experience/cs-zaytun.html): How I gave Zaytun, a rooftop restaurant and event venue in Dhaka, one bilingual Bangla and English Facebook voice, timed to Eid, weddings and holud season.
+- [Non-Kabob: Food Brand Storytelling on Facebook in Dhaka](https://samirinmarketing.github.io/resume-and-experience/cs-nonkabob.html): How I turned Non-Kabob's Turkish and Bengali fusion idea into Facebook posts and video scripts for families in Banasree and Aftabnagar, Dhaka.
+- [Bangladesh Air Force Social Media: Recruitment and Museum](https://samirinmarketing.github.io/resume-and-experience/cs-baf.html): Bilingual Facebook content for two official Bangladesh Air Force pages: recruitment campaigns for young applicants and museum posts that sell visits.
+- [Somalicious: Fashion Brand Copywriting and Social Media](https://samirinmarketing.github.io/resume-and-experience/cs-somalicious.html): Brand voice, video scripts, storyboards and photo direction for Somalicious, a handcrafted fashion label in Dhaka, across reels, carousels and stories.
+- [Artmap Argyll: Open Studios Social Media in Scotland](https://samirinmarketing.github.io/resume-and-experience/cs-artmap.html): Facebook copy and video scripts for Artmap Argyll, a network of artists on Scotland's west coast, to bring new visitors to Open Studios 2025.
+
+## Case studies: SEO and GEO
+
+- [Local SEO for Builders in Lochgilphead, Scotland](https://samirinmarketing.github.io/resume-and-experience/cs-local-seo.html): Local SEO case study: keyword research, service pages, GA4, Search Console and Google Business Profile setup for two construction firms in Argyll, Scotland.
+- [Real Estate SEO: Flat Price Guides for Dhaka](https://samirinmarketing.github.io/resume-and-experience/cs-angan.html): Three SEO price guides for Angan Properties on flat prices in Dhanmondi, Gulshan and Mirpur, written for buyers and structured for Google featured snippets.
+- [Generative Engine Optimization (GEO) Case Study](https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html): A GEO and SEO blog programme for Techabyte: posts built to rank on Google and get cited by ChatGPT, Perplexity and AI Overviews, tracked in Otterly.ai and Peec AI.
+- [Building an On-Page SEO Programme for WordPress Plugins](https://samirinmarketing.github.io/resume-and-experience/cs-onpage-seo.html): How I built ThemeWinter's on-page SEO programme in four layers: audit, ranking reports, a pricing keyword gap analysis and a WordPress.org ranking push.
+- [Vertical Content Strategy: A Booking Plugin for Fitness](https://samirinmarketing.github.io/resume-and-experience/cs-fitness-vertical.html): How I pointed WP Timetics at gyms, studios and personal trainers with a four-piece content sequence, from a 101 guide to a conversion-stage blog post.
+
+## Case studies: Launches and positioning
+
+- [Timetics.ai Launch on Product Hunt and AppSumo](https://samirinmarketing.github.io/resume-and-experience/cs-timetics.html): Launch copy for Timetics.ai, an AI scheduling tool, on Product Hunt and AppSumo, plus adapted copy for Kenmoo and MarTech. Two platforms, two crowds.
+- [Eventin: WordPress Plugin Homepage Copy and WordPress.org SEO](https://samirinmarketing.github.io/resume-and-experience/cs-eventin.html): Homepage copy for the Eventin events plugin and WordPress.org readme optimization for Eventin, WP Timetics and WPCafe, guided by a competitor tag gap analysis.
+- [Eventin 4.0: A WordPress Plugin Release Campaign](https://samirinmarketing.github.io/resume-and-experience/cs-eventin-4.html): The full content campaign for Eventin 4.0: launch blog, v3 vs v4 comparison, QA report, readme rewrite, 62 admin screenshots, founder post and release email.
+- [Calendly Comparison Pages: Positioning a WordPress Plugin](https://samirinmarketing.github.io/resume-and-experience/cs-calendly-positioning.html): Keyword research and comparison pages that positioned Timetics against Calendly, Trafft and Appointlet by owning the WordPress and small business segment.
+- [WordPress Plugin to SaaS: Positioning Timetics.ai](https://samirinmarketing.github.io/resume-and-experience/cs-saas-positioning.html): How I positioned Timetics as both a WordPress plugin and a SaaS product: a 20-row comparison matrix, a story-led landing page, an FAQ and a launch blog.
+
+## Case studies: Campaigns and competitive intelligence
+
+- [Black Friday Deal Pages: A Seasonal Campaign System](https://samirinmarketing.github.io/resume-and-experience/cs-seasonal-deals.html): A reusable seasonal campaign system for WordPress plugins: Black Friday, Holiday and Ramadan deal pages, affiliate emails and in-plugin ads across two brands.
+- [Competitive Intelligence Framework: Reading Changelogs](https://samirinmarketing.github.io/resume-and-experience/cs-changelog-ci.html): A repeatable competitive intelligence framework for a WordPress plugin: changelog tracking, install benchmarks, an ad funnel teardown and a comment audit.
+
+## Contact
+
+- Email: samirinmarketing@gmail.com
+- LinkedIn: https://www.linkedin.com/in/iftekhar-ahmed-in-marketing/
+- Book a call: https://calendly.com/samirinmarketing

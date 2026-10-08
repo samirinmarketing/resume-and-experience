@@ -24,9 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,100..125,400..700;1,100..125,400..700&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="preload" href="assets/fonts/saira-normal-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="assets/profile.webp" type="image/webp">
 <link rel="stylesheet" href="site.css">
 
@@ -47,27 +45,143 @@
       "@id": "https://samirinmarketing.github.io/resume-and-experience/#profile",
       "url": "https://samirinmarketing.github.io/resume-and-experience/",
       "name": "Iftekhar A. Samir · Senior Content Marketing Strategist",
-      "isPartOf": { "@id": "https://samirinmarketing.github.io/resume-and-experience/#website" },
+      "isPartOf": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#website"
+      },
       "dateModified": "2026-10-08",
-      "mainEntity": { "@id": "https://samirinmarketing.github.io/resume-and-experience/#person" }
+      "mainEntity": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#person"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://samirinmarketing.github.io/resume-and-experience/#person",
       "name": "Iftekhar Ahmed",
-      "alternateName": ["Iftekhar A. Samir", "Samir in Marketing"],
+      "alternateName": [
+        "Iftekhar A. Samir",
+        "Samir in Marketing"
+      ],
       "jobTitle": "Senior Content Marketing Executive & Strategist",
       "description": "Content marketing strategist who ranks content, creates designs and builds websites for SaaS and WordPress brands: SEO, generative engine optimization (GEO), brand style, content strategy and GTM.",
       "url": "https://samirinmarketing.github.io/resume-and-experience/",
       "image": "https://samirinmarketing.github.io/resume-and-experience/assets/profile.webp",
       "email": "mailto:samirinmarketing@gmail.com",
-      "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
-      "knowsAbout": ["Content strategy", "Content optimization", "Search engine optimization", "Generative engine optimization", "Brand style", "Rebranding", "Web analytics", "Social media marketing", "Go-to-market strategy", "WordPress plugin marketing", "SaaS marketing", "Copywriting"],
-      "knowsLanguage": ["en", "ja"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dhaka",
+        "addressCountry": "BD"
+      },
+      "knowsAbout": [
+        "Content strategy",
+        "Content optimization",
+        "Search engine optimization",
+        "Generative engine optimization",
+        "Brand style",
+        "Rebranding",
+        "Web analytics",
+        "Social media marketing",
+        "Go-to-market strategy",
+        "WordPress plugin marketing",
+        "SaaS marketing",
+        "Copywriting"
+      ],
+      "knowsLanguage": [
+        "bn",
+        "en",
+        "ja"
+      ],
       "sameAs": [
         "https://www.linkedin.com/in/iftekhar-ahmed-in-marketing/",
         "https://github.com/samirinmarketing",
         "https://calendly.com/samirinmarketing"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Content Marketing Strategist",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "Dhaka"
+        },
+        "skills": "SEO, generative engine optimization, content strategy, brand style, go-to-market strategy, web analytics"
+      },
+      "award": [
+        "Sync Leader Award, Arraytics (2024)",
+        "Team Leader Award, Markosis Australia (2022)"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Content Marketing Certification",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "HubSpot Academy"
+          }
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Dhaka"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Dhaka Commerce College"
+        },
+        {
+          "@type": "HighSchool",
+          "name": "Pallabi Mazedul Islam Model High School",
+          "alternateName": "MI Model"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://samirinmarketing.github.io/resume-and-experience/#faq",
+      "isPartOf": {
+        "@id": "https://samirinmarketing.github.io/resume-and-experience/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Iftekhar A. Samir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's me. I'm a content marketing strategist from Dhaka, Bangladesh, with 7 years in the game. I rank content, create designs and build websites, mostly for SaaS and WordPress brands. Some people know me as Samir in Marketing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is GEO, and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO, or generative engine optimization, means shaping your content so AI tools like ChatGPT, Perplexity and Google's AI Overviews can find it, trust it and quote it. More people now ask AI instead of searching, so being the source it cites matters. Here's how I did it at Techabyte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of work do you take on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO and GEO, content strategy and writing, brand style, landing pages and go-to-market launches. I've done it for 50+ brands, from WordPress plugins to restaurants to the Bangladesh Air Force Museum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with brands outside Bangladesh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. I've worked remotely with brands in Scotland and Tasmania, Australia, as well as at home in Bangladesh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a first chat cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nothing. Book a call and tell me what you're working on. Quick advice is on me, and you only get an invoice if it turns into paid work."
+          }
+        }
       ]
     }
   ]
@@ -528,6 +642,35 @@
         <li>Movies, TV series and anime</li>
         <li>Memes and sarcasm (fluent in both)</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 11b · QUICK ANSWERS ============================ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec__head rv"><h2>Quick answers</h2><p>The questions people ask me most.</p></div>
+    <div class="faq rv">
+      <details open>
+        <summary>Who is Iftekhar A. Samir?</summary>
+        <p>That's me. I'm a content marketing strategist from Dhaka, Bangladesh, with 7 years in the game. I rank content, create designs and build websites, mostly for SaaS and WordPress brands. Some people know me as Samir in Marketing.</p>
+      </details>
+      <details>
+        <summary>What is GEO, and why does it matter?</summary>
+        <p>GEO, or generative engine optimization, means shaping your content so AI tools like ChatGPT, Perplexity and Google's AI Overviews can find it, trust it and quote it. More people now ask AI instead of searching, so being the source it cites matters. <a href="cs-geo-seo.html">Here's how I did it at Techabyte</a>.</p>
+      </details>
+      <details>
+        <summary>What kind of work do you take on?</summary>
+        <p>SEO and GEO, content strategy and writing, brand style, landing pages and go-to-market launches. I've done it for 50+ brands, from WordPress plugins to restaurants to the Bangladesh Air Force Museum.</p>
+      </details>
+      <details>
+        <summary>Do you work with brands outside Bangladesh?</summary>
+        <p>Yes. I've worked remotely with brands in Scotland and Tasmania, Australia, as well as at home in Bangladesh.</p>
+      </details>
+      <details>
+        <summary>How much does a first chat cost?</summary>
+        <p>Nothing. <a href="#book">Book a call</a> and tell me what you're working on. Quick advice is on me, and you only get an invoice if it turns into paid work.</p>
+      </details>
     </div>
   </div>
 </section>

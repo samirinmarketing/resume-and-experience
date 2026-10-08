@@ -1,3 +1,73 @@
+/* ---------- 0. Fonts (self-hosted, latin + latin-ext, SIL OFL) ---------- */
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/courierprime-normal-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/courierprime-normal-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/courierprime-normal-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/courierprime-normal-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100% 125%;
+  font-display: swap;
+  src: url(assets/fonts/saira-italic-400-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: italic;
+  font-weight: 400 700;
+  font-stretch: 100% 125%;
+  font-display: swap;
+  src: url(assets/fonts/saira-italic-400-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100% 125%;
+  font-display: swap;
+  src: url(assets/fonts/saira-normal-400-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100% 125%;
+  font-display: swap;
+  src: url(assets/fonts/saira-normal-400-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* =====================================================================
    site.css · shared stylesheet for every page
    Brand: "Evidence, quietly" (see brand/brand-style.html in the workspace)
@@ -487,3 +557,19 @@ em.em{font-style:italic;font-weight:500;padding-right:.04em}
 .cs-sec:first-child{border-top:0;padding-top:0}
 @media (max-width:860px){ .cs-intro{grid-template-columns:1fr} }
 @media (max-width:420px){ .cs-intro .cs-facts{grid-template-columns:1fr} }
+.cs-byline{margin-top:var(--s4)}
+.cs-byline a,.cs-related a{color:var(--teal)}
+.cs-related{display:flex;flex-wrap:wrap;gap:.35rem .6rem;align-items:baseline;font-size:.9375rem}
+.cs-related .data{color:var(--ink-muted);margin-right:.25rem}
+.cs-sec__body a:not(.btn){color:var(--teal);text-underline-offset:3px}
+
+/* ---------- 20. Quick answers ---------- */
+.faq{display:grid;border-top:1px solid var(--hairline);max-width:820px}
+.faq details{border-bottom:1px solid var(--hairline);padding:var(--s4) 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.0625rem;list-style:none;display:flex;justify-content:space-between;gap:var(--s4)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:700 1.2rem/1 var(--font-data);color:var(--teal);transition:transform var(--d-base) var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:4px}
+.faq details p{color:var(--ink-soft);margin-top:var(--s3);max-width:66ch}
+.faq details a{color:var(--teal)}
