@@ -257,12 +257,87 @@ em.em{font-style:italic;font-weight:500;padding-right:.04em}
 @media (max-width:860px){ .about{grid-template-columns:1fr} .about__side{grid-template-columns:200px minmax(0,1fr);align-items:start;max-width:520px} }
 @media (max-width:480px){ .about__side{grid-template-columns:1fr;max-width:260px} }
 
-/* places: "my favourite places to hang out" */
-.places{list-style:none;padding:0;border-top:1px solid var(--hairline);margin-bottom:var(--s8)}
-.places li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s5);align-items:baseline;padding:var(--s5) 0;border-bottom:1px solid var(--hairline)}
-.places__name{font:600 clamp(1.5rem,1.1rem + 1.6vw,2.4rem)/1.1 var(--font-sans);letter-spacing:-.025em;font-variation-settings:"wdth" 110}
-.places__note{color:var(--ink-soft);max-width:56ch}
-@media (max-width:700px){ .places li{grid-template-columns:1fr;gap:var(--s2)} }
+/* places: one card per area, each with a real artefact as its visual */
+.haunts{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s4);margin-bottom:var(--s8)}
+.haunt{display:grid;grid-template-rows:auto 1fr;border:1px solid var(--hairline);border-radius:var(--r-card);overflow:hidden;background:#fff;
+  transition:border-color var(--d-base) var(--ease),box-shadow var(--d-base) var(--ease)}
+@media (hover:hover){ .haunt:hover{border-color:var(--hairline-strong);box-shadow:var(--e2)} }
+.haunt--wp{grid-column:span 7} .haunt--saas{grid-column:span 5}
+.haunt--social{grid-column:span 4} .haunt--data{grid-column:span 5} .haunt--brand{grid-column:span 3}
+.haunt__visual{min-height:200px;display:grid;place-items:center;padding:var(--s5);background:var(--mist)}
+.haunt--wp .haunt__visual{background:var(--teal-wash)} .haunt--saas .haunt__visual{background:var(--wash-sky)}
+.haunt--social .haunt__visual{background:var(--wash-lavender)} .haunt--brand .haunt__visual{background:var(--wash-sand)}
+.haunt__body{display:grid;gap:var(--s2);align-content:start;padding:var(--s5)}
+.haunt__body h3{font:600 clamp(1.3rem,1.1rem + .7vw,1.7rem)/1.15 var(--font-sans);letter-spacing:-.02em}
+.haunt__body p{color:var(--ink-soft);max-width:52ch}
+.haunt__body .link{margin-top:var(--s1);width:max-content}
+
+/* WordPress: plugin brands */
+.haunt__logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3)}
+.haunt__logos img{width:100%;height:76px;object-fit:contain;background:#fff;border-radius:10px;padding:18px 28px;box-shadow:0 1px 2px rgb(19 34 43 / .05)}
+.haunt__logos img[alt="Arraytics"]{padding:8px}
+
+/* SaaS: the launch path */
+.track{list-style:none;padding:0;margin:0;width:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative}
+.track::before{content:"";position:absolute;left:12.5%;right:12.5%;top:7px;height:2px;background:var(--teal);transform-origin:left center}
+.track li{position:relative;display:grid;justify-items:center;gap:var(--s3);padding-top:0;font:700 var(--t-xs)/1.3 var(--font-data);text-align:center;color:var(--ink)}
+.track li::before{content:"";width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--teal);position:relative;z-index:1}
+.track li:first-child::before{background:var(--teal)}
+
+/* Social media: real posts, fanned */
+.haunt__fan{position:relative;min-height:230px}
+.haunt__fan img{position:absolute;width:50%;max-width:210px;aspect-ratio:3/2;object-fit:cover;border-radius:10px;border:3px solid #fff;box-shadow:var(--e2)}
+.haunt__fan img:nth-child(1){transform:translate(-36%,-6%) rotate(-11deg)}
+.haunt__fan img:nth-child(2){transform:translate(-16%,-14%) rotate(-4deg)}
+.haunt__fan img:nth-child(3){transform:translate(14%,-6%) rotate(5deg)}
+.haunt__fan img:nth-child(4){transform:translate(36%,6%) rotate(11deg)}
+
+/* Web analytics: tools to outputs */
+.flow{width:100%;display:grid;grid-template-columns:minmax(0,1fr) 44px auto;align-items:center;gap:var(--s3) var(--s2)}
+.flow__in{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.flow__in li{font-size:var(--t-xs);background:#fff;border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:.2rem .6rem;white-space:nowrap}
+.flow__line{height:2px;background:var(--teal);position:relative;transform-origin:left center}
+.flow__line::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:7px solid var(--teal);border-right:0}
+.flow__out{margin:0;font:700 var(--t-xs)/1.3 var(--font-data);color:#fff;background:var(--teal);border-radius:8px;padding:.45rem .7rem;white-space:nowrap}
+
+/* Rebranding: old name, new name */
+.rename{margin:0;display:grid;justify-items:center;gap:var(--s2);text-align:center}
+.rename s{font:500 1.05rem/1.2 var(--font-sans);color:var(--ink-muted);text-decoration:none;position:relative}
+.rename s::after{content:"";position:absolute;left:-4px;right:-4px;top:52%;height:2px;background:var(--ink-soft);transform-origin:left center}
+.rename__arrow{color:var(--ink-muted);font-size:1.1rem}
+.rename b{font:600 1.3rem/1.2 var(--font-sans);letter-spacing:-.01em;color:var(--ink)}
+
+/* one entrance per card, played once when it scrolls in: the visual explains the area */
+@media (prefers-reduced-motion:no-preference){
+  .js .haunt:not(.in) .haunt__logos img{opacity:0;transform:translateY(8px)}
+  .haunt__logos img{transition:opacity .5s var(--ease),transform .5s var(--ease)}
+  .haunt__logos img:nth-child(2){transition-delay:80ms} .haunt__logos img:nth-child(3){transition-delay:160ms} .haunt__logos img:nth-child(4){transition-delay:240ms}
+  .js .haunt:not(.in) .track::before{transform:scaleX(0)}
+  .track::before{transition:transform .9s var(--ease) .15s}
+  .js .haunt:not(.in) .track li{opacity:0}
+  .track li{transition:opacity .4s var(--ease)}
+  .track li:nth-child(2){transition-delay:.35s} .track li:nth-child(3){transition-delay:.6s} .track li:nth-child(4){transition-delay:.85s}
+  .js .haunt:not(.in) .haunt__fan img{transform:translate(0,0) rotate(0)}
+  .haunt__fan img{transition:transform .8s var(--ease) .15s}
+  .js .haunt:not(.in) .flow__line{transform:scaleX(0)}
+  .flow__line{transition:transform .7s var(--ease) .2s}
+  .js .haunt:not(.in) .flow__out{opacity:0}
+  .flow__out{transition:opacity .4s var(--ease) .75s}
+  .js .haunt:not(.in) .rename s::after{transform:scaleX(0)}
+  .rename s::after{transition:transform .6s var(--ease) .3s}
+  .js .haunt:not(.in) .rename b{opacity:0;transform:translateY(8px)}
+  .rename b{transition:opacity .5s var(--ease) .75s,transform .5s var(--ease) .75s}
+  .haunts .haunt:nth-child(2){transition-delay:80ms} .haunts .haunt:nth-child(4){transition-delay:80ms} .haunts .haunt:nth-child(5){transition-delay:160ms}
+}
+@media (max-width:1040px){
+  .haunts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .haunt--wp{grid-column:1/-1} .haunt--saas,.haunt--social,.haunt--data,.haunt--brand{grid-column:auto}
+}
+@media (max-width:700px){
+  .haunts{grid-template-columns:1fr} .haunt--wp{grid-column:auto}
+  .haunt__visual{min-height:170px}
+  .flow{grid-template-columns:minmax(0,1fr) 32px auto}
+}
 .skillset__title{font-size:var(--t-h3);margin-bottom:var(--s5)}
 
 /* ---------- 8. Skills / tools / brands ---------- */
