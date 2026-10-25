@@ -13,6 +13,7 @@ Key facts:
 - [Home](https://samirinmarketing.github.io/resume-and-experience/): profile, skills, featured work, experience, awards, education and contact.
 - [Home in Bangla](https://samirinmarketing.github.io/resume-and-experience/bn/): the same profile in Bangla (বাংলা). The projects page and all 17 case studies also have Bangla versions under https://samirinmarketing.github.io/resume-and-experience/bn/.
 - [All projects](https://samirinmarketing.github.io/resume-and-experience/projects.html): the 17 case studies, filterable by focus.
+- [Writing samples](https://samirinmarketing.github.io/resume-and-experience/writing-samples.html): seven technical writing samples (PDF) written at Arraytics for Eventin and WP Timetics. Shared for review only; the content belongs to Arraytics.
 - [CV (PDF)](https://samirinmarketing.github.io/resume-and-experience/Iftekhar-Ahmed-Resume.pdf): October 2026 CV.
 
 ## Case studies: Social media
@@ -43,6 +44,16 @@ Key facts:
 
 - [Black Friday Deal Pages: A Seasonal Campaign System](https://samirinmarketing.github.io/resume-and-experience/cs-seasonal-deals.html): A reusable seasonal campaign system for WordPress plugins: Black Friday, Holiday and Ramadan deal pages, affiliate emails and in-plugin ads across two brands.
 - [Competitive Intelligence Framework: Reading Changelogs](https://samirinmarketing.github.io/resume-and-experience/cs-changelog-ci.html): A repeatable competitive intelligence framework for a WordPress plugin: changelog tracking, install benchmarks, an ad funnel teardown and a comment audit.
+
+## Writing samples (PDF, content owned by Arraytics)
+
+- [How to Send Event Notifications via Twilio with WooCommerce](https://samirinmarketing.github.io/resume-and-experience/assets/writing/twilio-woocommerce-event-notifications.pdf): How-to guide, Eventin, 2023. Connecting Twilio SMS to a WooCommerce event store: installing ShopMagic and its Twilio add-on, setting up the Twilio account, wiring the Account SID, Auth Token and sender number, and building the first SMS automation.
+- [How to Schedule a Zoom Meeting with Timetics](https://samirinmarketing.github.io/resume-and-experience/assets/writing/zoom-meetings-with-timetics.pdf): How-to guide, WP Timetics, 2023. Setting up Zoom inside a WordPress booking plugin: installing Timetics, creating a user-managed OAuth app in the Zoom Marketplace, connecting it to Timetics Pro and scheduling the first meeting.
+- [How to Integrate a CRM with a WordPress Website Using Eventin](https://samirinmarketing.github.io/resume-and-experience/assets/writing/crm-integration-with-eventin.pdf): Integration guide, Eventin, 2023. What a WordPress CRM does, why it matters for event businesses, and step-by-step setup of Eventin with GroundHogg and FluentCRM, closing with an FAQ.
+- [How to Create Multiple Pricing Tiers for Tickets in WP Timetics](https://samirinmarketing.github.io/resume-and-experience/assets/writing/multi-tier-ticket-pricing-wp-timetics.pdf): Feature walkthrough, WP Timetics, 2024. A feature walkthrough for multi-tier ticketing: creating ticket types, setting minimum and maximum purchase limits, and assigning tiers to seats on a visual seat plan, plus pricing tips.
+- [Eventin 4.0 Is Here: What Changed and Why](https://samirinmarketing.github.io/resume-and-experience/assets/writing/eventin-4-release-notes.pdf): Release notes, Eventin, 2024. Release documentation for a ground-up rebuild: page-by-page UI and UX changes, API and caching improvements, unit testing, optimisations and bug fixes, with a recap of every change.
+- [WP Timetics: WordPress.org Plugin Readme](https://samirinmarketing.github.io/resume-and-experience/assets/writing/wp-timetics-wordpress-org-readme.pdf): Plugin readme, WP Timetics, 2024. The WordPress.org listing for an AI-powered booking plugin: header and researched tags, a benefit-first description, the full feature set and screenshot captions, written in the readme.txt format that plugin search reads.
+- [Eventin: WordPress.org Plugin Readme](https://samirinmarketing.github.io/resume-and-experience/assets/writing/eventin-wordpress-org-readme.pdf): Plugin readme, Eventin, 2024. The WordPress.org listing for an event management plugin: researched tags, description, feature groups, Elementor widgets, shortcodes, features and benefits, and screenshot captions.
 
 ## Contact
 
