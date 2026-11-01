@@ -806,3 +806,4 @@ html[lang="bn"] .label,html[lang="bn"] .data{letter-spacing:0}
 .skill-tab[aria-pressed="true"] .ico,.skill-tab[aria-pressed="true"] .n{color:#fff}
 .skill-desc{color:var(--ink-soft);min-height:1.6em;margin-bottom:var(--s5);max-width:62ch}
 @media (prefers-reduced-motion:reduce){ .build-card__shot img,.skill-index a{transition:none} .build-card:hover .build-card__shot img{transform:none} }
+.roles .bullets a{color:var(--teal);text-underline-offset:3px}
