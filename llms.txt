@@ -11,8 +11,8 @@ Key facts:
 ## Main pages
 
 - [Home](https://samirinmarketing.github.io/resume-and-experience/): profile, skills, featured work, experience, awards, education and contact.
-- [Home in Bangla](https://samirinmarketing.github.io/resume-and-experience/bn/): the same profile in Bangla (বাংলা). The projects page and all 17 case studies also have Bangla versions under https://samirinmarketing.github.io/resume-and-experience/bn/.
-- [All projects](https://samirinmarketing.github.io/resume-and-experience/projects.html): the 17 case studies, filterable by focus.
+- [Home in Bangla](https://samirinmarketing.github.io/resume-and-experience/bn/): the same profile in Bangla (বাংলা). The projects page and the 17 written case studies also have Bangla versions under https://samirinmarketing.github.io/resume-and-experience/bn/.
+- [All projects](https://samirinmarketing.github.io/resume-and-experience/projects.html): all 19 projects, filterable by skill (for example https://samirinmarketing.github.io/resume-and-experience/projects.html#skill=seo).
 - [Writing samples](https://samirinmarketing.github.io/resume-and-experience/writing-samples.html): seven technical writing samples (PDF) written at Arraytics for Eventin and WP Timetics. Shared for review only; the content belongs to Arraytics.
 - [CV (PDF)](https://samirinmarketing.github.io/resume-and-experience/Iftekhar-Ahmed-Resume.pdf): October 2026 CV.
 
@@ -44,6 +44,11 @@ Key facts:
 
 - [Black Friday Deal Pages: A Seasonal Campaign System](https://samirinmarketing.github.io/resume-and-experience/cs-seasonal-deals.html): A reusable seasonal campaign system for WordPress plugins: Black Friday, Holiday and Ramadan deal pages, affiliate emails and in-plugin ads across two brands.
 - [Competitive Intelligence Framework: Reading Changelogs](https://samirinmarketing.github.io/resume-and-experience/cs-changelog-ci.html): A repeatable competitive intelligence framework for a WordPress plugin: changelog tracking, install benchmarks, an ad funnel teardown and a comment audit.
+
+## VibeCoding builds (websites built with AI coding agents)
+
+- [Glo Little Luxury: A WooCommerce Store Built with AI](https://samirinmarketing.github.io/resume-and-experience/cs-glo.html): Live. How I designed, coded, optimised and launched Glo Little Luxury, an imported beauty store in Dhaka, with AI coding agents: Framer, a custom WordPress theme, SEO, GA4, Steadfast and Apps Script.
+- [RAK Security: Website Redesign, SEO, GEO and AEO](https://samirinmarketing.github.io/resume-and-experience/cs-rak.html): In progress. How I am redesigning raksecuritybd.com and running on-page, off-page and technical SEO, GEO and AEO for RAK Security, a Dhaka security company founded in 2006.
 
 ## Writing samples (PDF, content owned by Arraytics)
 

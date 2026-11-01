@@ -294,6 +294,35 @@
     return pick;
   }
 
+  /* ---------- projects by skill (projects.html; links use #skill=<key>) ---------- */
+  function initSkills(root) {
+    if (!root) return null;
+    const cards = $$('.card', root), tabs = $$('[data-skill]', root), desc = $('[data-skill-desc]', root);
+    if (!cards.length || !tabs.length) return null;
+    const pick = (key, push) => {
+      const tab = tabs.find(t => t.dataset.skill === key) || tabs[0];
+      key = tab.dataset.skill;
+      cards.forEach(c => { c.hidden = key !== '*' && !(c.dataset.skills || '').split(' ').includes(key); });
+      tabs.forEach(t => t.setAttribute('aria-pressed', String(t === tab)));
+      if (desc) desc.textContent = tab.dataset.desc || '';
+      if (push) history.replaceState(null, '', key === '*' ? location.pathname : '#skill=' + key);
+    };
+    const fromHash = () => { const m = location.hash.match(/^#skill=([\w-]+)$/); pick(m ? m[1] : '*', false); };
+    tabs.forEach(t => t.addEventListener('click', () => pick(t.dataset.skill, true)));
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
+    return pick;
+  }
+
+  /* ---------- before/after compare (build pages) ---------- */
+  $$('[data-compare]').forEach(fig => {
+    const range = $('input[type="range"]', fig);
+    if (!range) return;
+    const set = () => fig.style.setProperty('--pos', range.value + '%');
+    range.addEventListener('input', set);
+    set();
+  });
+
   /* ---------- Calendly on demand ---------- */
   $$('[data-calendly]').forEach(btn => {
     btn.addEventListener('click', e => {
@@ -316,5 +345,5 @@
     });
   });
 
-  window.Site = { Charts, initIndex, bindTip, cssVar };
+  window.Site = { Charts, initIndex, initSkills, bindTip, cssVar };
 })();
