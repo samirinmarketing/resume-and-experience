@@ -28,7 +28,7 @@ Key facts:
 
 - [Local SEO for Builders in Lochgilphead, Scotland](https://samirinmarketing.github.io/resume-and-experience/cs-local-seo.html): Local SEO case study: keyword research, service pages, GA4, Search Console and Google Business Profile setup for two construction firms in Argyll, Scotland.
 - [Real Estate SEO: Flat Price Guides for Dhaka](https://samirinmarketing.github.io/resume-and-experience/cs-angan.html): Three SEO price guides for Angan Properties on flat prices in Dhanmondi, Gulshan and Mirpur, written for buyers and structured for Google featured snippets.
-- [Generative Engine Optimization (GEO) Case Study](https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html): A GEO and SEO blog programme for Techabyte: posts built to rank on Google and get cited by ChatGPT, Perplexity and AI Overviews, tracked in Otterly.ai and Peec AI.
+- [Generative Engine Optimization (GEO) Case Study](https://samirinmarketing.github.io/resume-and-experience/cs-geo-seo.html): A GEO and SEO blog programme for Techabyte: posts built to rank on Google and get cited by ChatGPT, Perplexity and AI Overviews, measured in GA4, Semrush and Microsoft Clarity.
 - [Building an On-Page SEO Programme for WordPress Plugins](https://samirinmarketing.github.io/resume-and-experience/cs-onpage-seo.html): How I built ThemeWinter's on-page SEO programme in four layers: audit, ranking reports, a pricing keyword gap analysis and a WordPress.org ranking push.
 - [Vertical Content Strategy: A Booking Plugin for Fitness](https://samirinmarketing.github.io/resume-and-experience/cs-fitness-vertical.html): How I pointed WP Timetics at gyms, studios and personal trainers with a four-piece content sequence, from a 101 guide to a conversion-stage blog post.
 
